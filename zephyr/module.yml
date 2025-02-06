@@ -1,0 +1,6 @@
+name: hal_bouffalolab
+build:
+  cmake-ext: True
+  kconfig-ext: True
+  settings:
+    dts_root: .
