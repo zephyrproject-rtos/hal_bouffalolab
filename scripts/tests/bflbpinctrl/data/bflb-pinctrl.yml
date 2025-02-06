@@ -1,0 +1,86 @@
+# Copyright (c) 2022-2024 Gerson Fernando Budke
+# SPDX-License-Identifier: Apache-2.0
+
+model: bflb,bl
+
+family: bl60x
+
+map: BFLB_PINMUX_XXX
+
+series: [602, 604]
+
+peripherals:
+  - [sdio, 1]
+  - [flash, 2]
+  - [spi, 4]
+  - [i2c, 6]
+  - [uart, 7, 0, 1]
+  - [pwm, 8]
+  - [fem, 9]
+  - [analog, 10]
+  - [swgpio, 11]
+  - [gpio, 11]
+  - [jtag, 14]
+
+signals:
+  - [rts, 0]
+  - [cts, 1]
+  - [tx, 2]
+  - [rx, 3]
+
+pins:
+  gpio0:
+    series: [602, 604]
+    analog:
+      - [atest, [in]]
+    periph:
+      - [sdio, [clk]]
+      - [flash, [d1]]
+      - [spi, [mosi]]
+      - [i2c, [scl]]
+      - [uart0, [rts, cts, tx, rx]]
+      - [uart1, [rts, cts, tx, rx]]
+      - [pwm, [ch0]]
+      - [fem, [gpio0]]
+      - [jtag, [tms]]
+  gpio1:
+    series: [602]
+    analog:
+      - [atest, [ip]]
+    periph:
+      - [sdio, [cmd]]
+      - [flash, [d2]]
+      - [spi, [miso]]
+      - [i2c, [sda]]
+      - [uart0, [rts, cts, tx, rx]]
+      - [uart1, [rts, cts, tx, rx]]
+      - [pwm, [ch1]]
+      - [fem, [gpio1]]
+      - [jtag, [tdi]]
+  gpio2:
+    series: [604]
+    analog:
+      - [atest, [qn]]
+    periph:
+      - [sdio, [dat0]]
+      - [flash, [d3]]
+      - [spi, [ss]]
+      - [i2c, [scl]]
+      - [uart0, [rts, cts, tx, rx]]
+      - [uart1, [rts, cts, tx, rx]]
+      - [pwm, [ch2]]
+      - [fem, [gpio2]]
+      - [jtag, [tck]]
+  gpio3:
+    series: [602, 604]
+    analog:
+      - [atest, [qp]]
+    periph:
+      - [sdio, [dat1]]
+      - [spi, [sclk]]
+      - [i2c, [sda]]
+      - [uart0, [rts, cts, tx, rx]]
+      - [uart1, [rts, cts, tx, rx]]
+      - [pwm, [ch3]]
+      - [fem, [gpio3]]
+      - [jtag, [tdo]]

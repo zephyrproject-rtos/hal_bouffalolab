@@ -1,0 +1,323 @@
+# Copyright (c) 2024 Gerson Fernando Budke
+# SPDX-License-Identifier: Apache-2.0
+#
+# Sources:
+# - BL602_BL604_DS_1.6_en
+# - BL602_BL604_RM_1.2_en
+# - drivers/soc/bl602/std/include/bl602_gpio.h
+#
+# Pin codes:
+#
+# - BL602 32-pin
+# - BL604 40-pin
+
+model: bflb,bl
+
+family: bl60x
+
+map: BFLB_PINMUX
+
+series: [602, 604]
+
+peripherals:
+  - [sdio, 1]
+  - [flash, 2]
+  - [spi, 4]
+  - [i2c, 6]
+  - [uart, 7, 0, 1]
+  - [pwm, 8]
+  - [fem, 9]
+  - [analog, 10]
+  - [swgpio, 11]
+  - [gpio, 11]
+  - [jtag, 14]
+
+signals:
+  - [rts, 0]
+  - [cts, 1]
+  - [tx, 2]
+  - [rx, 3]
+
+pins:
+  gpio0:
+    series: [602, 604]
+    analog:
+      - [atest, [in]]
+    periph:
+      - [sdio, [clk]]
+      - [flash, [d1]]
+      - [spi, [mosi]]
+      - [i2c, [scl]]
+      - [uart0, [rts, cts, tx, rx]]
+      - [uart1, [rts, cts, tx, rx]]
+      - [pwm, [ch0]]
+      - [fem, [gpio0]]
+      - [jtag, [tms]]
+  gpio1:
+    series: [602, 604]
+    analog:
+      - [atest, [ip]]
+    periph:
+      - [sdio, [cmd]]
+      - [flash, [d2]]
+      - [spi, [miso]]
+      - [i2c, [sda]]
+      - [uart0, [rts, cts, tx, rx]]
+      - [uart1, [rts, cts, tx, rx]]
+      - [pwm, [ch1]]
+      - [fem, [gpio1]]
+      - [jtag, [tdi]]
+  gpio2:
+    series: [602, 604]
+    analog:
+      - [atest, [qn]]
+    periph:
+      - [sdio, [dat0]]
+      - [flash, [d3]]
+      - [spi, [ss]]
+      - [i2c, [scl]]
+      - [uart0, [rts, cts, tx, rx]]
+      - [uart1, [rts, cts, tx, rx]]
+      - [pwm, [ch2]]
+      - [fem, [gpio2]]
+      - [jtag, [tck]]
+  gpio3:
+    series: [602, 604]
+    analog:
+      - [atest, [qp]]
+    periph:
+      - [sdio, [dat1]]
+      - [spi, [sclk]]
+      - [i2c, [sda]]
+      - [uart0, [rts, cts, tx, rx]]
+      - [uart1, [rts, cts, tx, rx]]
+      - [pwm, [ch3]]
+      - [fem, [gpio3]]
+      - [jtag, [tdo]]
+  gpio4:
+    series: [602, 604]
+    analog:
+      - [adc, [ch1]]
+    periph:
+      - [sdio, [dat2]]
+      - [spi, [mosi]]
+      - [i2c, [scl]]
+      - [uart0, [rts, cts, tx, rx]]
+      - [uart1, [rts, cts, tx, rx]]
+      - [pwm, [ch4]]
+      - [fem, [gpio0]]
+      - [jtag, [tms]]
+  gpio5:
+    series: [602, 604]
+    analog:
+      - [adc, [ch4]]
+    periph:
+      - [spi, [miso]]
+      - [i2c, [sda]]
+      - [uart0, [rts, cts, tx, rx]]
+      - [uart1, [rts, cts, tx, rx]]
+      - [pwm, [ch0]]
+      - [fem, [gpio1]]
+      - [jtag, [tdi]]
+  gpio6:
+    series: [604]
+    analog:
+      - [adc, [ch5]]
+    periph:
+      - [spi, [ss]]
+      - [i2c, [scl]]
+      - [uart0, [rts, cts, tx, rx]]
+      - [uart1, [rts, cts, tx, rx]]
+      - [pwm, [ch1]]
+      - [fem, [gpio2]]
+      - [jtag, [tck]]
+  gpio7:
+    series: [602, 604]
+    periph:
+      - [spi, [sck]]
+      - [i2c, [sda]]
+      - [uart0, [rts, cts, tx, rx]]
+      - [uart1, [rts, cts, tx, rx]]
+      - [pwm, [ch2]]
+      - [fem, [gpio3]]
+      - [jtag, [tdo]]
+  gpio8:
+    series: [602, 604]
+    periph:
+      - [spi, [mosi]]
+      - [i2c, [scl]]
+      - [uart0, [rts, cts, tx, rx]]
+      - [uart1, [rts, cts, tx, rx]]
+      - [pwm, [ch3]]
+      - [fem, [gpio0]]
+      - [jtag, [tms]]
+  gpio9:
+    series: [604]
+    analog:
+      - [adc, [ch6]]
+    periph:
+      - [spi, [miso]]
+      - [i2c, [sda]]
+      - [uart0, [rts, cts, tx, rx]]
+      - [uart1, [rts, cts, tx, rx]]
+      - [pwm, [ch4]]
+      - [fem, [gpio1]]
+      - [jtag, [tdi]]
+  gpio10:
+    series: [604]
+    analog:
+      - [mic, [bias]]
+      - [adc, [ch8]]
+    periph:
+      - [spi, [ss]]
+      - [i2c, [scl]]
+      - [uart0, [rts, cts, tx, rx]]
+      - [uart1, [rts, cts, tx, rx]]
+      - [pwm, [ch0]]
+      - [fem, [gpio2]]
+      - [jtag, [tck]]
+  gpio11:
+    series: [602, 604]
+    analog:
+      - [adc, [ch10]]
+      - [ir, [tx]]
+    input:
+      - [ir, [rx]]
+    periph:
+      - [spi, [sclk]]
+      - [i2c, [sda]]
+      - [uart0, [rts, cts, tx, rx]]
+      - [uart1, [rts, cts, tx, rx]]
+      - [pwm, [ch1]]
+      - [fem, [gpio3]]
+      - [jtag, [tdo]]
+  gpio12:
+    series: [602, 604]
+    analog:
+      - [adc, [ch0]]
+    input:
+      - [ir, [rx]]
+    periph:
+      - [spi, [mosi]]
+      - [i2c, [scl]]
+      - [uart0, [rts, cts, tx, rx]]
+      - [uart1, [rts, cts, tx, rx]]
+      - [pwm, [ch2]]
+      - [fem, [gpio0]]
+      - [jtag, [tms]]
+  gpio13:
+    series: [604]
+    analog:
+      - [adc, [ch3]]
+      - [dac, [cha]]
+    input:
+      - [ir, [rx]]
+    periph:
+      - [spi, [miso]]
+      - [i2c, [sda]]
+      - [uart0, [rts, cts, tx, rx]]
+      - [uart1, [rts, cts, tx, rx]]
+      - [pwm, [ch3]]
+      - [fem, [gpio1]]
+      - [jtag, [tdi]]
+  gpio14:
+    series: [602, 604]
+    analog:
+      - [adc, [ch2]]
+      - [dac, [chb]]
+    periph:
+      - [spi, [ss]]
+      - [i2c, [scl]]
+      - [uart0, [rts, cts, tx, rx]]
+      - [uart1, [rts, cts, tx, rx]]
+      - [pwm, [ch4]]
+      - [fem, [gpio1]]
+      - [jtag, [tck]]
+  gpio15:
+    series: [604]
+    analog:
+      - [adc, [ch11]]
+    periph:
+      - [spi, [sclk]]
+      - [i2c, [sda]]
+      - [uart0, [rts, cts, tx, rx]]
+      - [uart1, [rts, cts, tx, rx]]
+      - [pwm, [ch0]]
+      - [fem, [gpio3]]
+      - [jtag, [tdo]]
+  gpio16:
+    series: [602, 604]
+    periph:
+      - [spi, [mosi]]
+      - [i2c, [scl]]
+      - [uart0, [rts, cts, tx, rx]]
+      - [uart1, [rts, cts, tx, rx]]
+      - [pwm, [ch1]]
+      - [fem, [gpio0]]
+      - [jtag, [tms]]
+  gpio17:
+    series: [602, 604]
+    periph:
+      - [flash, [d3]]
+      - [spi, [miso]]
+      - [i2c, [sda]]
+      - [uart0, [rts, cts, tx, rx]]
+      - [uart1, [rts, cts, tx, rx]]
+      - [pwm, [ch2]]
+      - [fem, [gpio1]]
+      - [jtag, [tdi]]
+  gpio18:
+    series: [604]
+    periph:
+      - [flash, [d2]]
+      - [spi, [ss]]
+      - [i2c, [scl]]
+      - [uart0, [rts, cts, tx, rx]]
+      - [uart1, [rts, cts, tx, rx]]
+      - [pwm, [ch3]]
+      - [fem, [gpio2]]
+      - [jtag, [tck]]
+  gpio19:
+    series: [604]
+    periph:
+      - [flash, [d1]]
+      - [spi, [sclk]]
+      - [i2c, [sda]]
+      - [uart0, [rts, cts, tx, rx]]
+      - [uart1, [rts, cts, tx, rx]]
+      - [pwm, [ch4]]
+      - [fem, [gpio3]]
+      - [jtag, [tdo]]
+  gpio20:
+    series: [602, 604]
+    periph:
+      - [flash, [d0]]
+      - [spi, [mosi]]
+      - [i2c, [scl]]
+      - [uart0, [rts, cts, tx, rx]]
+      - [uart1, [rts, cts, tx, rx]]
+      - [pwm, [ch0]]
+      - [fem, [gpio0]]
+      - [jtag, [tms]]
+  gpio21:
+    series: [602, 604]
+    periph:
+      - [flash, [cs]]
+      - [spi, [miso]]
+      - [i2c, [sda]]
+      - [uart0, [rts, cts, tx, rx]]
+      - [uart1, [rts, cts, tx, rx]]
+      - [pwm, [ch1]]
+      - [fem, [gpio1]]
+      - [jtag, [tdi]]
+  gpio22:
+    series: [602, 604]
+    periph:
+      - [flash, [clk_out]]
+      - [spi, [ss]]
+      - [i2c, [scl]]
+      - [uart0, [rts, cts, tx, rx]]
+      - [uart1, [rts, cts, tx, rx]]
+      - [pwm, [ch2]]
+      - [fem, [gpio2]]
+      - [jtag, [tck]]
