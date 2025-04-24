@@ -1,0 +1,181 @@
+/*
+ * Contains definitions removed from 'common' files with ifdefs
+ * Copyright (c) 2025 Bouffalo lab
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+#pragma once
+
+/* adc_reg.h */
+#define AON_GPADC_SEN_SEL_MASK (0x3 << AON_GPADC_SEN_SEL_SHIFT)
+#define AON_GPADC_SEN_TEST_EN  (1 << 30U)
+
+/* dma_reg.h */
+#define DMA_SBSIZE_MASK        (0x7 << DMA_SBSIZE_SHIFT)
+#define DMA_DBSIZE_MASK        (0x7 << DMA_DBSIZE_SHIFT)
+#define DMA_SWIDTH_MASK        (0x7 << DMA_SWIDTH_SHIFT)
+#define DMA_DWIDTH_MASK        (0x7 << DMA_DWIDTH_SHIFT)
+#define DMA_SLARGERD           (1 << 24U)
+
+/* spi_reg.h */
+#define SPI_TX_FIFO_CNT_MASK (0x7 << SPI_TX_FIFO_CNT_SHIFT
+#define SPI_RX_FIFO_CNT_MASK (0x7 << SPI_RX_FIFO_CNT_SHIFT)
+#define SPI_TX_FIFO_TH_MASK (0x3 << SPI_TX_FIFO_TH_SHIFT)
+#define SPI_RX_FIFO_TH_MASK (0x3 << SPI_RX_FIFO_TH_SHIFT)
+
+/* uart_reg.h */
+#define UART_UTX_IR_POSITION_OFFSET (0x10) /* utx_ir_position */
+#define UART_URX_IR_POSITION_OFFSET (0x14) /* urx_ir_position */
+#define UART_CR_UTX_IR_EN  (1 << 6U)
+#define UART_CR_UTX_IR_INV (1 << 7U)
+#define UART_CR_UTX_BIT_CNT_P_SHIFT (12U)
+#define UART_CR_URX_RTS_SW_MODE (1 << 1U)
+#define UART_CR_URX_RTS_SW_VAL  (1 << 2U)
+#define UART_CR_URX_ABR_EN      (1 << 3U)
+#define UART_CR_URX_IR_EN  (1 << 6U)
+#define UART_CR_URX_IR_INV (1 << 7U)
+#define UART_CR_UTX_IR_POS_S_SHIFT (0U)
+#define UART_CR_UTX_IR_POS_S_MASK  (0xffff << UART_CR_UTX_IR_POS_S_SHIFT)
+#define UART_CR_UTX_IR_POS_P_SHIFT (16U)
+#define UART_CR_UTX_IR_POS_P_MASK  (0xffff << UART_CR_UTX_IR_POS_P_SHIFT)
+#define UART_CR_URX_IR_POS_S_SHIFT (0U)
+#define UART_CR_URX_IR_POS_S_MASK  (0xffff << UART_CR_URX_IR_POS_S_SHIFT)
+#define UART_STS_URX_ABR_PRD_0X55_MASK (0xffff << UART_STS_URX_ABR_PRD_0X55_SHIFT)
+#define UART_TX_FIFO_CNT_MASK (0x3f << UART_TX_FIFO_CNT_SHIFT)
+#define UART_RX_FIFO_CNT_MASK (0x3f << UART_RX_FIFO_CNT_SHIFT)
+#define UART_TX_FIFO_TH_MASK (0x1f << UART_TX_FIFO_TH_SHIFT)
+#define UART_RX_FIFO_TH_MASK (0x1f << UART_RX_FIFO_TH_SHIFT)
+
+/* timer_reg.h */
+#define TIMER_CS_0_SHIFT   (2U)
+#define TIMER_CS_0_MASK    (0x3 << TIMER_CS_0_SHIFT)
+#define TIMER_CS_1_SHIFT   (5U)
+#define TIMER_CS_1_MASK    (0x3 << TIMER_CS_1_SHIFT)
+#define TIMER_CS_WDT_SHIFT (8U)
+#define TIMER_CS_WDT_MASK  (0x3 << TIMER_CS_WDT_SHIFT)
+
+/* kys_reg.h */
+#define KYS_KEYFIFO_IDX_OFFSET   (0x30)
+#define KYS_KEYFIFO_VALUE_OFFSET (0x34)
+#define KYS_FIFO_MODE_SHIFT (1U)
+#define KYS_FIFO_MODE_MASK  (0x1 << KYS_FIFO_MODE_SHIFT)
+#define KYS_COL_NUM_SHIFT   (20U)
+#define KYS_COL_NUM_MASK    (0x1f << KYS_COL_NUM_SHIFT)
+#define KYS_KS_DONE_INT_EN_SHIFT          (7U)
+#define KYS_KS_DONE_INT_EN_MASK           (0x1 << KYS_KS_DONE_INT_EN_SHIFT)
+#define KYS_KEYFIFO_FULL_INT_EN_SHIFT     (8U)
+#define KYS_KEYFIFO_FULL_INT_EN_MASK      (0x1 << KYS_KEYFIFO_FULL_INT_EN_SHIFT)
+#define KYS_KEYFIFO_HALF_INT_EN_SHIFT     (9U)
+#define KYS_KEYFIFO_HALF_INT_EN_MASK      (0x1 << KYS_KEYFIFO_HALF_INT_EN_SHIFT)
+#define KYS_KEYFIFO_QUARTER_INT_EN_SHIFT  (10U)
+#define KYS_KEYFIFO_QUARTER_INT_EN_MASK   (0x1 << KYS_KEYFIFO_QUARTER_INT_EN_SHIFT)
+#define KYS_KEYFIFO_NONEMPTY_INT_EN_SHIFT (11U)
+#define KYS_KEYFIFO_NONEMPTY_INT_EN_MASK  (0x1 << KYS_KEYFIFO_NONEMPTY_INT_EN_SHIFT)
+#define KYS_GHOST_INT_EN_SHIFT            (12U)
+#define KYS_GHOST_INT_EN_MASK             (0x1 << KYS_GHOST_INT_EN_SHIFT)
+#define KYS_KEYCODE_DONE_SHIFT     (7U)
+#define KYS_KEYCODE_DONE_MASK      (0x1 << KYS_KEYCODE_DONE_SHIFT)
+#define KYS_KEYFIFO_FULL_SHIFT     (8U)
+#define KYS_KEYFIFO_FULL_MASK      (0x1 << KYS_KEYFIFO_FULL_SHIFT)
+#define KYS_KEYFIFO_HALF_SHIFT     (9U)
+#define KYS_KEYFIFO_HALF_MSK       (0x1 << KYS_KEYFIFO_HALF_SHIFT)
+#define KYS_KEYFIFO_QUARTER_SHIFT  (10U)
+#define KYS_KEYFIFO_QUARTER_MSK    (0x1 << KYS_KEYFIFO_QUARTER_SHIFT)
+#define KYS_KEYFIFO_NONEMPTY_SHIFT (11U)
+#define KYS_KEYFIFO_NONEMPTY_MSK   (0x1 << KYS_KEYFIFO_NONEMPTY_SHIFT)
+#define KYS_GHOST_DET_SHIFT        (12U)
+#define KYS_GHOST_DET_MASK         (0x1 << KYS_GHOST_DET_SHIFT)
+#define KYS_KS_DONE_CLR_SHIFT      (7U)
+#define KYS_KS_DONE_CLR_MASK       (0x1 << KYS_KS_DONE_CLR_SHIFT)
+#define KYS_KEYFIFO_FULL_CLR_SHIFT (8U)
+#define KYS_KEYFIFO_FULL_CLR_MASK  (0x1 << KYS_KEYFIFO_FULL_CLR_SHIFT)
+#define KYS_GHOST_CLR_SHIFT        (12U)
+#define KYS_GHOST_CLR_MASK         (0x1 << KYS_GHOST_CLR_SHIFT)
+
+/* pwm_v1_reg.h */
+#define PWM_INT_CONFIG_OFFSET (0x0)
+
+/* rtc_reg.h */
+#define HBN_RTC_CTL_MASK             (0x3f << HBN_RTC_CTL_SHIFT)
+#define HBN_RTC_DLY_OPTION           (1 << 24U)
+
+/* ef_ctrl_reg.h */
+#define EF_CTRL_EF_CLK_SAHB_DATA_SEL       EF_CTRL_EF_CLK_SAHB_DATA_SEL
+#define EF_CTRL_EF_CLK_SAHB_DATA_SEL_POS   (7U)
+#define EF_CTRL_EF_CLK_SAHB_DATA_SEL_LEN   (1U)
+#define EF_CTRL_EF_CLK_SAHB_DATA_SEL_MASK  (((1U << EF_CTRL_EF_CLK_SAHB_DATA_SEL_LEN) - 1) << EF_CTRL_EF_CLK_SAHB_DATA_SEL_POS)
+#define EF_CTRL_EF_CLK_SAHB_DATA_SEL_UMASK (~(((1U << EF_CTRL_EF_CLK_SAHB_DATA_SEL_LEN) - 1) << EF_CTRL_EF_CLK_SAHB_DATA_SEL_POS))
+#define EF_CTRL_EF_CLK_SAHB_DATA_GATE       EF_CTRL_EF_CLK_SAHB_DATA_GATE
+#define EF_CTRL_EF_CLK_SAHB_DATA_GATE_POS   (17U)
+#define EF_CTRL_EF_CLK_SAHB_DATA_GATE_LEN   (1U)
+#define EF_CTRL_EF_CLK_SAHB_DATA_GATE_MASK  (((1U << EF_CTRL_EF_CLK_SAHB_DATA_GATE_LEN) - 1) << EF_CTRL_EF_CLK_SAHB_DATA_GATE_POS)
+#define EF_CTRL_EF_CLK_SAHB_DATA_GATE_UMASK (~(((1U << EF_CTRL_EF_CLK_SAHB_DATA_GATE_LEN) - 1) << EF_CTRL_EF_CLK_SAHB_DATA_GATE_POS))
+#define EF_CTRL_EF_IF_0_MANUAL_OFFSET        (0x80C)
+#define EF_CTRL_EF_IF_A                      EF_CTRL_EF_IF_A
+#define EF_CTRL_EF_IF_A_POS                  (0U)
+#define EF_CTRL_EF_IF_A_LEN                  (10U)
+#define EF_CTRL_EF_IF_A_MASK                 (((1U << EF_CTRL_EF_IF_A_LEN) - 1) << EF_CTRL_EF_IF_A_POS)
+#define EF_CTRL_EF_IF_A_UMASK                (~(((1U << EF_CTRL_EF_IF_A_LEN) - 1) << EF_CTRL_EF_IF_A_POS))
+#define EF_CTRL_EF_IF_PD                     EF_CTRL_EF_IF_PD
+#define EF_CTRL_EF_IF_PD_POS                 (10U)
+#define EF_CTRL_EF_IF_PD_LEN                 (1U)
+#define EF_CTRL_EF_IF_PD_MASK                (((1U << EF_CTRL_EF_IF_PD_LEN) - 1) << EF_CTRL_EF_IF_PD_POS)
+#define EF_CTRL_EF_IF_PD_UMASK               (~(((1U << EF_CTRL_EF_IF_PD_LEN) - 1) << EF_CTRL_EF_IF_PD_POS))
+#define EF_CTRL_EF_IF_PS                     EF_CTRL_EF_IF_PS
+#define EF_CTRL_EF_IF_PS_POS                 (11U)
+#define EF_CTRL_EF_IF_PS_LEN                 (1U)
+#define EF_CTRL_EF_IF_PS_MASK                (((1U << EF_CTRL_EF_IF_PS_LEN) - 1) << EF_CTRL_EF_IF_PS_POS)
+#define EF_CTRL_EF_IF_PS_UMASK               (~(((1U << EF_CTRL_EF_IF_PS_LEN) - 1) << EF_CTRL_EF_IF_PS_POS))
+#define EF_CTRL_EF_IF_STROBE                 EF_CTRL_EF_IF_STROBE
+#define EF_CTRL_EF_IF_STROBE_POS             (12U)
+#define EF_CTRL_EF_IF_STROBE_LEN             (1U)
+#define EF_CTRL_EF_IF_STROBE_MASK            (((1U << EF_CTRL_EF_IF_STROBE_LEN) - 1) << EF_CTRL_EF_IF_STROBE_POS)
+#define EF_CTRL_EF_IF_STROBE_UMASK           (~(((1U << EF_CTRL_EF_IF_STROBE_LEN) - 1) << EF_CTRL_EF_IF_STROBE_POS))
+#define EF_CTRL_EF_IF_PGENB                  EF_CTRL_EF_IF_PGENB
+#define EF_CTRL_EF_IF_PGENB_POS              (13U)
+#define EF_CTRL_EF_IF_PGENB_LEN              (1U)
+#define EF_CTRL_EF_IF_PGENB_MASK             (((1U << EF_CTRL_EF_IF_PGENB_LEN) - 1) << EF_CTRL_EF_IF_PGENB_POS)
+#define EF_CTRL_EF_IF_PGENB_UMASK            (~(((1U << EF_CTRL_EF_IF_PGENB_LEN) - 1) << EF_CTRL_EF_IF_PGENB_POS))
+#define EF_CTRL_EF_IF_LOAD                   EF_CTRL_EF_IF_LOAD
+#define EF_CTRL_EF_IF_LOAD_POS               (14U)
+#define EF_CTRL_EF_IF_LOAD_LEN               (1U)
+#define EF_CTRL_EF_IF_LOAD_MASK              (((1U << EF_CTRL_EF_IF_LOAD_LEN) - 1) << EF_CTRL_EF_IF_LOAD_POS)
+#define EF_CTRL_EF_IF_LOAD_UMASK             (~(((1U << EF_CTRL_EF_IF_LOAD_LEN) - 1) << EF_CTRL_EF_IF_LOAD_POS))
+#define EF_CTRL_EF_IF_CSB                    EF_CTRL_EF_IF_CSB
+#define EF_CTRL_EF_IF_CSB_POS                (15U)
+#define EF_CTRL_EF_IF_CSB_LEN                (1U)
+#define EF_CTRL_EF_IF_CSB_MASK               (((1U << EF_CTRL_EF_IF_CSB_LEN) - 1) << EF_CTRL_EF_IF_CSB_POS)
+#define EF_CTRL_EF_IF_CSB_UMASK              (~(((1U << EF_CTRL_EF_IF_CSB_LEN) - 1) << EF_CTRL_EF_IF_CSB_POS))
+#define EF_CTRL_EF_IF_0_Q                    EF_CTRL_EF_IF_0_Q
+#define EF_CTRL_EF_IF_0_Q_POS                (16U)
+#define EF_CTRL_EF_IF_0_Q_LEN                (8U)
+#define EF_CTRL_EF_IF_0_Q_MASK               (((1U << EF_CTRL_EF_IF_0_Q_LEN) - 1) << EF_CTRL_EF_IF_0_Q_POS)
+#define EF_CTRL_EF_IF_0_Q_UMASK              (~(((1U << EF_CTRL_EF_IF_0_Q_LEN) - 1) << EF_CTRL_EF_IF_0_Q_POS))
+#define EF_CTRL_EF_IF_PROT_CODE_MANUAL       EF_CTRL_EF_IF_PROT_CODE_MANUAL
+#define EF_CTRL_EF_IF_PROT_CODE_MANUAL_POS   (24U)
+#define EF_CTRL_EF_IF_PROT_CODE_MANUAL_LEN   (8U)
+#define EF_CTRL_EF_IF_PROT_CODE_MANUAL_MASK  (((1U << EF_CTRL_EF_IF_PROT_CODE_MANUAL_LEN) - 1) << EF_CTRL_EF_IF_PROT_CODE_MANUAL_POS)
+#define EF_CTRL_EF_IF_PROT_CODE_MANUAL_UMASK (~(((1U << EF_CTRL_EF_IF_PROT_CODE_MANUAL_LEN) - 1) << EF_CTRL_EF_IF_PROT_CODE_MANUAL_POS))
+
+/* dac_reg.h */
+#define GLB_GPDAC_CTRL_OFFSET  (0x308)
+#define GLB_GPDAC_ACTRL_OFFSET (0x30C)
+#define GLB_GPDAC_BCTRL_OFFSET (0x310)
+#define GLB_GPDAC_DATA_OFFSET  (0x314)
+#define GPIP_GPDAC_EN2      (1 << 1U)
+#define GPIP_DSM_MODE_SHIFT (4U)
+#define GPIP_DSM_MODE_MASK  (0x3 << GPIP_DSM_MODE_SHIFT)
+#define GLB_GPDAC_B_DATA_SHIFT (0U)
+#define GLB_GPDAC_B_DATA_MASK  (0x3ff << GLB_GPDAC_B_DATA_SHIFT)
+#define GLB_GPDAC_A_DATA_SHIFT (16U)
+#define GLB_GPDAC_A_DATA_MASK  (0x3ff << GLB_GPDAC_A_DATA_SHIFT)
+
+/* i2c_reg.h */
+#define I2C_CR_I2C_SLV_ADDR_SHIFT (8U)
+#define I2C_CR_I2C_SLV_ADDR_MASK  (0x7f << I2C_CR_I2C_SLV_ADDR_SHIFT)
+#define I2C_CR_I2C_PKT_LEN_SHIFT  (16U)
+#define I2C_CR_I2C_PKT_LEN_MASK   (0xff << I2C_CR_I2C_PKT_LEN_SHIFT)
+
+/* bflb_uart.h */
+#define UART_FIFO_MAX         32
