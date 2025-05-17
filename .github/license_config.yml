@@ -1,6 +1,8 @@
 license:
   main: apache-2.0
   category: Permissive
+  additional:
+    - bsd-new
 copyright:
   check: true
 exclude:
