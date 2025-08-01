@@ -1,0 +1,534 @@
+# Copyright (c) 2024 MASSDRIVER EI (massdriver.space)
+# SPDX-License-Identifier: Apache-2.0
+#
+# Sources:
+# - BL702_704_706_DS_en_2.6.pdf
+# - BL702_BL704_BL706_RM_en_1.2.pdf
+# - drivers/soc/bl702/std/include/bl702_gpio.h
+# - bl60x.yml
+# - BL602_BL604_DS_1.6_en.pdf (for facilitation via comparison)
+#
+# Pin codes:
+#
+# - BL702 32-pin
+# - BL704 40-pin
+# - BL706 48-pin
+
+model: bflb,bl
+
+family: bl70x
+
+map: BFLB_PINMUX
+
+series: [702, 704, 706]
+
+peripherals:
+    - [sdio, 1]
+    - [flash, 2, 0, 1, 2]
+    - [i2s, 3]
+    - [spi, 4]
+    - [i2c, 6]
+    - [uart, 7, 0, 1]
+    - [pwm, 8]
+    - [cam, 9]
+    - [analog, 10]
+    - [swgpio, 11]
+    - [gpio, 11]
+    - [jtag, 14]
+    - [fem, 16]
+    - [mii, 19] # ethernet
+    - [qdec, 20] # potentiometers
+#  - [kscan_in, 21]
+#  - [kscan_drive, 22]
+
+signals:
+    - [rts, 0]
+    - [cts, 1]
+    - [tx, 2]
+    - [rx, 3]
+
+pins:
+    gpio0:
+        series: [702, 704, 706]
+        periph:
+            - [i2s, [blck]]
+            - [spi, [mosi]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch0]]
+            - [cam, [pix_clk]]
+            - [jtag, [tms]]
+            - [fem, [gpio0]]
+            - [mii, [ref_clk]]
+            - [qdec0, [a]]
+
+    gpio1:
+        series: [702, 704, 706]
+        periph:
+            - [i2s, [fs]]
+            - [spi, [miso]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch1]]
+            - [cam, [frame_vld]]
+            - [jtag, [tdi]]
+            - [fem, [gpio1]]
+            - [mii, [txd0]]
+            - [qdec0, [b]]
+
+    gpio2:
+        series: [702, 704, 706]
+        periph:
+            - [i2s, [do]]
+            - [spi, [ss]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch2]]
+            - [cam, [line_vld]]
+            - [jtag, [tck]]
+            - [fem, [gpio2]]
+            - [mii, [txd1]]
+            - [qdec0, [led]]
+
+    gpio3:
+        series: [704, 706]
+        periph:
+            - [i2s, [di]]
+            - [spi, [sclk]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch3]]
+            - [cam, [pix_dat0]]
+            - [jtag, [tdo]]
+            - [fem, [gpio3]]
+            - [qdec1, [a]]
+
+    gpio4:
+        series: [706]
+        periph:
+            - [i2s, [bclk]]
+            - [spi, [mosi]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch4]]
+            - [cam, [pix_dat1]]
+            - [jtag, [tms]]
+            - [fem, [gpio4]]
+            - [qdec1, [b]]
+
+    gpio5:
+        series: [706]
+        periph:
+            - [i2s, [fs]]
+            - [spi, [miso]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch0]]
+            - [cam, [pix_dat2]]
+            - [jtag, [tdi]]
+            - [fem, [gpio0]]
+            - [qdec1, [led]]
+
+    gpio6:
+        series: [706]
+        periph:
+            - [i2s, [do]]
+            - [spi, [ss]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch1]]
+            - [cam, [pix_dat3]]
+            - [jtag, [tck]]
+            - [fem, [gpio1]]
+            - [qdec2, [a]]
+
+    gpio7:
+        series: [702, 704, 706]
+        analog:
+            - [adc, [ch6]]
+            - [usb, [dp]]
+        periph:
+            - [i2s, [di]]
+            - [spi, [sclk]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch2]]
+            - [jtag, [tdo]]
+            - [fem, [gpio2]]
+            - [mii, [rxd0]]
+            - [qdec2, [b]]
+
+    gpio8:
+        series: [702, 704, 706]
+        analog:
+            - [adc, [ch0]]
+            - [usb, [dm]]
+        periph:
+            - [i2s, [bclk]]
+            - [spi, [mosi]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch3]]
+            - [jtag, [tms]]
+            - [fem, [gpio3]]
+            - [mii, [rxd1]]
+            - [qdec2, [led]]
+
+    gpio9:
+        series: [702, 704, 706]
+        analog:
+            - [adc, [ch7]]
+        periph:
+            - [i2s, [fs]]
+            - [spi, [miso]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch4]]
+            - [jtag, [tdi]]
+            - [fem, [gpio4]]
+            - [qdec0, [a]]
+
+    gpio10:
+        series: [704, 706]
+        analog:
+            - [mic, [bias]]
+        periph:
+            - [i2s, [do]]
+            - [spi, [ss]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch0]]
+            - [jtag, [tck]]
+            - [fem, [gpio0]]
+            - [qdec0, [b]]
+
+    gpio11:
+        series: [704, 706]
+        analog:
+            - [adc, [ch3]]
+            - [dac, [cha]]
+        periph:
+            - [i2s, [di]]
+            - [spi, [sclk]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch1]]
+            - [jtag, [tdo]]
+            - [fem, [gpio1]]
+            - [qdec0, [led]]
+
+    gpio12:
+        series: [706]
+        analog:
+            - [adc, [ch4]]
+        periph:
+            - [i2s, [bclk]]
+            - [spi, [mosi]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch2]]
+            - [cam, [pix_dat4]]
+            - [jtag, [tms]]
+            - [fem, [gpio2]]
+            - [qdec1, [a]]
+
+    gpio14:
+        series: [702, 704, 706]
+        analog:
+            - [adc, [ch5]]
+            - [atest, [out0]]
+        periph:
+            - [i2s, [do]]
+            - [spi, [ss]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch4]]
+            - [jtag, [tck]]
+            - [fem, [gpio4]]
+            - [qdec1, [led]]
+
+    gpio15:
+        series: [702, 704, 706]
+        analog:
+            - [adc, [ch1]]
+            - [atest, [out1]]
+        periph:
+            - [i2s, [di]]
+            - [spi, [sclk]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch0]]
+            - [jtag, [tdo]]
+            - [fem, [gpio0]]
+            - [qdec2, [a]]
+
+    gpio16:
+        series: [706]
+        periph:
+            - [i2s, [blck]]
+            - [spi, [mosi]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch1]]
+            - [jtag, [tms]]
+            - [fem, [gpio1]]
+            - [qdec2, [b]]
+
+    gpio17:
+        series: [702, 704, 706]
+        analog:
+            - [adc, [ch2]]
+            - [dac, [chb]]
+        periph:
+            - [flash1, [d0]]
+            - [flash2, [cs2]]
+            - [i2s, [fs]]
+            - [spi, [miso]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch2]]
+            - [jtag, [tdi]]
+            - [fem, [gpio2]]
+            - [qdec2, [led]]
+
+    gpio18:
+        series: [704, 706]
+        analog:
+            - [adc, [ch8]]
+        periph:
+            - [flash1, [d1]]
+            - [i2s, [do]]
+            - [spi, [ss]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch3]]
+            - [cam, [pix_dat5]]
+            - [jtag, [tck]]
+            - [fem, [gpio3]]
+            - [mii, [mdc]]
+            - [qdec0, [a]]
+
+    gpio19:
+        series: [704, 706]
+        analog:
+            - [adc, [ch9]]
+        periph:
+            - [flash1, [cs]]
+            - [i2s, [di]]
+            - [spi, [sclk]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch4]]
+            - [cam, [pix_dat6]]
+            - [jtag, [tdo]]
+            - [fem, [gpio4]]
+            - [mii, [mdio]]
+            - [qdec0, [b]]
+
+    gpio20:
+        series: [704, 706]
+        analog:
+            - [adc, [ch10]]
+        periph:
+            - [flash1, [d3]]
+            - [i2s, [bclk]]
+            - [spi, [mosi]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch0]]
+            - [cam, [pix_dat7]]
+            - [jtag, [tms]]
+            - [fem, [gpio0]]
+            - [mii, [rxerr]]
+            - [qdec0, [led]]
+
+    gpio21:
+        series: [704, 706]
+        analog:
+            - [adc, [ch11]]
+        periph:
+            - [flash1, [clk]]
+            - [i2s, [fs]]
+            - [spi, [miso]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch1]]
+            - [jtag, [tdi]]
+            - [fem, [gpio1]]
+            - [mii, [tx_en]]
+            - [qdec1, [led]]
+
+    gpio22:
+        series: [704, 706]
+        analog:
+            - [ir, [tx]]
+        periph:
+            - [flash1, [d2]]
+            - [i2s, [do]]
+            - [spi, [ss]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch2]]
+            - [jtag, [tck]]
+            - [fem, [gpio2]]
+            - [mii, [rx_dv]]
+            - [qdec1, [b]]
+
+    gpio23:
+        series: [702, 704, 706]
+        analog:
+            - [ir, [tx]]
+        periph:
+            - [flash2, [d2]]
+            - [i2s, [di]]
+            - [spi, [sclk]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch3]]
+            - [cam, [pix_dat4]]
+            - [jtag, [tdo]]
+            - [fem, [gpio3]]
+            - [qdec1, [led]]
+
+    gpio24:
+        series: [702, 704, 706]
+        periph:
+            - [flash2, [d1]]
+            - [i2s, [blck]]
+            - [spi, [mosi]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch4]]
+            - [cam, [pix_dat5]]
+            - [jtag, [tms]]
+            - [fem, [gpio4]]
+            - [mii, [mdc]]
+            - [qdec2, [a]]
+
+    gpio25:
+        series: [702, 704, 706]
+        periph:
+            - [flash2, [cs]]
+            - [i2s, [fs]]
+            - [spi, [miso]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch0]]
+            - [cam, [pix_dat6]]
+            - [jtag, [tdi]]
+            - [fem, [gpio0]]
+            - [mii, [mdio]]
+            - [qdec2, [b]]
+
+    gpio26:
+        series: [702, 704, 706]
+        periph:
+            - [flash2, [d3]]
+            - [i2s, [do]]
+            - [spi, [ss]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch1]]
+            - [cam, [pix_dat7]]
+            - [jtag, [tck]]
+            - [fem, [gpio1]]
+            - [mii, [rxerr]]
+            - [qdec2, [led]]
+
+    gpio27:
+        series: [702, 704, 706]
+        periph:
+            - [flash2, [clk]]
+            - [i2s, [di]]
+            - [spi, [sclk]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch2]]
+            - [jtag, [tdo]]
+            - [fem, [gpio2]]
+            - [mii, [tx_en]]
+            - [qdec0, [a]]
+
+    gpio28:
+        series: [702, 704, 706]
+        periph:
+            - [flash2, [d0]]
+            - [i2s, [bclk]]
+            - [spi, [mosi]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch3]]
+            - [cam, [pix_dat4]]
+            - [jtag, [tms]]
+            - [fem, [gpio3]]
+            - [mii, [rx_dv]]
+            - [qdec0, [b]]
+
+    gpio29:
+        series: [706]
+        periph:
+            - [i2s, [fs]]
+            - [spi, [miso]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch4]]
+            - [cam, [pix_dat5]]
+            - [jtag, [tdi]]
+            - [fem, [gpio4]]
+            - [qdec0, [led]]
+
+    gpio30:
+        series: [706]
+        periph:
+            - [i2s, [do]]
+            - [spi, [ss]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch0]]
+            - [jtag, [tck]]
+            - [fem, [gpio0]]
+            - [qdec1, [a]]
+
+    gpio31:
+        series: [706]
+        periph:
+            - [i2s, [di]]
+            - [spi, [sclk]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [uart1, [rts, cts, tx, rx]]
+            - [pwm, [ch2]]
+            - [cam, [pix_dat7]]
+            - [jtag, [tdo]]
+            - [fem, [gpio1]]
+            - [qdec1, [b]]
