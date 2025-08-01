@@ -1,0 +1,203 @@
+/*
+ * Contains definitions removed from 'common' files with ifdefs
+ * Copyright (c) 2025 Bouffalo lab
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+#pragma once
+
+/* adc_reg.h */
+#define GLB_GPDAC_CTRL_OFFSET  (0x120) /* gpdac_ctrl */
+#define GLB_GPDAC_ACTRL_OFFSET (0x124) /* gpdac_actrl */
+#define GLB_GPDAC_BCTRL_OFFSET (0x128) /* gpdac_bctrl */
+#define GLB_GPDAC_DATA_OFFSET  (0x12C) /* gpdac_data */
+#define GPIP_GPADC_PIR_TRAIN_OFFSET (0x20) /* gpadc_pir_train */
+#define AON_GPADC_RCAL_EN (1 << 17U)
+#define AON_GPADC_SEN_SEL_MASK (0x7 << AON_GPADC_SEN_SEL_SHIFT)
+#define AON_GPADC_SEN_TEST_EN  (1 << 31U)
+#define AON_GPADC_PWM_TRG_EN        (1 << 11U)
+#define AON_GPADC_CLK_ANA_DLY_SHIFT (12U)
+#define AON_GPADC_CLK_ANA_DLY_MASK  (0xf << AON_GPADC_CLK_ANA_DLY_SHIFT)
+#define AON_GPADC_CLK_ANA_DLY_EN    (1 << 16U)
+
+/* dac_reg.h */
+#define GPIP_GPDAC_DMA_INV_MSB (1 << 1U)
+#define GLB_GPDAC_B_DATA_SHIFT (0U)
+#define GLB_GPDAC_B_DATA_MASK  (0x1fff << GLB_GPDAC_B_DATA_SHIFT)
+#define GLB_GPDAC_A_DATA_SHIFT (16U)
+#define GLB_GPDAC_A_DATA_MASK  (0x1fff << GLB_GPDAC_A_DATA_SHIFT)
+
+/* dma_reg.h */
+#define DMA_SBSIZE_MASK        (0x3 << DMA_SBSIZE_SHIFT)
+#define DMA_DST_MIN_MODE       (1 << 14U)
+#define DMA_DBSIZE_MASK        (0x3 << DMA_DBSIZE_SHIFT)
+#define DMA_DST_ADD_MODE       (1 << 17U)
+#define DMA_SWIDTH_MASK        (0x3 << DMA_SWIDTH_SHIFT)
+#define DMA_DWIDTH_MASK        (0x3 << DMA_DWIDTH_SHIFT)
+#define DMA_FIX_CNT_SHIFT      (23U)
+#define DMA_FIX_CNT_MASK       (0x7 << DMA_FIX_CNT_SHIFT)
+
+/* spi_reg.h */
+#define SPI_BACKUP_IO_EN_OFFSET (0xFC) /* backup_io_en */
+#define SPI_TX_FIFO_CNT_MASK (0x3f << SPI_TX_FIFO_CNT_SHIFT)
+#define SPI_RX_FIFO_CNT_MASK (0x3f << SPI_RX_FIFO_CNT_SHIFT)
+#define SPI_TX_FIFO_TH_MASK (0x1f << SPI_TX_FIFO_TH_SHIFT)
+#define SPI_RX_FIFO_TH_MASK (0x1f << SPI_RX_FIFO_TH_SHIFT)
+
+/* uart_reg.h */
+#define UART_SW_MODE_OFFSET (0x1C) /* uart_sw_mode */
+#define UART_CR_UTX_LIN_EN (1 << 3U)
+#define UART_CR_UTX_IR_EN  (1 << 6U)
+#define UART_CR_UTX_IR_INV (1 << 7U)
+#define UART_CR_UTX_BIT_CNT_P_SHIFT (11U)
+#define UART_CR_UTX_BIT_CNT_B_SHIFT (13U)
+#define UART_CR_UTX_BIT_CNT_B_MASK  (0x7 << UART_CR_UTX_BIT_CNT_B_SHIFT)
+#define UART_CR_URX_ABR_EN (1 << 1U)
+#define UART_CR_URX_LIN_EN (1 << 3U)
+#define UART_CR_URX_IR_EN  (1 << 6U)
+#define UART_CR_URX_IR_INV (1 << 7U)
+/* 0x10 : utx_ir_position */
+#define UART_CR_UTX_IR_POS_S_SHIFT (0U)
+#define UART_CR_UTX_IR_POS_S_MASK  (0xffff << UART_CR_UTX_IR_POS_S_SHIFT)
+#define UART_CR_UTX_IR_POS_P_SHIFT (16U)
+#define UART_CR_UTX_IR_POS_P_MASK  (0xffff << UART_CR_UTX_IR_POS_P_SHIFT)
+
+/* 0x14 : urx_ir_position */
+#define UART_CR_URX_IR_POS_S_SHIFT (0U)
+#define UART_CR_URX_IR_POS_S_MASK  (0xffff << UART_CR_URX_IR_POS_S_SHIFT)
+/* 0x1C : uart_sw_mode */
+#define UART_CR_UTX_TXD_SW_MODE (1 << 0U)
+#define UART_CR_UTX_TXD_SW_VAL  (1 << 1U)
+#define UART_CR_URX_RTS_SW_MODE (1 << 2U)
+#define UART_CR_URX_RTS_SW_VAL  (1 << 3U)
+#define UART_URX_LSE_INT (1 << 8U)
+#define UART_URX_BCR_INT (1 << 9U)
+#define UART_URX_ADS_INT (1 << 10U)
+#define UART_URX_AD5_INT (1 << 11U)
+#define UART_CR_URX_LSE_MASK (1 << 8U)
+#define UART_CR_URX_BCR_MASK (1 << 9U)
+#define UART_CR_URX_ADS_MASK (1 << 10U)
+#define UART_CR_URX_AD5_MASK (1 << 11U)
+#define UART_CR_URX_LSE_CLR (1 << 8U)
+#define UART_CR_URX_BCR_CLR (1 << 9U)
+#define UART_CR_URX_ADS_CLR (1 << 10U)
+#define UART_CR_URX_AD5_CLR (1 << 11U)
+#define UART_CR_URX_LSE_EN (1 << 8U)
+#define UART_CR_URX_BCR_EN (1 << 9U)
+#define UART_CR_URX_ADS_EN (1 << 10U)
+#define UART_CR_URX_AD5_EN (1 << 11U)
+#define UART_STS_URX_ABR_PRD_0X55_MASK (0xffff << UART_STS_URX_ABR_PRD_0X55_SHIFT)
+/* 0x38 : urx_abr_prd_b01 */
+#define UART_STS_URX_ABR_PRD_BIT0_SHIFT (0U)
+#define UART_STS_URX_ABR_PRD_BIT0_MASK (0xffff << UART_STS_URX_ABR_PRD_BIT0_SHIFT)
+#define UART_STS_URX_ABR_PRD_BIT1_SHIFT (16U)
+#define UART_STS_URX_ABR_PRD_BIT1_MASK (0xffff << UART_STS_URX_ABR_PRD_BIT1_SHIFT)
+/* 0x3C : urx_abr_prd_b23 */
+#define UART_STS_URX_ABR_PRD_BIT2_SHIFT (0U)
+#define UART_STS_URX_ABR_PRD_BIT2_MASK (0xffff << UART_STS_URX_ABR_PRD_BIT2_SHIFT)
+#define UART_STS_URX_ABR_PRD_BIT3_SHIFT (16U)
+#define UART_STS_URX_ABR_PRD_BIT3_MASK (0xffff << UART_STS_URX_ABR_PRD_BIT3_SHIFT)
+
+/* 0x40 : urx_abr_prd_b45 */
+#define UART_STS_URX_ABR_PRD_BIT4_SHIFT (0U)
+#define UART_STS_URX_ABR_PRD_BIT4_MASK (0xffff << UART_STS_URX_ABR_PRD_BIT4_SHIFT)
+#define UART_STS_URX_ABR_PRD_BIT5_SHIFT (16U)
+#define UART_STS_URX_ABR_PRD_BIT5_MASK (0xffff << UART_STS_URX_ABR_PRD_BIT5_SHIFT)
+
+/* 0x44 : urx_abr_prd_b67 */
+#define UART_STS_URX_ABR_PRD_BIT6_SHIFT (0U)
+#define UART_STS_URX_ABR_PRD_BIT6_MASK (0xffff << UART_STS_URX_ABR_PRD_BIT6_SHIFT)
+#define UART_STS_URX_ABR_PRD_BIT7_SHIFT (16U)
+#define UART_STS_URX_ABR_PRD_BIT7_MASK (0xffff << UART_STS_URX_ABR_PRD_BIT7_SHIFT)
+
+/* 0x48 : urx_abr_pw_tol */
+#define UART_CR_URX_ABR_PW_TOL_SHIFT (0U)
+#define UART_CR_URX_ABR_PW_TOL_MASK  (0xff << UART_CR_URX_ABR_PW_TOL_SHIFT)
+
+/* 0x50 : urx_bcr_int_cfg */
+#define UART_CR_URX_BCR_VALUE_SHIFT  (0U)
+#define UART_CR_URX_BCR_VALUE_MASK   (0xffff << UART_CR_URX_BCR_VALUE_SHIFT)
+#define UART_STS_URX_BCR_COUNT_SHIFT (16U)
+#define UART_STS_URX_BCR_COUNT_MASK  (0xffff << UART_STS_URX_BCR_COUNT_SHIFT)
+
+/* 0x54 : utx_rs485_cfg */
+#define UART_CR_UTX_RS485_EN  (1 << 0U)
+#define UART_CR_UTX_RS485_POL (1 << 1U)
+
+#define UART_TX_FIFO_CNT_MASK (0x3f << UART_TX_FIFO_CNT_SHIFT)
+#define UART_RX_FIFO_CNT_MASK (0x3f << UART_RX_FIFO_CNT_SHIFT)
+#define UART_TX_FIFO_TH_MASK (0x1f << UART_TX_FIFO_TH_SHIFT)
+#define UART_RX_FIFO_TH_MASK (0x1f << UART_RX_FIFO_TH_SHIFT)
+
+/* timer_reg.h */
+#define TIMER_CS_0_SHIFT   (0U)
+#define TIMER_CS_0_MASK    (0xf << TIMER_CS_0_SHIFT)
+#define TIMER_CS_1_SHIFT   (4U)
+#define TIMER_CS_1_MASK    (0xf << TIMER_CS_1_SHIFT)
+#define TIMER_CS_WDT_SHIFT (8U)
+#define TIMER_CS_WDT_MASK  (0xf << TIMER_CS_WDT_SHIFT)
+#define TIMER_ID_SHIFT     (24U)
+#define TIMER_ID_MASK      (0xff << TIMER_ID_SHIFT)
+
+/* kys_reg.h */
+#define KYS_KEYFIFO_IDX_OFFSET   (0x30)
+#define KYS_KEYFIFO_VALUE_OFFSET (0x34)
+#define KYS_FIFO_MODE_SHIFT (1U)
+#define KYS_FIFO_MODE_MASK  (0x1 << KYS_FIFO_MODE_SHIFT)
+#define KYS_COL_NUM_SHIFT   (20U)
+#define KYS_COL_NUM_MASK    (0x1f << KYS_COL_NUM_SHIFT)
+#define KYS_KS_DONE_INT_EN_SHIFT          (7U)
+#define KYS_KS_DONE_INT_EN_MASK           (0x1 << KYS_KS_DONE_INT_EN_SHIFT)
+#define KYS_KEYFIFO_FULL_INT_EN_SHIFT     (8U)
+#define KYS_KEYFIFO_FULL_INT_EN_MASK      (0x1 << KYS_KEYFIFO_FULL_INT_EN_SHIFT)
+#define KYS_KEYFIFO_HALF_INT_EN_SHIFT     (9U)
+#define KYS_KEYFIFO_HALF_INT_EN_MASK      (0x1 << KYS_KEYFIFO_HALF_INT_EN_SHIFT)
+#define KYS_KEYFIFO_QUARTER_INT_EN_SHIFT  (10U)
+#define KYS_KEYFIFO_QUARTER_INT_EN_MASK   (0x1 << KYS_KEYFIFO_QUARTER_INT_EN_SHIFT)
+#define KYS_KEYFIFO_NONEMPTY_INT_EN_SHIFT (11U)
+#define KYS_KEYFIFO_NONEMPTY_INT_EN_MASK  (0x1 << KYS_KEYFIFO_NONEMPTY_INT_EN_SHIFT)
+#define KYS_GHOST_INT_EN_SHIFT            (12U)
+#define KYS_GHOST_INT_EN_MASK             (0x1 << KYS_GHOST_INT_EN_SHIFT)
+#define KYS_KEYCODE_DONE_SHIFT     (7U)
+#define KYS_KEYCODE_DONE_MASK      (0x1 << KYS_KEYCODE_DONE_SHIFT)
+#define KYS_KEYFIFO_FULL_SHIFT     (8U)
+#define KYS_KEYFIFO_FULL_MASK      (0x1 << KYS_KEYFIFO_FULL_SHIFT)
+#define KYS_KEYFIFO_HALF_SHIFT     (9U)
+#define KYS_KEYFIFO_HALF_MSK       (0x1 << KYS_KEYFIFO_HALF_SHIFT)
+#define KYS_KEYFIFO_QUARTER_SHIFT  (10U)
+#define KYS_KEYFIFO_QUARTER_MSK    (0x1 << KYS_KEYFIFO_QUARTER_SHIFT)
+#define KYS_KEYFIFO_NONEMPTY_SHIFT (11U)
+#define KYS_KEYFIFO_NONEMPTY_MSK   (0x1 << KYS_KEYFIFO_NONEMPTY_SHIFT)
+#define KYS_GHOST_DET_SHIFT        (12U)
+#define KYS_GHOST_DET_MASK         (0x1 << KYS_GHOST_DET_SHIFT)
+#define KYS_KS_DONE_CLR_SHIFT      (7U)
+#define KYS_KS_DONE_CLR_MASK       (0x1 << KYS_KS_DONE_CLR_SHIFT)
+#define KYS_KEYFIFO_FULL_CLR_SHIFT (8U)
+#define KYS_KEYFIFO_FULL_CLR_MASK  (0x1 << KYS_KEYFIFO_FULL_CLR_SHIFT)
+#define KYS_GHOST_CLR_SHIFT        (12U)
+#define KYS_GHOST_CLR_MASK         (0x1 << KYS_GHOST_CLR_SHIFT)
+
+/* pwm_v1_reg.h */
+#define PWM_INT_CONFIG_OFFSET (0x0)
+
+/* rtc_reg.h */
+#define HBN_RTC_CTL_MASK             (0x7 << HBN_RTC_CTL_SHIFT)
+#define HBN_RTC_DLY_OPTION           (1 << 4U)
+
+/* ef_ctrl_reg.h */
+#define EF_CTRL_EF_PCLK_FORCE_ON       EF_CTRL_EF_PCLK_FORCE_ON
+#define EF_CTRL_EF_PCLK_FORCE_ON_POS   (17U)
+#define EF_CTRL_EF_PCLK_FORCE_ON_LEN   (1U)
+#define EF_CTRL_EF_PCLK_FORCE_ON_MASK  (((1U << EF_CTRL_EF_PCLK_FORCE_ON_LEN) - 1) << EF_CTRL_EF_PCLK_FORCE_ON_POS)
+#define EF_CTRL_EF_PCLK_FORCE_ON_UMASK (~(((1U << EF_CTRL_EF_PCLK_FORCE_ON_LEN) - 1) << EF_CTRL_EF_PCLK_FORCE_ON_POS))
+
+/* i2c_reg.h */
+#define I2C_CR_I2C_10B_ADDR_EN    (1 << 7U)
+#define I2C_CR_I2C_SLV_ADDR_SHIFT (8U)
+#define I2C_CR_I2C_SLV_ADDR_MASK  (0x3ff << I2C_CR_I2C_SLV_ADDR_SHIFT)
+#define I2C_CR_I2C_PKT_LEN_SHIFT  (20U)
+#define I2C_CR_I2C_PKT_LEN_MASK   (0xff << I2C_CR_I2C_PKT_LEN_SHIFT)
+
+/* bflb_uart.h */
+#define UART_FIFO_MAX         32
