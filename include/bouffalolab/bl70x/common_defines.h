@@ -106,7 +106,6 @@
 
 /* rtc_reg.h */
 #define HBN_RTC_CTL_MASK             (0x3f << HBN_RTC_CTL_SHIFT)
-#define HBN_RTC_DLY_OPTION           (1 << 24U)
 
 /* ef_ctrl_reg.h */
 #define EF_CTRL_EF_CLK_SAHB_DATA_SEL       EF_CTRL_EF_CLK_SAHB_DATA_SEL
