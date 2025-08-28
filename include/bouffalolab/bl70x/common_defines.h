@@ -186,3 +186,13 @@
 
 /* bflb_uart.h */
 #define UART_FIFO_MAX         32
+
+/* dma_reg.h */
+#define DMA_SBSIZE_MASK        (0x3 << DMA_SBSIZE_SHIFT)
+#define DMA_DST_MIN_MODE       (1 << 14U)
+#define DMA_DBSIZE_MASK        (0x3 << DMA_DBSIZE_SHIFT)
+#define DMA_DST_ADD_MODE       (1 << 17U)
+#define DMA_SWIDTH_MASK        (0x3 << DMA_SWIDTH_SHIFT)
+#define DMA_DWIDTH_MASK        (0x3 << DMA_DWIDTH_SHIFT)
+#define DMA_FIX_CNT_SHIFT      (23U)
+#define DMA_FIX_CNT_MASK       (0x7 << DMA_FIX_CNT_SHIFT)
