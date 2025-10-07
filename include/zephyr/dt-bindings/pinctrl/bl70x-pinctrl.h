@@ -19,12 +19,19 @@
 #define BFLB_PINMUX_FUN_INST_pwm                        0x0008
 #define BFLB_PINMUX_FUN_INST_cam                        0x0009
 #define BFLB_PINMUX_FUN_INST_analog                     0x000a
+#define BFLB_PINMUX_FUN_INST_usb                        0x000a
+#define BFLB_PINMUX_FUN_INST_ir                         0x000a
+#define BFLB_PINMUX_FUN_INST_atest                      0x000a
+#define BFLB_PINMUX_FUN_INST_adc                        0x000a
+#define BFLB_PINMUX_FUN_INST_dac                        0x000a
 #define BFLB_PINMUX_FUN_INST_swgpio                     0x000b
 #define BFLB_PINMUX_FUN_INST_gpio                       0x000b
 #define BFLB_PINMUX_FUN_INST_jtag                       0x000e
 #define BFLB_PINMUX_FUN_INST_fem                        0x0010
 #define BFLB_PINMUX_FUN_INST_mii                        0x0013
-#define BFLB_PINMUX_FUN_INST_qdec                       0x0014
+#define BFLB_PINMUX_FUN_INST_qdec0                      0x0014
+#define BFLB_PINMUX_FUN_INST_qdec1                      0x0114
+#define BFLB_PINMUX_FUN_INST_qdec2                      0x0214
 
 #define BFLB_PINMUX_SIGNAL_a                            0x00
 #define BFLB_PINMUX_SIGNAL_blck                         0x00

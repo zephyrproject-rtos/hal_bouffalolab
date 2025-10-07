@@ -32,12 +32,17 @@ peripherals:
     - [pwm, 8]
     - [cam, 9]
     - [analog, 10]
+    - [usb, 10]
+    - [ir, 10]
+    - [atest, 10]
+    - [adc, 10]
+    - [dac, 10]
     - [swgpio, 11]
     - [gpio, 11]
     - [jtag, 14]
     - [fem, 16]
     - [mii, 19] # ethernet
-    - [qdec, 20] # potentiometers
+    - [qdec, 20, 0, 1, 2] # potentiometers
 #  - [kscan_in, 21]
 #  - [kscan_drive, 22]
 
