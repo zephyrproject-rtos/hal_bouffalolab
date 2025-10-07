@@ -16,6 +16,10 @@
 #define BFLB_PINMUX_FUN_INST_pwm                        0x0008
 #define BFLB_PINMUX_FUN_INST_fem                        0x0009
 #define BFLB_PINMUX_FUN_INST_analog                     0x000a
+#define BFLB_PINMUX_FUN_INST_ir                         0x000a
+#define BFLB_PINMUX_FUN_INST_dac                        0x000a
+#define BFLB_PINMUX_FUN_INST_adc                        0x000a
+#define BFLB_PINMUX_FUN_INST_atest                      0x000a
 #define BFLB_PINMUX_FUN_INST_swgpio                     0x000b
 #define BFLB_PINMUX_FUN_INST_gpio                       0x000b
 #define BFLB_PINMUX_FUN_INST_jtag                       0x000e
