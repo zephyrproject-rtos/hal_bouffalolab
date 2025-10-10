@@ -183,7 +183,6 @@
 
 /* rtc_reg.h */
 #define HBN_RTC_CTL_MASK             (0x7 << HBN_RTC_CTL_SHIFT)
-#define HBN_RTC_DLY_OPTION           (1 << 4U)
 
 /* ef_ctrl_reg.h */
 #define EF_CTRL_EF_PCLK_FORCE_ON       EF_CTRL_EF_PCLK_FORCE_ON
