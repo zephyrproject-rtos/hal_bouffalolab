@@ -318,6 +318,14 @@
 #define GPIO4_PWM0_CH0P \
 	BFLB_PINMUX(4, pwm0, ch0p, periph)
 
+/* gpio4_dbi_b_wr */
+#define GPIO4_DBI_B_WR \
+	BFLB_PINMUX(4, dbi_b, wr, periph)
+
+/* gpio4_dbi_c_scl */
+#define GPIO4_DBI_C_SCL \
+	BFLB_PINMUX(4, dbi_c, scl, periph)
+
 /* gpio4_qspi_scl */
 #define GPIO4_QSPI_SCL \
 	BFLB_PINMUX(4, qspi, scl, periph)
@@ -381,6 +389,14 @@
 /* gpio5_pwm0_ch1p */
 #define GPIO5_PWM0_CH1P \
 	BFLB_PINMUX(5, pwm0, ch1p, periph)
+
+/* gpio5_dbi_b_cs */
+#define GPIO5_DBI_B_CS \
+	BFLB_PINMUX(5, dbi_b, cs, periph)
+
+/* gpio5_dbi_c_cs */
+#define GPIO5_DBI_C_CS \
+	BFLB_PINMUX(5, dbi_c, cs, periph)
 
 /* gpio5_qspi_cs */
 #define GPIO5_QSPI_CS \
@@ -446,6 +462,14 @@
 #define GPIO6_PWM0_CH2P \
 	BFLB_PINMUX(6, pwm0, ch2p, periph)
 
+/* gpio6_dbi_b_rd */
+#define GPIO6_DBI_B_RD \
+	BFLB_PINMUX(6, dbi_b, rd, periph)
+
+/* gpio6_dbi_c_sda */
+#define GPIO6_DBI_C_SDA \
+	BFLB_PINMUX(6, dbi_c, sda, periph)
+
 /* gpio6_qspi_sda0 */
 #define GPIO6_QSPI_SDA0 \
 	BFLB_PINMUX(6, qspi, sda0, periph)
@@ -509,6 +533,14 @@
 /* gpio7_pwm0_ch3p */
 #define GPIO7_PWM0_CH3P \
 	BFLB_PINMUX(7, pwm0, ch3p, periph)
+
+/* gpio7_dbi_b_dc */
+#define GPIO7_DBI_B_DC \
+	BFLB_PINMUX(7, dbi_b, dc, periph)
+
+/* gpio7_dbi_c_dc */
+#define GPIO7_DBI_C_DC \
+	BFLB_PINMUX(7, dbi_c, dc, periph)
 
 /* gpio7_qspi_sda1 */
 #define GPIO7_QSPI_SDA1 \
@@ -574,6 +606,14 @@
 #define GPIO8_PWM0_CH0P \
 	BFLB_PINMUX(8, pwm0, ch0p, periph)
 
+/* gpio8_dbi_b_db0 */
+#define GPIO8_DBI_B_DB0 \
+	BFLB_PINMUX(8, dbi_b, db0, periph)
+
+/* gpio8_dbi_c_scl */
+#define GPIO8_DBI_C_SCL \
+	BFLB_PINMUX(8, dbi_c, scl, periph)
+
 /* gpio8_qspi_sda2 */
 #define GPIO8_QSPI_SDA2 \
 	BFLB_PINMUX(8, qspi, sda2, periph)
@@ -637,6 +677,14 @@
 /* gpio9_pwm0_ch1p */
 #define GPIO9_PWM0_CH1P \
 	BFLB_PINMUX(9, pwm0, ch1p, periph)
+
+/* gpio9_dbi_b_db1 */
+#define GPIO9_DBI_B_DB1 \
+	BFLB_PINMUX(9, dbi_b, db1, periph)
+
+/* gpio9_dbi_c_cs */
+#define GPIO9_DBI_C_CS \
+	BFLB_PINMUX(9, dbi_c, cs, periph)
 
 /* gpio9_qspi_sda3 */
 #define GPIO9_QSPI_SDA3 \
@@ -713,6 +761,14 @@
 /* gpio10_pwm0_ch2p */
 #define GPIO10_PWM0_CH2P \
 	BFLB_PINMUX(10, pwm0, ch2p, periph)
+
+/* gpio10_dbi_b_db2 */
+#define GPIO10_DBI_B_DB2 \
+	BFLB_PINMUX(10, dbi_b, db2, periph)
+
+/* gpio10_dbi_c_sda */
+#define GPIO10_DBI_C_SDA \
+	BFLB_PINMUX(10, dbi_c, sda, periph)
 
 /* gpio10_qspi_scl */
 #define GPIO10_QSPI_SCL \
@@ -794,6 +850,14 @@
 #define GPIO11_PWM0_CH3P \
 	BFLB_PINMUX(11, pwm0, ch3p, periph)
 
+/* gpio11_dbi_b_db3 */
+#define GPIO11_DBI_B_DB3 \
+	BFLB_PINMUX(11, dbi_b, db3, periph)
+
+/* gpio11_dbi_c_dc */
+#define GPIO11_DBI_C_DC \
+	BFLB_PINMUX(11, dbi_c, dc, periph)
+
 /* gpio11_qspi_cs */
 #define GPIO11_QSPI_CS \
 	BFLB_PINMUX(11, qspi, cs, periph)
@@ -869,6 +933,14 @@
 /* gpio12_pwm0_ch0p */
 #define GPIO12_PWM0_CH0P \
 	BFLB_PINMUX(12, pwm0, ch0p, periph)
+
+/* gpio12_dbi_b_db4 */
+#define GPIO12_DBI_B_DB4 \
+	BFLB_PINMUX(12, dbi_b, db4, periph)
+
+/* gpio12_dbi_c_scl */
+#define GPIO12_DBI_C_SCL \
+	BFLB_PINMUX(12, dbi_c, scl, periph)
 
 /* gpio12_qspi_sda0 */
 #define GPIO12_QSPI_SDA0 \
@@ -950,6 +1022,14 @@
 #define GPIO13_PWM0_CH1P \
 	BFLB_PINMUX(13, pwm0, ch1p, periph)
 
+/* gpio13_dbi_b_db5 */
+#define GPIO13_DBI_B_DB5 \
+	BFLB_PINMUX(13, dbi_b, db5, periph)
+
+/* gpio13_dbi_c_cs */
+#define GPIO13_DBI_C_CS \
+	BFLB_PINMUX(13, dbi_c, cs, periph)
+
 /* gpio13_qspi_sda1 */
 #define GPIO13_QSPI_SDA1 \
 	BFLB_PINMUX(13, qspi, sda1, periph)
@@ -1030,6 +1110,14 @@
 #define GPIO14_PWM0_CH2P \
 	BFLB_PINMUX(14, pwm0, ch2p, periph)
 
+/* gpio14_dbi_b_db6 */
+#define GPIO14_DBI_B_DB6 \
+	BFLB_PINMUX(14, dbi_b, db6, periph)
+
+/* gpio14_dbi_c_sda */
+#define GPIO14_DBI_C_SDA \
+	BFLB_PINMUX(14, dbi_c, sda, periph)
+
 /* gpio14_qspi_sda2 */
 #define GPIO14_QSPI_SDA2 \
 	BFLB_PINMUX(14, qspi, sda2, periph)
@@ -1109,6 +1197,14 @@
 /* gpio15_pwm0_ch3p */
 #define GPIO15_PWM0_CH3P \
 	BFLB_PINMUX(15, pwm0, ch3p, periph)
+
+/* gpio15_dbi_b_db7 */
+#define GPIO15_DBI_B_DB7 \
+	BFLB_PINMUX(15, dbi_b, db7, periph)
+
+/* gpio15_dbi_c_dc */
+#define GPIO15_DBI_C_DC \
+	BFLB_PINMUX(15, dbi_c, dc, periph)
 
 /* gpio15_qspi_sda3 */
 #define GPIO15_QSPI_SDA3 \
