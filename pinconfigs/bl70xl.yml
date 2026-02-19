@@ -1,0 +1,346 @@
+# Copyright The Zephyr Project Contributors
+# SPDX-License-Identifier: Apache-2.0
+#
+# Sources:
+# - BL702L_704L_DS_en_1.1.pdf
+# - bl70x.yml (for format reference)
+#
+# Pin codes:
+#
+# - BL702L 32-pin QFN (22 GPIOs)
+# - BL704L 40-pin QFN (29 GPIOs)
+#
+# Key differences from BL70x:
+# - Only one UART (UART0) with 4 signal routing slots
+# - No I2S peripheral
+# - No camera (CAM) interface
+# - PDM interface available on some pins
+# - Different ADC channel mappings
+# - 2 PWM peripherals: PWM0 (1 SC channel), PWM1 (4 MC channels)
+
+model: bflb,bl
+
+family: bl70xl
+
+map: BFLB_PINMUX
+
+series: [702l, 704l]
+
+peripherals:
+    - [flash, 2, 0, 1, 2]
+    - [spi, 4]
+    - [pdm, 5]
+    - [i2c, 6]
+    - [uart, 7, 0]
+    - [pwm, 8, 0, 1]
+    - [analog, 10]
+    - [adc, 10]
+    - [swgpio, 11]
+    - [gpio, 11]
+    - [jtag, 14]
+#   - [kscan_in, 21]
+#   - [kscan_drive, 22]
+
+signals:
+    - [rts, 0]
+    - [cts, 1]
+    - [tx, 2]
+    - [rx, 3]
+
+pins:
+    gpio0:
+        series: [702l, 704l]
+        periph:
+            - [spi, [mosi]]
+            - [pdm, [clk]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm0, [ch0]]
+            - [jtag, [tms]]
+
+    gpio1:
+        series: [702l, 704l]
+        periph:
+            - [spi, [miso]]
+            - [pdm, [in0]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm1, [ch0]]
+            - [jtag, [tdi]]
+
+    gpio2:
+        series: [702l, 704l]
+        periph:
+            - [spi, [ss]]
+            - [pdm, [clk]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm1, [ch1]]
+            - [jtag, [tck]]
+
+    gpio3:
+        series: [704l]
+        periph:
+            - [spi, [sclk]]
+            - [pdm, [in0]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm1, [ch2]]
+            - [jtag, [tdo]]
+
+    gpio7:
+        series: [702l, 704l]
+        analog:
+            - [adc, [ch7]]
+        periph:
+            - [spi, [sclk]]
+            - [pdm, [in0]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm1, [ch1]]
+            - [jtag, [tdo]]
+
+    gpio8:
+        series: [702l, 704l]
+        analog:
+            - [adc, [ch8]]
+        periph:
+            - [spi, [mosi]]
+            - [pdm, [clk]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm1, [ch2]]
+            - [jtag, [tms]]
+
+    gpio9:
+        series: [702l, 704l]
+        analog:
+            - [adc, [ch9]]
+        periph:
+            - [spi, [miso]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm1, [ch3]]
+            - [jtag, [tdi]]
+
+    gpio10:
+        series: [702l, 704l]
+        periph:
+            - [spi, [ss]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm0, [ch0]]
+            - [jtag, [tck]]
+
+    gpio11:
+        series: [702l, 704l]
+        analog:
+            - [adc, [ch10]]
+        periph:
+            - [spi, [sclk]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm1, [ch0]]
+            - [jtag, [tdo]]
+
+    gpio12:
+        series: [704l]
+        analog:
+            - [adc, [ch11]]
+        periph:
+            - [spi, [mosi]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm1, [ch1]]
+            - [jtag, [tms]]
+
+    gpio13:
+        series: [704l]
+        periph:
+            - [spi, [miso]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm1, [ch2]]
+            - [jtag, [tdi]]
+
+    gpio14:
+        series: [702l, 704l]
+        analog:
+            - [adc, [ch0]]
+        periph:
+            - [spi, [ss]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm1, [ch3]]
+            - [jtag, [tck]]
+
+    gpio15:
+        series: [702l, 704l]
+        analog:
+            - [adc, [ch1]]
+        periph:
+            - [spi, [sclk]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm0, [ch0]]
+            - [jtag, [tdo]]
+
+    gpio16:
+        series: [702l, 704l]
+        periph:
+            - [spi, [mosi]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm1, [ch0]]
+            - [jtag, [tms]]
+
+    gpio17:
+        series: [702l, 704l]
+        analog:
+            - [adc, [ch2]]
+        periph:
+            - [spi, [miso]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm1, [ch1]]
+            - [jtag, [tdi]]
+
+    gpio18:
+        series: [702l, 704l]
+        analog:
+            - [adc, [ch3]]
+        periph:
+            - [spi, [ss]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm1, [ch2]]
+            - [jtag, [tck]]
+
+    gpio19:
+        series: [704l]
+        analog:
+            - [adc, [ch4]]
+        periph:
+            - [spi, [sclk]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm1, [ch3]]
+            - [jtag, [tdo]]
+
+    gpio20:
+        series: [704l]
+        analog:
+            - [adc, [ch5]]
+        periph:
+            - [spi, [mosi]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm0, [ch0]]
+            - [jtag, [tms]]
+
+    gpio21:
+        series: [704l]
+        analog:
+            - [adc, [ch6]]
+        periph:
+            - [spi, [miso]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm1, [ch0]]
+            - [jtag, [tdi]]
+
+    gpio22:
+        series: [702l, 704l]
+        periph:
+            - [spi, [ss]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm1, [ch1]]
+            - [jtag, [tck]]
+
+    gpio23:
+        series: [702l, 704l]
+        periph:
+            - [flash2, [d0]]
+            - [spi, [sclk]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm1, [ch2]]
+            - [jtag, [tdo]]
+
+    gpio24:
+        series: [702l, 704l]
+        periph:
+            - [flash2, [d2]]
+            - [spi, [mosi]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm1, [ch3]]
+            - [jtag, [tms]]
+
+    gpio25:
+        series: [702l, 704l]
+        periph:
+            - [flash2, [d1]]
+            - [spi, [miso]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm0, [ch0]]
+            - [jtag, [tdi]]
+
+    gpio26:
+        series: [702l, 704l]
+        periph:
+            - [flash2, [cs]]
+            - [spi, [ss]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm1, [ch0]]
+            - [jtag, [tck]]
+
+    gpio27:
+        series: [702l, 704l]
+        periph:
+            - [flash2, [clk]]
+            - [spi, [sclk]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm1, [ch1]]
+            - [jtag, [tdo]]
+
+    gpio28:
+        series: [702l, 704l]
+        periph:
+            - [flash2, [d3]]
+            - [spi, [mosi]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm1, [ch2]]
+            - [jtag, [tms]]
+
+    gpio29:
+        series: [704l]
+        periph:
+            - [spi, [miso]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm1, [ch3]]
+            - [jtag, [tdi]]
+
+    gpio30:
+        series: [702l, 704l]
+        periph:
+            - [spi, [ss]]
+            - [i2c, [scl]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm0, [ch0]]
+            - [jtag, [tck]]
+
+    gpio31:
+        series: [702l, 704l]
+        periph:
+            - [spi, [sclk]]
+            - [i2c, [sda]]
+            - [uart0, [rts, cts, tx, rx]]
+            - [pwm1, [ch0]]
+            - [jtag, [tdo]]
