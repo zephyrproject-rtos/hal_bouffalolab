@@ -5,6 +5,7 @@ build:
   settings:
     dts_root: .
 blobs:
+# BL70xL series
   - path: lib/bl70xl/libbtblecontroller_bl702l_m0s1p.a
     sha256: bc3da66316623b4e6c75921b6283f9e02c6c073d7832748c8309694f4799f651
     type: lib
@@ -101,3 +102,76 @@ blobs:
     license-path: include/bouffalolab/bl70xl/ble/btble_lib_api.h
     description: "ROM patch library for BL702L (BL70XL) A1 revision"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8
+# BL70x series
+  - path: lib/bl70x/libblecontroller_bl702_m0s0sp.a
+    sha256: 5f46c4bd1f8375d0376ea9560533a9bca3a06c70c79a222361cef153bc76d781
+    type: lib
+    version: '1.6.40-2207-g7c727d7bd'
+    url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/73ffff3849ea621dacafdb66835505d6404d7dd8/network/ble/blecontroller_bl702_m0s0sp/lib/libblecontroller_bl702_m0s0sp.a
+    license-path: include/bouffalolab/bl70x/ble/ble_lib_api.h
+    description: "BLE controller for BL702: observer + peripheral, 0 connections"
+    doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8/network/ble/blecontroller_bl702_m0s0sp
+  - path: lib/bl70x/libblecontroller_bl702_m0s1.a
+    sha256: 18ebd0bb8cd837f65f61ee7b8b569237ecb472a57017b7b3be3d8fee87d6b20b
+    type: lib
+    version: '1.6.40-2207-g7c727d7bd'
+    url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/73ffff3849ea621dacafdb66835505d6404d7dd8/network/ble/blecontroller_bl702_m0s1/lib/libblecontroller_bl702_m0s1.a
+    license-path: include/bouffalolab/bl70x/ble/ble_lib_api.h
+    description: "BLE controller for BL702: peripheral only, 1 connection"
+    doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8/network/ble/blecontroller_bl702_m0s1
+  - path: lib/bl70x/libblecontroller_bl702_m0s1p.a
+    sha256: 7b4f4b5e967c3ef09342b6a1d39299a4b4971a0a7e4643ab219266f55e837c1b
+    type: lib
+    version: '1.6.40-2207-g7c727d7bd'
+    url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/73ffff3849ea621dacafdb66835505d6404d7dd8/network/ble/blecontroller_bl702_m0s1p/lib/libblecontroller_bl702_m0s1p.a
+    license-path: include/bouffalolab/bl70x/ble/ble_lib_api.h
+    description: "BLE controller for BL702: peripheral only, 1 connection (optimized)"
+    doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8/network/ble/blecontroller_bl702_m0s1p
+  - path: lib/bl70x/libblecontroller_bl702_m0s1s.a
+    sha256: 1800b06f5c2e0f2c754244d1e07a8c4741ed84597e88d62085807111ef5164cf
+    type: lib
+    version: '1.6.40-2207-g7c727d7bd'
+    url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/73ffff3849ea621dacafdb66835505d6404d7dd8/network/ble/blecontroller_bl702_m0s1s/lib/libblecontroller_bl702_m0s1s.a
+    license-path: include/bouffalolab/bl70x/ble/ble_lib_api.h
+    description: "BLE controller for BL702: peripheral + scanner, 1 connection"
+    doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8/network/ble/blecontroller_bl702_m0s1s
+  - path: lib/bl70x/libblecontroller_bl702_m0s1t10.a
+    sha256: 50ddb0aedde04f984680bbac0b98771d31abf842cce6dc134714c2faf83eb174
+    type: lib
+    version: '1.6.40-2207-g7c727d7bd'
+    url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/73ffff3849ea621dacafdb66835505d6404d7dd8/network/ble/blecontroller_bl702_m0s1t10/lib/libblecontroller_bl702_m0s1t10.a
+    license-path: include/bouffalolab/bl70x/ble/ble_lib_api.h
+    description: "BLE controller for BL702: peripheral, 1 connection (test mode)"
+    doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8/network/ble/blecontroller_bl702_m0s1t10
+  - path: lib/bl70x/libblecontroller_bl702_m1s1.a
+    sha256: 33ed644e0f255cb904b23bd6ac899ff6ee5624b8106cdfdb685953eaa9c1bf9c
+    type: lib
+    version: '1.6.40-2207-g7c727d7bd'
+    url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/73ffff3849ea621dacafdb66835505d6404d7dd8/network/ble/blecontroller_bl702_m1s1/lib/libblecontroller_bl702_m1s1.a
+    license-path: include/bouffalolab/bl70x/ble/ble_lib_api.h
+    description: "BLE controller for BL702: central + peripheral, 1 connection each"
+    doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8/network/ble/blecontroller_bl702_m1s1
+  - path: lib/bl70x/libblecontroller_bl702_m16s1.a
+    sha256: defc1365d2485ebab15d777116a0b2441d504b5139471628c64c41e4ad5aaf99
+    type: lib
+    version: '1.6.40-2207-g7c727d7bd'
+    url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/73ffff3849ea621dacafdb66835505d6404d7dd8/network/ble/blecontroller_bl702_m16s1/lib/libblecontroller_bl702_m16s1.a
+    license-path: include/bouffalolab/bl70x/ble/ble_lib_api.h
+    description: "BLE controller for BL702: all roles, 16 connections"
+    doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8/network/ble/blecontroller_bl702_m16s1
+  - path: lib/bl70x/libblecontroller_bl702_uarthci.a
+    sha256: c417a97b53383a04bf689cceff70b940e4e10a7b2e9025de5853468a8cd6baf4
+    type: lib
+    version: '1.6.40-2207-g7c727d7bd'
+    url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/73ffff3849ea621dacafdb66835505d6404d7dd8/network/ble/blecontroller_bl702_uarthci/lib/libblecontroller_bl702_uarthci.a
+    license-path: include/bouffalolab/bl70x/ble/ble_lib_api.h
+    description: "BLE controller for BL702: UART HCI transport"
+    doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8/network/ble/blecontroller_bl702_uarthci
+  - path: lib/bl70x/libbl702_rf.a
+    sha256: b3d683ffd4c11f58d4413243340817d20a0ea188693b322e936209046519a626
+    type: lib
+    version: '1.6.40-2207-g7c727d7bd'
+    url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/73ffff3849ea621dacafdb66835505d6404d7dd8/platform/soc/bl702/bl702_rf/lib/libbl702_rf.a
+    license-path: include/bouffalolab/bl70x/rf/bl702_rf_public.h
+    description: "RF driver library for BL702 (BL70x)"
+    doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8/platform/soc/bl702/bl702_rf
