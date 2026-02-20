@@ -4,3 +4,100 @@ build:
   kconfig-ext: True
   settings:
     dts_root: .
+blobs:
+  - path: lib/bl70xl/libbtblecontroller_bl702l_m0s1p.a
+    sha256: bc3da66316623b4e6c75921b6283f9e02c6c073d7832748c8309694f4799f651
+    type: lib
+    version: '1.6.40-2207-g7c727d7bd'
+    url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/73ffff3849ea621dacafdb66835505d6404d7dd8/network/ble/btblecontroller_bl702l_m0s1p/lib/libbtblecontroller_bl702l_m0s1p.a
+    license-path: include/bouffalolab/bl70xl/ble/btble_lib_api.h
+    description: "BLE controller: peripheral only, 1 connection"
+    doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8
+  - path: lib/bl70xl/libbtblecontroller_bl702l_m0s1rp.a
+    sha256: 83164609d186c4638ddf2f5b7ccc88846306f6259358ae7b782f1fc331abee60
+    type: lib
+    version: '1.6.40-2207-g7c727d7bd'
+    url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/73ffff3849ea621dacafdb66835505d6404d7dd8/network/ble/btblecontroller_bl702l_m0s1rp/lib/libbtblecontroller_bl702l_m0s1rp.a
+    license-path: include/bouffalolab/bl70xl/ble/btble_lib_api.h
+    description: "BLE controller: peripheral only, 1 connection (ROM code, A1)"
+    doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8
+  - path: lib/bl70xl/libbtblecontroller_bl702l_m0s1sp.a
+    sha256: 6c4e29eb29ec42f1294add9b1bc000062b4ce870aa5f09bffabb5863a833b10c
+    type: lib
+    version: '1.6.40-2207-g7c727d7bd'
+    url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/73ffff3849ea621dacafdb66835505d6404d7dd8/network/ble/btblecontroller_bl702l_m0s1sp/lib/libbtblecontroller_bl702l_m0s1sp.a
+    license-path: include/bouffalolab/bl70xl/ble/btble_lib_api.h
+    description: "BLE controller: peripheral + observer, 1 connection"
+    doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8
+  - path: lib/bl70xl/libbtblecontroller_bl702l_m0s2p.a
+    sha256: e6b7077b6fc1891d01ecd1662b24e01ce1892d51176e51508d4584979d89fc87
+    type: lib
+    version: '1.6.40-2207-g7c727d7bd'
+    url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/73ffff3849ea621dacafdb66835505d6404d7dd8/network/ble/btblecontroller_bl702l_m0s2p/lib/libbtblecontroller_bl702l_m0s2p.a
+    license-path: include/bouffalolab/bl70xl/ble/btble_lib_api.h
+    description: "BLE controller: peripheral only, 2 connections"
+    doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8
+  - path: lib/bl70xl/libbtblecontroller_bl702l_m0s4p.a
+    sha256: 2f5eaad8d868d53c0bf2e65e9ba6ecc471b116200e64402e77bdb4c2f9bfe71b
+    type: lib
+    version: '1.6.40-2207-g7c727d7bd'
+    url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/73ffff3849ea621dacafdb66835505d6404d7dd8/network/ble/btblecontroller_bl702l_m0s4p/lib/libbtblecontroller_bl702l_m0s4p.a
+    license-path: include/bouffalolab/bl70xl/ble/btble_lib_api.h
+    description: "BLE controller: peripheral only, 4 connections"
+    doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8
+  - path: lib/bl70xl/libbtblecontroller_bl702l_m1s1p.a
+    sha256: fdd4f40daf8386f7140ac99cda1c14be74086c4f26996813ff5c3d1e7b54501c
+    type: lib
+    version: '1.6.40-2207-g7c727d7bd'
+    url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/73ffff3849ea621dacafdb66835505d6404d7dd8/network/ble/btblecontroller_bl702l_m1s1p/lib/libbtblecontroller_bl702l_m1s1p.a
+    license-path: include/bouffalolab/bl70xl/ble/btble_lib_api.h
+    description: "BLE controller: all roles, 1 connection"
+    doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8
+  - path: lib/bl70xl/libbtblecontroller_bl702l_m2s1p.a
+    sha256: 377fcee978dc24b238123641765546689e63da1618b59174df1277a73c510f21
+    type: lib
+    version: '1.6.40-2207-g7c727d7bd'
+    url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/73ffff3849ea621dacafdb66835505d6404d7dd8/network/ble/btblecontroller_bl702l_m2s1p/lib/libbtblecontroller_bl702l_m2s1p.a
+    license-path: include/bouffalolab/bl70xl/ble/btble_lib_api.h
+    description: "BLE controller: all roles, 2 connections"
+    doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8
+  - path: lib/bl70xl/libbtblecontroller_bl702l_m4s1p.a
+    sha256: ab39fa0d627399974d890bf2b713c3cb73f6cf86c952dd0ef92dcdee24bc2249
+    type: lib
+    version: '1.6.40-2207-g7c727d7bd'
+    url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/73ffff3849ea621dacafdb66835505d6404d7dd8/network/ble/btblecontroller_bl702l_m4s1p/lib/libbtblecontroller_bl702l_m4s1p.a
+    license-path: include/bouffalolab/bl70xl/ble/btble_lib_api.h
+    description: "BLE controller: all roles, 4 connections"
+    doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8
+  - path: lib/bl70xl/libbtblecontroller_bl702l_m8s1p.a
+    sha256: 7be6c301b03e482df828ac009fc4defb0bef0ed1578057848248db498779a464
+    type: lib
+    version: '1.6.40-2207-g7c727d7bd'
+    url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/73ffff3849ea621dacafdb66835505d6404d7dd8/network/ble/btblecontroller_bl702l_m8s1p/lib/libbtblecontroller_bl702l_m8s1p.a
+    license-path: include/bouffalolab/bl70xl/ble/btble_lib_api.h
+    description: "BLE controller: all roles, 8 connections"
+    doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8
+  - path: lib/bl70xl/libbl702l_rf.a
+    sha256: 66e1e697b34244a2a36e9a001d3838305bde9e8fd0e114bbaee5ee1722a3eea7
+    type: lib
+    version: '1.6.40-2207-g7c727d7bd'
+    url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/73ffff3849ea621dacafdb66835505d6404d7dd8/platform/soc/bl702l/bl702l_rf/lib/libbl702l_rf.a
+    license-path: include/bouffalolab/bl70xl/ble/btble_lib_api.h
+    description: "RF driver library for BL702L (BL70XL)"
+    doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8
+  - path: lib/bl70xl/libbl702l_rom_a0.a
+    sha256: 264dad6b55913ec08d4881f85a82565df0398bfa4537379c77de339ba4488bc8
+    type: lib
+    version: '1.6.40-2207-g7c727d7bd'
+    url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/73ffff3849ea621dacafdb66835505d6404d7dd8/platform/soc/bl702l/bl702l_rom_a0/lib/libbl702l_rom_a0.a
+    license-path: include/bouffalolab/bl70xl/ble/btble_lib_api.h
+    description: "ROM patch library for BL702L (BL70XL) A0 revision"
+    doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8
+  - path: lib/bl70xl/libbl702l_rom_a1.a
+    sha256: bcbddba473fde919a1f0a1aafc6cd456b0a45ee189f5d5958cd3b440e746ee9a
+    type: lib
+    version: '1.6.40-2207-g7c727d7bd'
+    url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/73ffff3849ea621dacafdb66835505d6404d7dd8/platform/soc/bl702l/bl702l_rom_a1/lib/libbl702l_rom_a1.a
+    license-path: include/bouffalolab/bl70xl/ble/btble_lib_api.h
+    description: "ROM patch library for BL702L (BL70XL) A1 revision"
+    doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8
