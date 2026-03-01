@@ -78,6 +78,14 @@ blobs:
     license-path: zephyr/blobs/license_sdk.txt
     description: "BLE controller: all roles, 8 connections"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8
+  - path: lib/bl70xl/liblmac154_bl702l.a
+    sha256: 79ad7526f5d6f17089b95af0016dd6cb0a541dca6c1b4392a6137ac5e786cc2a
+    type: lib
+    version: '1.6.40-2207-g7c727d7bd'
+    url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/73ffff3849ea621dacafdb66835505d6404d7dd8/network/lmac154/lmac154_bl702l/lib/liblmac154_bl702l.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "IEEE 802.15.4 MAC/PHY library for BL702L (BL70XL)"
+    doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8
   - path: lib/bl70xl/libbl702l_rf.a
     sha256: 66e1e697b34244a2a36e9a001d3838305bde9e8fd0e114bbaee5ee1722a3eea7
     type: lib
