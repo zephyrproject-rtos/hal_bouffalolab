@@ -175,3 +175,52 @@ blobs:
     license-path: zephyr/blobs/license_sdk.txt
     description: "RF driver library for BL702 (BL70x)"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8/platform/soc/bl702/bl702_rf
+# BL61x series
+  - path: lib/bl61x/libbtblecontroller_bl616_ble1m0s1bredr0.a
+    sha256: 0585eb29f3efa0962ac0ca4f8c9300c1199da6ec1c751cb3a133a41279d2c017
+    type: lib
+    version: '2.3.19'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.19/components/wireless/bluetooth/btblecontroller/lib/libbtblecontroller_bl616_ble1m0s1bredr0.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "BT/BLE controller for BL616 (peripheral only, 1 connection)"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.19/components/wireless/bluetooth/btblecontroller
+  - path: lib/bl61x/libbtblecontroller_bl616_ble1m10s1bredr0.a
+    sha256: 026cee4b9b882a39f95acab473448883adb8350325097e1583beedb6de049d53
+    type: lib
+    version: '2.3.19'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.19/components/wireless/bluetooth/btblecontroller/lib/libbtblecontroller_bl616_ble1m10s1bredr0.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "BT/BLE controller for BL616 (peripheral + central, 10 connections)"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.19/components/wireless/bluetooth/btblecontroller
+  - path: lib/bl61x/libbtblecontroller_bl616_ble1m2s1bredr1.a
+    sha256: 66aba21169399296fd9c79999ac09e128a49a915bbb643348d2457b91cf8ba62
+    type: lib
+    version: '2.3.19'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.19/components/wireless/bluetooth/btblecontroller/lib/libbtblecontroller_bl616_ble1m2s1bredr1.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "BT/BLE controller for BL616 (peripheral + central, 2 connections + BR/EDR)"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.19/components/wireless/bluetooth/btblecontroller
+  - path: lib/bl61x/libbtblecontroller_bl616_bleuarthci.a
+    sha256: 930c82c533ae992aeec1ae1801f1732a3be90af1a6afa6699199d7e947ff506b
+    type: lib
+    version: '2.3.19'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.19/components/wireless/bluetooth/btblecontroller/lib/libbtblecontroller_bl616_bleuarthci.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "BT/BLE controller for BL616 (BLE-only UART HCI transport)"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.19/components/wireless/bluetooth/btblecontroller
+  - path: lib/bl61x/libbtblecontroller_bl616_uarthci.a
+    sha256: 26c75ea73f463466532b9e6a13bd8260aba22f776a8468170da07dd1259b58fa
+    type: lib
+    version: '2.3.19'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.19/components/wireless/bluetooth/btblecontroller/lib/libbtblecontroller_bl616_uarthci.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "BT/BLE controller for BL616 (UART HCI transport)"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.19/components/wireless/bluetooth/btblecontroller
+  - path: lib/bl61x/libbl616_phyrf.a
+    sha256: 8d31069276f3647177656e7c3c6bffd55b465aca9c113dc15d4a48f784ace3b4
+    type: lib
+    version: '2.3.19'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.19/drivers/soc/bl616/phyrf/lib-gcc_10.2.0-toolchain_V2.6.1/libbl616_phyrf.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "PHY/RF library for BL616"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.19/drivers/soc/bl616/phyrf
