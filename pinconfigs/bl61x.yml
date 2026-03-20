@@ -209,7 +209,7 @@ pins:
         periph:
             - [sdh, [dat1]]
             - [spi, [miso]]
-            - [flash1, [d3]]
+            - [flash2, [d3]]
             - [i2s, [di]]
             - [i2c0, [scl]]
             - [i2c1, [scl]]
