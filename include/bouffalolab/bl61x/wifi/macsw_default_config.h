@@ -1,0 +1,13 @@
+/*
+ * SPDX-FileCopyrightText: Copyright (c) 2016-2026 Bouffalolab.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+#ifdef __MACSW_CONFIG_INTERNEL_ALLOW__
+#define CFG_AMSDU_4K
+#define CFG_TXDESC0 1
+#define CFG_TXDESC1 32
+#define CFG_TXDESC2 1
+#define CFG_TXDESC3 1
+#define CFG_TXDESC4 4
+#endif

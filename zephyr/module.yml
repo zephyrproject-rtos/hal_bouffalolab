@@ -219,11 +219,11 @@ blobs:
   - path: lib/bl61x/libbl616_phyrf.a
     sha256: 8d31069276f3647177656e7c3c6bffd55b465aca9c113dc15d4a48f784ace3b4
     type: lib
-    version: '2.3.23'
-    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.23/drivers/soc/bl616/phyrf/lib-gcc_10.2.0-toolchain_V2.6.1/libbl616_phyrf.a
+    version: '2.3.26'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.26/drivers/soc/bl616/phyrf/lib-gcc_10.2.0-toolchain_V2.6.1/libbl616_phyrf.a
     license-path: zephyr/blobs/license_sdk.txt
     description: "PHY/RF library for BL616"
-    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.23/drivers/soc/bl616/phyrf
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.26/drivers/soc/bl616/phyrf
 # BL60x series
   - path: lib/bl60x/libblecontroller_bl602_m1s1.a
     sha256: d0d535ffc52fc342d33ddf8db56088c9d2df8734a6c0ea08951bb3dea143fa28
@@ -249,3 +249,76 @@ blobs:
     license-path: zephyr/blobs/license_sdk.txt
     description: "PHY/RF library for BL602 (BL60x)"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.23/drivers/soc/bl602/phyrf
+# BL61x WiFi MACSW blobs
+  - path: lib/bl61x/libmacsw_bl616_ack.a
+    sha256: 332bbd1f31c2671d79142f20cb0d3e3c11ec11928660a6dba893dd0119c32c78
+    type: lib
+    version: '2.3.26'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.26/components/wireless/macsw/lib/libmacsw_bl616_ack.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "MACSW lower MAC firmware for BL616 (ack config: enhanced Block Ack and A-MPDU aggregation)"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.26/components/wireless/macsw
+  - path: lib/bl61x/libmacsw_config_bl616_ack.a
+    sha256: 10cca2f7fc5889cb78bb43596e8d5b3614f485ba2c11983449eee7fe7c0c1545
+    type: lib
+    version: '2.3.26'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.26/components/wireless/macsw/lib/libmacsw_config_bl616_ack.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "MACSW configuration for BL616 (ack config)"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.26/components/wireless/macsw
+  - path: lib/bl61x/libmacsw_bl616_default.a
+    sha256: 5672e98fce7d2bcb9a28ac68472bbf00464cf151c40e6e1bdcbacdbbe9855ba0
+    type: lib
+    version: '2.3.26'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.26/components/wireless/macsw/lib/libmacsw_bl616_default.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "MACSW lower MAC firmware for BL616 (default config)"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.26/components/wireless/macsw
+  - path: lib/bl61x/libmacsw_config_bl616_default.a
+    sha256: 7c73aab96e219f7590139d7974c64e830bb78f94ea0a014ccf52f43923530cf3
+    type: lib
+    version: '2.3.26'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.26/components/wireless/macsw/lib/libmacsw_config_bl616_default.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "MACSW configuration for BL616 (default config)"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.26/components/wireless/macsw
+  - path: lib/bl61x/libmacsw_bl616_bridge.a
+    sha256: 87c26b2854023e5bde9305325408debe1c140650d49a0612753d23900cf13b9f
+    type: lib
+    version: '2.3.26'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.26/components/wireless/macsw/lib/libmacsw_bl616_bridge.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "MACSW lower MAC firmware for BL616 (bridge config: larger TX/RX queues, AMSDU 8K)"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.26/components/wireless/macsw
+  - path: lib/bl61x/libmacsw_config_bl616_bridge.a
+    sha256: 6ad2c715d1aae4aa6428e64ef4e52fe408d6ecba8864c008d7ff25e93aa842f4
+    type: lib
+    version: '2.3.26'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.26/components/wireless/macsw/lib/libmacsw_config_bl616_bridge.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "MACSW configuration for BL616 (bridge config)"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.26/components/wireless/macsw
+  - path: lib/bl61x/libmacsw_bl616_coex.a
+    sha256: 2ce3676073329cdca631e0678fb446e2d0f2bd54c231944e0f6b591a7ef34a50
+    type: lib
+    version: '2.3.26'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.26/components/wireless/macsw/lib/libmacsw_bl616_coex.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "MACSW lower MAC firmware for BL616 (coex config: legacy Thread/Zigbee/BT TDMA/PTI coex hooks)"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.26/components/wireless/macsw
+  - path: lib/bl61x/libmacsw_config_bl616_coex.a
+    sha256: 532afec352418d5433ca1e9b3712444861b53a29942718a444eac3d85b6b8215
+    type: lib
+    version: '2.3.26'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.26/components/wireless/macsw/lib/libmacsw_config_bl616_coex.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "MACSW configuration for BL616 (coex config)"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.26/components/wireless/macsw
+  - path: lib/bl61x/libwl80211_bl616.a
+    sha256: c0cc7977e763de2f57de3ab63a3b20a74d311225b870f44cc1c252fff66787c0
+    type: lib
+    version: '2.3.26'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.26/components/wireless/wl80211/lib/libwl80211_bl616.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "WL80211 upper MAC library for BL616"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.26/components/wireless/wl80211
