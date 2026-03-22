@@ -4,8 +4,26 @@ out/*
 build/*
 .vscode/settings.json
 .settings
+
+# Python
 .venv
-*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+*.whl
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Zephyr blobs (local builds)
+zephyr/blobs/lib/
 
 **/.cdk
 **/Lst
