@@ -265,6 +265,14 @@ blobs:
     license-path: zephyr/blobs/license_sdk.txt
     description: "PHY/RF library for BL602 (BL60x)"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/drivers/soc/bl602/phyrf
+  - path: lib/bl61x/liblmac154_bl616.a
+    sha256: 971165bcfb478d1093a67dff360bc54fff631e6efa7505b767a9386ffa8d7300
+    type: lib
+    version: '2.3.29'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.29/components/wireless/lmac154/lmac154/lib/liblmac154_bl616.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "IEEE 802.15.4 MAC/PHY library for BL616 (BL61x)"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/components/wireless/lmac154/lmac154
 # BL61x WiFi MACSW blobs
   - path: lib/bl61x/libmacsw_bl616.a
     sha256: 5e122c6b1c3bc2d604894d6cbfada5cbc8f9ca61e52ba4734c0bf8d38bec6a0a
