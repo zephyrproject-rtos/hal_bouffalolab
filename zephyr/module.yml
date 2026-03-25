@@ -175,3 +175,28 @@ blobs:
     license-path: zephyr/blobs/license_sdk.txt
     description: "RF driver library for BL702 (BL70x)"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8/platform/soc/bl702/bl702_rf
+# BL60x series
+  - path: lib/bl60x/libblecontroller_bl602_m1s1.a
+    sha256: d0d535ffc52fc342d33ddf8db56088c9d2df8734a6c0ea08951bb3dea143fa28
+    type: lib
+    version: '2.3.17'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.17/components/wireless/bluetooth/blecontroller/lib/libblecontroller_bl602_m1s1.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "BLE controller library for BL602 (variant: m1s1, 1 central + 1 peripheral)"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.17/components/wireless/bluetooth/blecontroller
+  - path: lib/bl60x/libblecontroller_bl602_m8s1.a
+    sha256: f529783ae35620ba9f7da02ac9dd5cec3542f5019e9c991c07f2662c5e89edac
+    type: lib
+    version: '2.3.17'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.17/components/wireless/bluetooth/blecontroller/lib/libblecontroller_bl602_m8s1.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "BLE controller library for BL602 (variant: m8s1, 8 central + 1 peripheral)"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.17/components/wireless/bluetooth/blecontroller
+  - path: lib/bl60x/libbl602_phyrf.a
+    sha256: 1040009fa1cdfca6627a241a49bb33107775ca1b979b3b4153d76f6daf2859fd
+    type: lib
+    version: '2.3.17'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.17/drivers/soc/bl602/phyrf/lib-gcc-10.2.0-rv32imfc-ilp32f-bouffalosdk/libbl602_phyrf.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "PHY/RF library for BL602 (BL60x)"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.17/drivers/soc/bl602/phyrf
