@@ -78,6 +78,14 @@ blobs:
     license-path: zephyr/blobs/license_sdk.txt
     description: "BLE controller: all roles, 8 connections"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8
+  - path: lib/bl70xl/liblmac154_bl702l.a
+    sha256: 79ad7526f5d6f17089b95af0016dd6cb0a541dca6c1b4392a6137ac5e786cc2a
+    type: lib
+    version: '1.6.40-2207-g7c727d7bd'
+    url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/73ffff3849ea621dacafdb66835505d6404d7dd8/network/lmac154/lmac154_bl702l/lib/liblmac154_bl702l.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "IEEE 802.15.4 MAC/PHY library for BL702L (BL70XL)"
+    doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8
   - path: lib/bl70xl/libbl702l_rf.a
     sha256: 66e1e697b34244a2a36e9a001d3838305bde9e8fd0e114bbaee5ee1722a3eea7
     type: lib
@@ -167,6 +175,14 @@ blobs:
     license-path: zephyr/blobs/license_sdk.txt
     description: "BLE controller for BL702: UART HCI transport"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8/network/ble/blecontroller_bl702_uarthci
+  - path: lib/bl70x/liblmac154.a
+    sha256: 498a669278ca297bb03f9ce13c013d71ea6aaad814785be116c99eed1ce85e05
+    type: lib
+    version: '1.6.40-2207-g7c727d7bd'
+    url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/73ffff3849ea621dacafdb66835505d6404d7dd8/network/lmac154/lmac154/lib/liblmac154.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "IEEE 802.15.4 MAC/PHY library for BL702 (BL70x)"
+    doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8/network/lmac154/lmac154
   - path: lib/bl70x/libbl702_rf.a
     sha256: b3d683ffd4c11f58d4413243340817d20a0ea188693b322e936209046519a626
     type: lib
@@ -175,3 +191,12 @@ blobs:
     license-path: zephyr/blobs/license_sdk.txt
     description: "RF driver library for BL702 (BL70x)"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/73ffff3849ea621dacafdb66835505d6404d7dd8/platform/soc/bl702/bl702_rf
+# BL61x series
+  - path: lib/bl61x/liblmac154_bl616.a
+    sha256: 1ab13b5a9f9aafb02ac7639045c575f158e6502f13b5eae0fad923f59bbd2eb1
+    type: lib
+    version: '2.3.17'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.17/components/wireless/lmac154/lmac154/lib/liblmac154_bl616.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "IEEE 802.15.4 MAC/PHY library for BL616 (BL61x)"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.17/components/wireless/lmac154/lmac154
