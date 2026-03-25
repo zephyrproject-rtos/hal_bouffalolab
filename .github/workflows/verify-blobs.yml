@@ -1,0 +1,36 @@
+# Copyright The Zephyr Project Contributors
+# SPDX-License-Identifier: Apache-2.0
+
+name: Verify Blobs
+
+on:
+  push:
+    paths:
+      - 'zephyr/module.yml'
+      - '.github/workflows/verify-blobs.yml'
+  pull_request:
+    paths:
+      - 'zephyr/module.yml'
+      - '.github/workflows/verify-blobs.yml'
+  workflow_dispatch:
+
+jobs:
+  verify-blobs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install west
+        run: pip install west
+
+      - name: Initialize west workspace
+        run: west init -m https://github.com/zephyrproject-rtos/zephyr --mr main
+
+      - name: Clone Zephyr (shallow)
+        run: west update --narrow --fetch-opt=--depth=1 zephyr
+
+      - name: Checkout hal_bouffalolab under test
+        uses: actions/checkout@v4
+        with:
+          path: modules/hal/bouffalolab
+
+      - name: Fetch and verify blobs
+        run: west blobs fetch hal_bouffalolab
