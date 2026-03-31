@@ -104,7 +104,7 @@ def generate_bflb_series_header(outdir, family, peripherals, signals, signal_cfg
         for periph, index, *instancies in peripherals:
             if instancies:
                 for inst in instancies:
-                    write_periph_index(f, periph + str(inst), index + inst * 256)
+                    write_periph_index(f, periph + str(inst), index + inst * 32)
                 continue
             write_periph_index(f, periph, index)
 

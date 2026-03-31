@@ -21,22 +21,19 @@ map: BFLB_PINMUX
 
 series: [616, 618]
 
+include:
+  - common.yml
+
 peripherals:
     - [sdh, 0]
     - [spi, 1]
-    - [flash, 2, 0, 1, 2]
     - [i2s, 3]
     - [pdm, 4]
     - [i2c, 5, 0]
     - [i2c, 6, 1]
-    - [uart, 7, 0, 1]
+    - [uart, 7, 1]
     - [emac, 8]
     - [cam, 9, 0, 1]
-    - [analog, 10]
-    - [adc, 10]
-    - [dac, 10]
-    - [swgpio, 11]
-    - [gpio, 11]
     - [sdio, 12]
     - [pwm, 16, 0]
     - [md_jtag, 17]
@@ -52,11 +49,6 @@ peripherals:
     - [clock_out, 31, 0, 1, 2, 3]
 
 signals:
-    # UART signals
-    - [rts, 0]
-    - [cts, 1]
-    - [tx, 2]
-    - [rx, 3]
     # Clock out signals
     - [cam_ref, 0]
     - [i2s_ref, 1]
@@ -131,7 +123,7 @@ pins:
         series: [618]
         periph:
             - [spi, [ss]]
-            - [flash1, [cs]]
+            - [sf2, [cs]]
             - [i2s, [bclk]]
             - [i2c0, [scl]]
             - [i2c1, [scl]]
@@ -147,7 +139,7 @@ pins:
         series: [618]
         periph:
             - [spi, [sclk]]
-            - [flash1, [d1]]
+            - [sf2, [d1]]
             - [i2s, [fs]]
             - [i2c0, [sda]]
             - [i2c1, [sda]]
@@ -163,7 +155,7 @@ pins:
         series: [618]
         periph:
             - [spi, [miso]]
-            - [flash1, [d2]]
+            - [sf2, [d2]]
             - [i2s, [di]]
             - [i2c0, [scl]]
             - [i2c1, [scl]]
@@ -179,7 +171,7 @@ pins:
         series: [618]
         periph:
             - [spi, [mosi]]
-            - [flash1, [d0]]
+            - [sf2, [d0, d3]]
             - [i2s, [do]]
             - [i2c0, [sda]]
             - [i2c1, [sda]]
@@ -195,7 +187,7 @@ pins:
         series: [618]
         periph:
             - [spi, [ss]]
-            - [flash1, [clk]]
+            - [sf2, [clk]]
             - [i2s, [bclk]]
             - [i2c0, [scl]]
             - [i2c1, [scl]]
@@ -211,7 +203,7 @@ pins:
         series: [618]
         periph:
             - [spi, [sclk]]
-            - [flash1, [d3]]
+            - [sf2, [d3, d0]]
             - [i2s, [fs]]
             - [i2c0, [sda]]
             - [i2c1, [sda]]
@@ -230,7 +222,7 @@ pins:
         periph:
             - [sdh, [dat1]]
             - [spi, [miso]]
-            - [flash2, [d3]]
+            - [sf3, [d3]]
             - [i2s, [di]]
             - [i2c0, [scl]]
             - [i2c1, [scl]]
@@ -249,7 +241,7 @@ pins:
         periph:
             - [sdh, [dat0]]
             - [spi, [mosi]]
-            - [flash2, [clk]]
+            - [sf3, [clk]]
             - [i2s, [do]]
             - [i2c0, [sda]]
             - [i2c1, [sda]]
@@ -270,7 +262,7 @@ pins:
         periph:
             - [sdh, [clk]]
             - [spi, [ss]]
-            - [flash2, [d0]]
+            - [sf3, [d0]]
             - [i2s, [bclk]]
             - [i2c0, [scl]]
             - [i2c1, [scl]]
@@ -291,7 +283,7 @@ pins:
         periph:
             - [sdh, [cmd]]
             - [spi, [sclk]]
-            - [flash2, [d2]]
+            - [sf3, [d2]]
             - [i2s, [fs]]
             - [i2c0, [sda]]
             - [i2c1, [sda]]
@@ -312,7 +304,7 @@ pins:
         periph:
             - [sdh, [dat3]]
             - [spi, [miso]]
-            - [flash2, [d1]]
+            - [sf3, [d1]]
             - [i2s, [di]]
             - [i2c0, [scl]]
             - [i2c1, [scl]]
@@ -332,7 +324,7 @@ pins:
         periph:
             - [sdh, [dat2]]
             - [spi, [mosi]]
-            - [flash2, [cs]]
+            - [sf3, [cs]]
             - [i2s, [do]]
             - [i2c0, [sda]]
             - [i2c1, [sda]]

@@ -4434,9 +4434,9 @@
 #define GPIO34_SPI0_MISO \
 	BFLB_PINMUX(34, spi0, miso, periph)
 
-/* gpio34_flash2_clk */
-#define GPIO34_FLASH2_CLK \
-	BFLB_PINMUX(34, flash2, clk, periph)
+/* gpio34_sf2_clk */
+#define GPIO34_SF2_CLK \
+	BFLB_PINMUX(34, sf2, clk, periph)
 
 /* gpio34_i2s_di */
 #define GPIO34_I2S_DI \
@@ -4570,9 +4570,9 @@
 #define GPIO35_SPI0_SCLK \
 	BFLB_PINMUX(35, spi0, sclk, periph)
 
-/* gpio35_flash2_cs */
-#define GPIO35_FLASH2_CS \
-	BFLB_PINMUX(35, flash2, cs, periph)
+/* gpio35_sf2_cs */
+#define GPIO35_SF2_CS \
+	BFLB_PINMUX(35, sf2, cs, periph)
 
 /* gpio35_i2s_do */
 #define GPIO35_I2S_DO \
@@ -4698,9 +4698,9 @@
 #define GPIO36_SPI0_SS \
 	BFLB_PINMUX(36, spi0, ss, periph)
 
-/* gpio36_flash2_d0 */
-#define GPIO36_FLASH2_D0 \
-	BFLB_PINMUX(36, flash2, d0, periph)
+/* gpio36_sf2_d0 */
+#define GPIO36_SF2_D0 \
+	BFLB_PINMUX(36, sf2, d0, periph)
 
 /* gpio36_i2s_bclk */
 #define GPIO36_I2S_BCLK \
@@ -4830,9 +4830,9 @@
 #define GPIO37_SPI0_MOSI \
 	BFLB_PINMUX(37, spi0, mosi, periph)
 
-/* gpio37_flash2_d1 */
-#define GPIO37_FLASH2_D1 \
-	BFLB_PINMUX(37, flash2, d1, periph)
+/* gpio37_sf2_d1 */
+#define GPIO37_SF2_D1 \
+	BFLB_PINMUX(37, sf2, d1, periph)
 
 /* gpio37_i2s_fs */
 #define GPIO37_I2S_FS \
@@ -4962,9 +4962,9 @@
 #define GPIO38_SPI0_MISO \
 	BFLB_PINMUX(38, spi0, miso, periph)
 
-/* gpio38_flash2_d2 */
-#define GPIO38_FLASH2_D2 \
-	BFLB_PINMUX(38, flash2, d2, periph)
+/* gpio38_sf2_d2 */
+#define GPIO38_SF2_D2 \
+	BFLB_PINMUX(38, sf2, d2, periph)
 
 /* gpio38_i2s_di */
 #define GPIO38_I2S_DI \
@@ -5094,9 +5094,9 @@
 #define GPIO39_SPI0_SCLK \
 	BFLB_PINMUX(39, spi0, sclk, periph)
 
-/* gpio39_flash2_d3 */
-#define GPIO39_FLASH2_D3 \
-	BFLB_PINMUX(39, flash2, d3, periph)
+/* gpio39_sf2_d3 */
+#define GPIO39_SF2_D3 \
+	BFLB_PINMUX(39, sf2, d3, periph)
 
 /* gpio39_i2s_do */
 #define GPIO39_I2S_DO \
