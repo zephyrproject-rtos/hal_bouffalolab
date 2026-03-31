@@ -23,22 +23,19 @@ map: BFLB_PINMUX
 
 series: [808]
 
+include:
+  - common.yml
+
 peripherals:
     - [sdh, 0]
     - [spi, 1, 0]
-    - [flash, 2, 0, 1, 2]
     - [i2s, 3]
     - [pdm, 4]
     - [i2c, 5, 0]
     - [i2c, 6, 1]
-    - [uart, 7, 0, 1, 2]
+    - [uart, 7, 1, 2]
     - [emac, 8]
     - [cam, 9]
-    - [analog, 10]
-    - [adc, 10]
-    - [dac, 10]
-    - [swgpio, 11]
-    - [gpio, 11]
     - [pwm, 16, 0]
     - [pwm, 17, 1]
     - [spi, 18, 1] # mm_spi
@@ -54,11 +51,6 @@ peripherals:
     - [clock_out, 31, 0, 1, 2, 3]
 
 signals:
-    # UART signals
-    - [rts, 0]
-    - [cts, 1]
-    - [tx, 2]
-    - [rx, 3]
     # Clock out signals
     - [cam_ref, 0]
     - [i2s_ref, 1]
@@ -893,7 +885,7 @@ pins:
             - [adc, [ch11]]
         periph:
             - [spi0, [miso]]
-            - [flash2, [clk]]
+            - [sf2, [clk]]
             - [i2s, [di]]
             - [pdm, [in]]
             - [i2c0, [scl]]
@@ -917,7 +909,7 @@ pins:
         series: [808]
         periph:
             - [spi0, [sclk]]
-            - [flash2, [cs]]
+            - [sf2, [cs]]
             - [i2s, [do]]
             - [pdm, [clk]]
             - [i2c0, [sda]]
@@ -941,7 +933,7 @@ pins:
         series: [808]
         periph:
             - [spi0, [ss]]
-            - [flash2, [d0]]
+            - [sf2, [d0]]
             - [i2s, [bclk]]
             - [pdm, [in]]
             - [i2c0, [scl]]
@@ -965,7 +957,7 @@ pins:
         series: [808]
         periph:
             - [spi0, [mosi]]
-            - [flash2, [d1]]
+            - [sf2, [d1]]
             - [i2s, [fs]]
             - [pdm, [in]]
             - [i2c0, [sda]]
@@ -989,7 +981,7 @@ pins:
         series: [808]
         periph:
             - [spi0, [miso]]
-            - [flash2, [d2]]
+            - [sf2, [d2]]
             - [i2s, [di]]
             - [pdm, [clk]]
             - [i2c0, [scl]]
@@ -1013,7 +1005,7 @@ pins:
         series: [808]
         periph:
             - [spi0, [sclk]]
-            - [flash2, [d3]]
+            - [sf2, [d3]]
             - [i2s, [do]]
             - [pdm, [in]]
             - [i2c0, [sda]]

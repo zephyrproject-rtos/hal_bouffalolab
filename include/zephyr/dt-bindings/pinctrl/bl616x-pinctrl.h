@@ -238,6 +238,10 @@
 #define GPIO2_ADC_CH2 \
 	BFLB_PINMUX(2, adc, ch2, analog)
 
+/* gpio2_dac_chb */
+#define GPIO2_DAC_CHB \
+	BFLB_PINMUX(2, dac, chb, analog)
+
 /* gpio3_spi_mosi */
 #define GPIO3_SPI_MOSI \
 	BFLB_PINMUX(3, spi, mosi, periph)
@@ -314,6 +318,10 @@
 #define GPIO3_ADC_CH8 \
 	BFLB_PINMUX(3, adc, ch8, analog)
 
+/* gpio3_dac_cha */
+#define GPIO3_DAC_CHA \
+	BFLB_PINMUX(3, dac, cha, analog)
+
 /* gpio10_sdh_dat1 */
 #define GPIO10_SDH_DAT1 \
 	BFLB_PINMUX(10, sdh, dat1, periph)
@@ -322,9 +330,9 @@
 #define GPIO10_SPI_MISO \
 	BFLB_PINMUX(10, spi, miso, periph)
 
-/* gpio10_flash2_d3 */
-#define GPIO10_FLASH2_D3 \
-	BFLB_PINMUX(10, flash2, d3, periph)
+/* gpio10_sf3_d3 */
+#define GPIO10_SF3_D3 \
+	BFLB_PINMUX(10, sf3, d3, periph)
 
 /* gpio10_i2s_di */
 #define GPIO10_I2S_DI \
@@ -426,9 +434,9 @@
 #define GPIO11_SPI_MOSI \
 	BFLB_PINMUX(11, spi, mosi, periph)
 
-/* gpio11_flash2_clk */
-#define GPIO11_FLASH2_CLK \
-	BFLB_PINMUX(11, flash2, clk, periph)
+/* gpio11_sf3_clk */
+#define GPIO11_SF3_CLK \
+	BFLB_PINMUX(11, sf3, clk, periph)
 
 /* gpio11_i2s_do */
 #define GPIO11_I2S_DO \
@@ -522,9 +530,9 @@
 #define GPIO12_SPI_SS \
 	BFLB_PINMUX(12, spi, ss, periph)
 
-/* gpio12_flash2_d0 */
-#define GPIO12_FLASH2_D0 \
-	BFLB_PINMUX(12, flash2, d0, periph)
+/* gpio12_sf3_d0 */
+#define GPIO12_SF3_D0 \
+	BFLB_PINMUX(12, sf3, d0, periph)
 
 /* gpio12_i2s_bclk */
 #define GPIO12_I2S_BCLK \
@@ -622,9 +630,9 @@
 #define GPIO13_SPI_SCLK \
 	BFLB_PINMUX(13, spi, sclk, periph)
 
-/* gpio13_flash2_d2 */
-#define GPIO13_FLASH2_D2 \
-	BFLB_PINMUX(13, flash2, d2, periph)
+/* gpio13_sf3_d2 */
+#define GPIO13_SF3_D2 \
+	BFLB_PINMUX(13, sf3, d2, periph)
 
 /* gpio13_i2s_fs */
 #define GPIO13_I2S_FS \
@@ -722,9 +730,9 @@
 #define GPIO14_SPI_MISO \
 	BFLB_PINMUX(14, spi, miso, periph)
 
-/* gpio14_flash2_d1 */
-#define GPIO14_FLASH2_D1 \
-	BFLB_PINMUX(14, flash2, d1, periph)
+/* gpio14_sf3_d1 */
+#define GPIO14_SF3_D1 \
+	BFLB_PINMUX(14, sf3, d1, periph)
 
 /* gpio14_i2s_di */
 #define GPIO14_I2S_DI \
@@ -830,9 +838,9 @@
 #define GPIO15_SPI_MOSI \
 	BFLB_PINMUX(15, spi, mosi, periph)
 
-/* gpio15_flash2_cs */
-#define GPIO15_FLASH2_CS \
-	BFLB_PINMUX(15, flash2, cs, periph)
+/* gpio15_sf3_cs */
+#define GPIO15_SF3_CS \
+	BFLB_PINMUX(15, sf3, cs, periph)
 
 /* gpio15_i2s_do */
 #define GPIO15_I2S_DO \

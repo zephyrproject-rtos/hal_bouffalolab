@@ -14,9 +14,9 @@
 #define GPIO0_SDIO_CLK \
 	BFLB_PINMUX(0, sdio, clk, periph)
 
-/* gpio0_flash_d1 */
-#define GPIO0_FLASH_D1 \
-	BFLB_PINMUX(0, flash, d1, periph)
+/* gpio0_sf3_d1 */
+#define GPIO0_SF3_D1 \
+	BFLB_PINMUX(0, sf3, d1, periph)
 
 /* gpio0_spi_mosi */
 #define GPIO0_SPI_MOSI \
@@ -78,9 +78,9 @@
 #define GPIO1_SDIO_CMD \
 	BFLB_PINMUX(1, sdio, cmd, periph)
 
-/* gpio1_flash_d2 */
-#define GPIO1_FLASH_D2 \
-	BFLB_PINMUX(1, flash, d2, periph)
+/* gpio1_sf3_d2 */
+#define GPIO1_SF3_D2 \
+	BFLB_PINMUX(1, sf3, d2, periph)
 
 /* gpio1_spi_miso */
 #define GPIO1_SPI_MISO \
@@ -142,9 +142,9 @@
 #define GPIO2_SDIO_DAT0 \
 	BFLB_PINMUX(2, sdio, dat0, periph)
 
-/* gpio2_flash_d3 */
-#define GPIO2_FLASH_D3 \
-	BFLB_PINMUX(2, flash, d3, periph)
+/* gpio2_sf3_d3 */
+#define GPIO2_SF3_D3 \
+	BFLB_PINMUX(2, sf3, d3, periph)
 
 /* gpio2_spi_ss */
 #define GPIO2_SPI_SS \
@@ -718,9 +718,9 @@
 #define GPIO16_JTAG_TMS \
 	BFLB_PINMUX(16, jtag, tms, periph)
 
-/* gpio17_flash_d3 */
-#define GPIO17_FLASH_D3 \
-	BFLB_PINMUX(17, flash, d3, periph)
+/* gpio17_sf2_d3 */
+#define GPIO17_SF2_D3 \
+	BFLB_PINMUX(17, sf2, d3, periph)
 
 /* gpio17_spi_miso */
 #define GPIO17_SPI_MISO \
@@ -774,9 +774,13 @@
 #define GPIO17_JTAG_TDI \
 	BFLB_PINMUX(17, jtag, tdi, periph)
 
-/* gpio20_flash_d0 */
-#define GPIO20_FLASH_D0 \
-	BFLB_PINMUX(20, flash, d0, periph)
+/* gpio20_sf2_d0 */
+#define GPIO20_SF2_D0 \
+	BFLB_PINMUX(20, sf2, d0, periph)
+
+/* gpio20_sf3_d0 */
+#define GPIO20_SF3_D0 \
+	BFLB_PINMUX(20, sf3, d0, periph)
 
 /* gpio20_spi_mosi */
 #define GPIO20_SPI_MOSI \
@@ -830,9 +834,13 @@
 #define GPIO20_JTAG_TMS \
 	BFLB_PINMUX(20, jtag, tms, periph)
 
-/* gpio21_flash_cs */
-#define GPIO21_FLASH_CS \
-	BFLB_PINMUX(21, flash, cs, periph)
+/* gpio21_sf2_cs */
+#define GPIO21_SF2_CS \
+	BFLB_PINMUX(21, sf2, cs, periph)
+
+/* gpio21_sf3_cs */
+#define GPIO21_SF3_CS \
+	BFLB_PINMUX(21, sf3, cs, periph)
 
 /* gpio21_spi_miso */
 #define GPIO21_SPI_MISO \
@@ -886,9 +894,13 @@
 #define GPIO21_JTAG_TDI \
 	BFLB_PINMUX(21, jtag, tdi, periph)
 
-/* gpio22_flash_clk_out */
-#define GPIO22_FLASH_CLK_OUT \
-	BFLB_PINMUX(22, flash, clk_out, periph)
+/* gpio22_sf2_clk */
+#define GPIO22_SF2_CLK \
+	BFLB_PINMUX(22, sf2, clk, periph)
+
+/* gpio22_sf3_clk */
+#define GPIO22_SF3_CLK \
+	BFLB_PINMUX(22, sf3, clk, periph)
 
 /* gpio22_spi_ss */
 #define GPIO22_SPI_SS \
