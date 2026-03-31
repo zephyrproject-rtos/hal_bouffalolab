@@ -7,22 +7,22 @@
 #ifndef DT_BINDINGS_PINCTRL_BFLB_BL70XL_PINCTRL_H_
 #define DT_BINDINGS_PINCTRL_BFLB_BL70XL_PINCTRL_H_
 
-#define BFLB_PINMUX_FUN_INST_flash0                     0x0002
-#define BFLB_PINMUX_FUN_INST_flash1                     0x0102
-#define BFLB_PINMUX_FUN_INST_flash2                     0x0202
+#define BFLB_PINMUX_FUN_INST_sf1                        0x0022
+#define BFLB_PINMUX_FUN_INST_sf2                        0x0042
+#define BFLB_PINMUX_FUN_INST_sf3                        0x0062
 #define BFLB_PINMUX_FUN_INST_spi                        0x0004
 #define BFLB_PINMUX_FUN_INST_pdm                        0x0005
 #define BFLB_PINMUX_FUN_INST_i2c                        0x0006
 #define BFLB_PINMUX_FUN_INST_uart0                      0x0007
 #define BFLB_PINMUX_FUN_INST_pwm0                       0x0008
-#define BFLB_PINMUX_FUN_INST_pwm1                       0x0108
-#define BFLB_PINMUX_FUN_INST_analog                     0x000a
+#define BFLB_PINMUX_FUN_INST_pwm1                       0x0028
 #define BFLB_PINMUX_FUN_INST_adc                        0x000a
+#define BFLB_PINMUX_FUN_INST_analog                     0x000a
 #define BFLB_PINMUX_FUN_INST_swgpio                     0x000b
 #define BFLB_PINMUX_FUN_INST_gpio                       0x000b
 #define BFLB_PINMUX_FUN_INST_jtag                       0x000e
 
-#define BFLB_PINMUX_SIGNAL_clk                          0x00
+#define BFLB_PINMUX_SIGNAL_clk                          0x05
 #define BFLB_PINMUX_SIGNAL_cts                          0x01
 #define BFLB_PINMUX_SIGNAL_ch0                          0x00
 #define BFLB_PINMUX_SIGNAL_ch1                          0x00
@@ -37,10 +37,10 @@
 #define BFLB_PINMUX_SIGNAL_ch5                          0x00
 #define BFLB_PINMUX_SIGNAL_ch6                          0x00
 #define BFLB_PINMUX_SIGNAL_cs                           0x00
-#define BFLB_PINMUX_SIGNAL_d0                           0x00
-#define BFLB_PINMUX_SIGNAL_d2                           0x00
-#define BFLB_PINMUX_SIGNAL_d1                           0x00
-#define BFLB_PINMUX_SIGNAL_d3                           0x00
+#define BFLB_PINMUX_SIGNAL_d0                           0x01
+#define BFLB_PINMUX_SIGNAL_d2                           0x03
+#define BFLB_PINMUX_SIGNAL_d1                           0x02
+#define BFLB_PINMUX_SIGNAL_d3                           0x04
 #define BFLB_PINMUX_SIGNAL_in0                          0x00
 #define BFLB_PINMUX_SIGNAL_mosi                         0x00
 #define BFLB_PINMUX_SIGNAL_miso                         0x00

@@ -22,35 +22,27 @@ map: BFLB_PINMUX
 
 series: [702, 704, 706]
 
+include:
+  - common.yml
+
 peripherals:
     - [sdio, 1]
-    - [flash, 2, 0, 1, 2]
     - [i2s, 3]
     - [spi, 4]
     - [i2c, 6]
-    - [uart, 7, 0, 1]
+    - [uart, 7, 1]
     - [pwm, 8]
     - [cam, 9]
-    - [analog, 10]
     - [usb, 10]
     - [ir, 10]
     - [atest, 10]
-    - [adc, 10]
     - [dac, 10]
-    - [swgpio, 11]
-    - [gpio, 11]
     - [jtag, 14]
     - [fem, 16]
     - [mii, 19] # ethernet
     - [qdec, 20, 0, 1, 2] # potentiometers
 #  - [kscan_in, 21]
 #  - [kscan_drive, 22]
-
-signals:
-    - [rts, 0]
-    - [cts, 1]
-    - [tx, 2]
-    - [rx, 3]
 
 pins:
     gpio0:
@@ -301,8 +293,8 @@ pins:
             - [adc, [ch2]]
             - [dac, [chb]]
         periph:
-            - [flash1, [d0]]
-            - [flash2, [cs2]]
+            - [sf1, [d0]]
+            - [sf2, [cs2]]
             - [i2s, [fs]]
             - [spi, [miso]]
             - [i2c, [sda]]
@@ -318,7 +310,7 @@ pins:
         analog:
             - [adc, [ch8]]
         periph:
-            - [flash1, [d1]]
+            - [sf1, [d1]]
             - [i2s, [do]]
             - [spi, [ss]]
             - [i2c, [scl]]
@@ -336,7 +328,7 @@ pins:
         analog:
             - [adc, [ch9]]
         periph:
-            - [flash1, [cs]]
+            - [sf1, [cs]]
             - [i2s, [di]]
             - [spi, [sclk]]
             - [i2c, [sda]]
@@ -354,7 +346,7 @@ pins:
         analog:
             - [adc, [ch10]]
         periph:
-            - [flash1, [d3]]
+            - [sf1, [d3]]
             - [i2s, [bclk]]
             - [spi, [mosi]]
             - [i2c, [scl]]
@@ -372,7 +364,7 @@ pins:
         analog:
             - [adc, [ch11]]
         periph:
-            - [flash1, [clk]]
+            - [sf1, [clk]]
             - [i2s, [fs]]
             - [spi, [miso]]
             - [i2c, [sda]]
@@ -389,7 +381,7 @@ pins:
         analog:
             - [ir, [tx]]
         periph:
-            - [flash1, [d2]]
+            - [sf1, [d2]]
             - [i2s, [do]]
             - [spi, [ss]]
             - [i2c, [scl]]
@@ -406,7 +398,8 @@ pins:
         analog:
             - [ir, [tx]]
         periph:
-            - [flash2, [d2]]
+            - [sf2, [d2, cs]]
+            - [sf3, [cs2]]
             - [i2s, [di]]
             - [spi, [sclk]]
             - [i2c, [sda]]
@@ -421,7 +414,7 @@ pins:
     gpio24:
         series: [702, 704, 706]
         periph:
-            - [flash2, [d1]]
+            - [sf2, [d1]]
             - [i2s, [blck]]
             - [spi, [mosi]]
             - [i2c, [scl]]
@@ -437,7 +430,7 @@ pins:
     gpio25:
         series: [702, 704, 706]
         periph:
-            - [flash2, [cs]]
+            - [sf2, [cs, d2]]
             - [i2s, [fs]]
             - [spi, [miso]]
             - [i2c, [sda]]
@@ -453,7 +446,7 @@ pins:
     gpio26:
         series: [702, 704, 706]
         periph:
-            - [flash2, [d3]]
+            - [sf2, [d3, d0]]
             - [i2s, [do]]
             - [spi, [ss]]
             - [i2c, [scl]]
@@ -469,7 +462,7 @@ pins:
     gpio27:
         series: [702, 704, 706]
         periph:
-            - [flash2, [clk]]
+            - [sf2, [clk]]
             - [i2s, [di]]
             - [spi, [sclk]]
             - [i2c, [sda]]
@@ -484,7 +477,7 @@ pins:
     gpio28:
         series: [702, 704, 706]
         periph:
-            - [flash2, [d0]]
+            - [sf2, [d0, d3]]
             - [i2s, [bclk]]
             - [spi, [mosi]]
             - [i2c, [scl]]
@@ -537,3 +530,33 @@ pins:
             - [jtag, [tdo]]
             - [fem, [gpio1]]
             - [qdec1, [b]]
+
+    gpio32:
+        series: []
+        periph:
+            - [sf3, [d0]]
+
+    gpio33:
+        series: []
+        periph:
+            - [sf3, [d2]]
+
+    gpio34:
+        series: []
+        periph:
+            - [sf3, [d1]]
+
+    gpio35:
+        series: []
+        periph:
+            - [sf3, [cs]]
+
+    gpio36:
+        series: []
+        periph:
+            - [sf3, [clk]]
+
+    gpio37:
+        series: []
+        periph:
+            - [sf3, [d3]]

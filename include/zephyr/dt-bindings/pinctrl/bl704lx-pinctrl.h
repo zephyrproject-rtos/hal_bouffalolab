@@ -722,9 +722,9 @@
 #define GPIO22_JTAG_TCK \
 	BFLB_PINMUX(22, jtag, tck, periph)
 
-/* gpio23_flash2_d0 */
-#define GPIO23_FLASH2_D0 \
-	BFLB_PINMUX(23, flash2, d0, periph)
+/* gpio23_sf2_d0 */
+#define GPIO23_SF2_D0 \
+	BFLB_PINMUX(23, sf2, d0, periph)
 
 /* gpio23_spi_sclk */
 #define GPIO23_SPI_SCLK \
@@ -758,9 +758,9 @@
 #define GPIO23_JTAG_TDO \
 	BFLB_PINMUX(23, jtag, tdo, periph)
 
-/* gpio24_flash2_d2 */
-#define GPIO24_FLASH2_D2 \
-	BFLB_PINMUX(24, flash2, d2, periph)
+/* gpio24_sf2_d2 */
+#define GPIO24_SF2_D2 \
+	BFLB_PINMUX(24, sf2, d2, periph)
 
 /* gpio24_spi_mosi */
 #define GPIO24_SPI_MOSI \
@@ -794,9 +794,9 @@
 #define GPIO24_JTAG_TMS \
 	BFLB_PINMUX(24, jtag, tms, periph)
 
-/* gpio25_flash2_d1 */
-#define GPIO25_FLASH2_D1 \
-	BFLB_PINMUX(25, flash2, d1, periph)
+/* gpio25_sf2_d1 */
+#define GPIO25_SF2_D1 \
+	BFLB_PINMUX(25, sf2, d1, periph)
 
 /* gpio25_spi_miso */
 #define GPIO25_SPI_MISO \
@@ -830,9 +830,9 @@
 #define GPIO25_JTAG_TDI \
 	BFLB_PINMUX(25, jtag, tdi, periph)
 
-/* gpio26_flash2_cs */
-#define GPIO26_FLASH2_CS \
-	BFLB_PINMUX(26, flash2, cs, periph)
+/* gpio26_sf2_cs */
+#define GPIO26_SF2_CS \
+	BFLB_PINMUX(26, sf2, cs, periph)
 
 /* gpio26_spi_ss */
 #define GPIO26_SPI_SS \
@@ -866,9 +866,9 @@
 #define GPIO26_JTAG_TCK \
 	BFLB_PINMUX(26, jtag, tck, periph)
 
-/* gpio27_flash2_clk */
-#define GPIO27_FLASH2_CLK \
-	BFLB_PINMUX(27, flash2, clk, periph)
+/* gpio27_sf2_clk */
+#define GPIO27_SF2_CLK \
+	BFLB_PINMUX(27, sf2, clk, periph)
 
 /* gpio27_spi_sclk */
 #define GPIO27_SPI_SCLK \
@@ -902,9 +902,9 @@
 #define GPIO27_JTAG_TDO \
 	BFLB_PINMUX(27, jtag, tdo, periph)
 
-/* gpio28_flash2_d3 */
-#define GPIO28_FLASH2_D3 \
-	BFLB_PINMUX(28, flash2, d3, periph)
+/* gpio28_sf2_d3 */
+#define GPIO28_SF2_D3 \
+	BFLB_PINMUX(28, sf2, d3, periph)
 
 /* gpio28_spi_mosi */
 #define GPIO28_SPI_MOSI \
