@@ -12,7 +12,7 @@
 #define BFLB_PINMUX_FUN_INST_spi                        0x0004
 #define BFLB_PINMUX_FUN_INST_i2c                        0x0006
 #define BFLB_PINMUX_FUN_INST_uart0                      0x0007
-#define BFLB_PINMUX_FUN_INST_uart1                      0x0107
+#define BFLB_PINMUX_FUN_INST_uart1                      0x0027
 #define BFLB_PINMUX_FUN_INST_pwm                        0x0008
 #define BFLB_PINMUX_FUN_INST_fem                        0x0009
 #define BFLB_PINMUX_FUN_INST_analog                     0x000a
