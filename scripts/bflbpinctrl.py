@@ -21,6 +21,8 @@ import yaml
 REPO_ROOT = Path(__file__).absolute().parents[1]
 """Repository root."""
 
+INCLUDE_PATH = "include"
+
 current_date = date.today()
 
 HEADER = """/*
@@ -102,7 +104,7 @@ def generate_bflb_series_header(outdir, family, peripherals, signals, signal_cfg
         for periph, index, *instancies in peripherals:
             if instancies:
                 for inst in instancies:
-                    write_periph_index(f, periph + str(inst), index + inst * 256)
+                    write_periph_index(f, periph + str(inst), index + inst * 32)
                 continue
             write_periph_index(f, periph, index)
 
@@ -248,9 +250,22 @@ def main(indir, outdir) -> None:
         family = config["family"]
         fmap = config["map"]
         series = config["series"]
-        peripherals = config["peripherals"]
-        signals = config["signals"]
+        peripherals = config.get("peripherals", [])
+        signals = config.get("signals", [])
         pins = config["pins"]
+        includes = config.get("include", [])
+
+        if includes:
+            for inc in includes:
+                inc_data = yaml.load(open(Path(indir, INCLUDE_PATH, inc)), Loader=yaml.Loader)
+                if inc_data.get("peripherals") is not None:
+                    peripherals = peripherals + inc_data["peripherals"]
+                if inc_data.get("signals") is not None:
+                    # Inverted order for orderedDict's last entry wins
+                    signals = inc_data["signals"] + signals
+
+        # Sort peripherals by function ID
+        peripherals = sorted(peripherals, key=lambda kv: kv[1])
 
         if model == "bflb,bl":
             signal_cfgs = generate_bflb_generate_signal_list(pins)

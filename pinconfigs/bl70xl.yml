@@ -26,26 +26,17 @@ map: BFLB_PINMUX
 
 series: [702l, 704l]
 
+include:
+  - common.yml
+
 peripherals:
-    - [flash, 2, 0, 1, 2]
     - [spi, 4]
     - [pdm, 5]
     - [i2c, 6]
-    - [uart, 7, 0]
     - [pwm, 8, 0, 1]
-    - [analog, 10]
-    - [adc, 10]
-    - [swgpio, 11]
-    - [gpio, 11]
     - [jtag, 14]
 #   - [kscan_in, 21]
 #   - [kscan_drive, 22]
-
-signals:
-    - [rts, 0]
-    - [cts, 1]
-    - [tx, 2]
-    - [rx, 3]
 
 pins:
     gpio0:
@@ -261,7 +252,7 @@ pins:
     gpio23:
         series: [702l, 704l]
         periph:
-            - [flash2, [d0]]
+            - [sf2, [d0]]
             - [spi, [sclk]]
             - [i2c, [sda]]
             - [uart0, [rts, cts, tx, rx]]
@@ -271,7 +262,7 @@ pins:
     gpio24:
         series: [702l, 704l]
         periph:
-            - [flash2, [d2]]
+            - [sf2, [d2]]
             - [spi, [mosi]]
             - [i2c, [scl]]
             - [uart0, [rts, cts, tx, rx]]
@@ -281,7 +272,7 @@ pins:
     gpio25:
         series: [702l, 704l]
         periph:
-            - [flash2, [d1]]
+            - [sf2, [d1]]
             - [spi, [miso]]
             - [i2c, [sda]]
             - [uart0, [rts, cts, tx, rx]]
@@ -291,7 +282,7 @@ pins:
     gpio26:
         series: [702l, 704l]
         periph:
-            - [flash2, [cs]]
+            - [sf2, [cs]]
             - [spi, [ss]]
             - [i2c, [scl]]
             - [uart0, [rts, cts, tx, rx]]
@@ -301,7 +292,7 @@ pins:
     gpio27:
         series: [702l, 704l]
         periph:
-            - [flash2, [clk]]
+            - [sf2, [clk]]
             - [spi, [sclk]]
             - [i2c, [sda]]
             - [uart0, [rts, cts, tx, rx]]
@@ -311,7 +302,7 @@ pins:
     gpio28:
         series: [702l, 704l]
         periph:
-            - [flash2, [d3]]
+            - [sf2, [d3]]
             - [spi, [mosi]]
             - [i2c, [scl]]
             - [uart0, [rts, cts, tx, rx]]
@@ -344,3 +335,33 @@ pins:
             - [uart0, [rts, cts, tx, rx]]
             - [pwm1, [ch0]]
             - [jtag, [tdo]]
+
+    gpio32:
+        series: []
+        periph:
+            - [sf1, [d0, d3]]
+
+    gpio33:
+        series: []
+        periph:
+            - [sf1, [d2, cs, clk]]
+
+    gpio34:
+        series: []
+        periph:
+            - [sf1, [d1, d2, cs]]
+
+    gpio35:
+        series: []
+        periph:
+            - [sf1, [cs, d2, d1]]
+
+    gpio36:
+        series: []
+        periph:
+            - [sf1, [clk, cs, d2]]
+
+    gpio37:
+        series: []
+        periph:
+            - [sf1, [d3, d0]]
