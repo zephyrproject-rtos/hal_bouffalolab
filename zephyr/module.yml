@@ -5,6 +5,15 @@ build:
   settings:
     dts_root: .
 blobs:
+# BL60x series (BL602/BL604)
+  - path: lib/bl60x/libbl602_firmware.a
+    sha256: 10d4d9e863462aebe2e7df2093b2fea03d9ebee077198bd7aff5d4eb8c019899
+    type: lib
+    version: '2.3.29'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.29/components/wireless/wifi4/firmware/lib/libfirmware.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "BL602 WiFi MAC firmware (wifi4 LMAC/UMAC, scan, connect, TX/RX)"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/components/wireless/wifi4
 # BL70xL series
   - path: lib/bl70xl/libbtblecontroller_bl702l_m0s1p.a
     sha256: 5e513afa94c45a1067853580f7670fc193d31b16ab27b5b8607b011e2c7cedd2
