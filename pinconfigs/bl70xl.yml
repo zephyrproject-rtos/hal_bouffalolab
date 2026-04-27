@@ -27,6 +27,7 @@ map: BFLB_PINMUX
 series: [702l, 704l]
 
 peripherals:
+    - [clock_out, 0, 0, 1]
     - [flash, 2, 0, 1, 2]
     - [spi, 4]
     - [pdm, 5]
@@ -42,15 +43,24 @@ peripherals:
 #   - [kscan_drive, 22]
 
 signals:
+    # UART signals
     - [rts, 0]
     - [cts, 1]
     - [tx, 2]
     - [rx, 3]
+    # Clock out signals
+    - [dll_2_032M, 1]
+    - [dll_6_095M, 2]
+    - [xclk, 3]
+    - [f32k, 1]
+    - [xtal, 2]
+    - [xtal32k, 3]
 
 pins:
     gpio0:
         series: [702l, 704l]
         periph:
+            - [clock_out0, [dll_2_032M, dll_6_095M, xclk]]
             - [spi, [mosi]]
             - [pdm, [clk]]
             - [i2c, [scl]]
@@ -61,6 +71,7 @@ pins:
     gpio1:
         series: [702l, 704l]
         periph:
+            - [clock_out1, [f32k, xtal, xtal32k]]
             - [spi, [miso]]
             - [pdm, [in0]]
             - [i2c, [sda]]
@@ -71,6 +82,7 @@ pins:
     gpio2:
         series: [702l, 704l]
         periph:
+            - [clock_out0, [dll_2_032M, dll_6_095M, xclk]]
             - [spi, [ss]]
             - [pdm, [clk]]
             - [i2c, [scl]]
@@ -81,6 +93,7 @@ pins:
     gpio3:
         series: [704l]
         periph:
+            - [clock_out1, [f32k, xtal, xtal32k]]
             - [spi, [sclk]]
             - [pdm, [in0]]
             - [i2c, [sda]]
@@ -93,6 +106,7 @@ pins:
         analog:
             - [adc, [ch7]]
         periph:
+            - [clock_out1, [f32k, xtal, xtal32k]]
             - [spi, [sclk]]
             - [pdm, [in0]]
             - [i2c, [sda]]
@@ -105,6 +119,7 @@ pins:
         analog:
             - [adc, [ch8]]
         periph:
+            - [clock_out0, [dll_2_032M, dll_6_095M, xclk]]
             - [spi, [mosi]]
             - [pdm, [clk]]
             - [i2c, [scl]]
@@ -117,6 +132,7 @@ pins:
         analog:
             - [adc, [ch9]]
         periph:
+            - [clock_out1, [f32k, xtal, xtal32k]]
             - [spi, [miso]]
             - [i2c, [sda]]
             - [uart0, [rts, cts, tx, rx]]
@@ -126,6 +142,7 @@ pins:
     gpio10:
         series: [702l, 704l]
         periph:
+            - [clock_out0, [dll_2_032M, dll_6_095M, xclk]]
             - [spi, [ss]]
             - [i2c, [scl]]
             - [uart0, [rts, cts, tx, rx]]
@@ -137,6 +154,7 @@ pins:
         analog:
             - [adc, [ch10]]
         periph:
+            - [clock_out1, [f32k, xtal, xtal32k]]
             - [spi, [sclk]]
             - [i2c, [sda]]
             - [uart0, [rts, cts, tx, rx]]
@@ -148,6 +166,7 @@ pins:
         analog:
             - [adc, [ch11]]
         periph:
+            - [clock_out0, [dll_2_032M, dll_6_095M, xclk]]
             - [spi, [mosi]]
             - [i2c, [scl]]
             - [uart0, [rts, cts, tx, rx]]
@@ -157,6 +176,7 @@ pins:
     gpio13:
         series: [704l]
         periph:
+            - [clock_out1, [f32k, xtal, xtal32k]]
             - [spi, [miso]]
             - [i2c, [sda]]
             - [uart0, [rts, cts, tx, rx]]
@@ -168,6 +188,7 @@ pins:
         analog:
             - [adc, [ch0]]
         periph:
+            - [clock_out0, [dll_2_032M, dll_6_095M, xclk]]
             - [spi, [ss]]
             - [i2c, [scl]]
             - [uart0, [rts, cts, tx, rx]]
@@ -179,6 +200,7 @@ pins:
         analog:
             - [adc, [ch1]]
         periph:
+            - [clock_out1, [f32k, xtal, xtal32k]]
             - [spi, [sclk]]
             - [i2c, [sda]]
             - [uart0, [rts, cts, tx, rx]]
@@ -188,6 +210,7 @@ pins:
     gpio16:
         series: [702l, 704l]
         periph:
+            - [clock_out0, [dll_2_032M, dll_6_095M, xclk]]
             - [spi, [mosi]]
             - [i2c, [scl]]
             - [uart0, [rts, cts, tx, rx]]
@@ -199,6 +222,7 @@ pins:
         analog:
             - [adc, [ch2]]
         periph:
+            - [clock_out1, [f32k, xtal, xtal32k]]
             - [spi, [miso]]
             - [i2c, [sda]]
             - [uart0, [rts, cts, tx, rx]]
@@ -210,6 +234,7 @@ pins:
         analog:
             - [adc, [ch3]]
         periph:
+            - [clock_out0, [dll_2_032M, dll_6_095M, xclk]]
             - [spi, [ss]]
             - [i2c, [scl]]
             - [uart0, [rts, cts, tx, rx]]
@@ -221,6 +246,7 @@ pins:
         analog:
             - [adc, [ch4]]
         periph:
+            - [clock_out1, [f32k, xtal, xtal32k]]
             - [spi, [sclk]]
             - [i2c, [sda]]
             - [uart0, [rts, cts, tx, rx]]
@@ -232,6 +258,7 @@ pins:
         analog:
             - [adc, [ch5]]
         periph:
+            - [clock_out0, [dll_2_032M, dll_6_095M, xclk]]
             - [spi, [mosi]]
             - [i2c, [scl]]
             - [uart0, [rts, cts, tx, rx]]
@@ -243,6 +270,7 @@ pins:
         analog:
             - [adc, [ch6]]
         periph:
+            - [clock_out1, [f32k, xtal, xtal32k]]
             - [spi, [miso]]
             - [i2c, [sda]]
             - [uart0, [rts, cts, tx, rx]]
@@ -252,6 +280,7 @@ pins:
     gpio22:
         series: [702l, 704l]
         periph:
+            - [clock_out0, [dll_2_032M, dll_6_095M, xclk]]
             - [spi, [ss]]
             - [i2c, [scl]]
             - [uart0, [rts, cts, tx, rx]]
@@ -261,6 +290,7 @@ pins:
     gpio23:
         series: [702l, 704l]
         periph:
+            - [clock_out1, [f32k, xtal, xtal32k]]
             - [flash2, [d0]]
             - [spi, [sclk]]
             - [i2c, [sda]]
@@ -271,6 +301,7 @@ pins:
     gpio24:
         series: [702l, 704l]
         periph:
+            - [clock_out0, [dll_2_032M, dll_6_095M, xclk]]
             - [flash2, [d2]]
             - [spi, [mosi]]
             - [i2c, [scl]]
@@ -281,6 +312,7 @@ pins:
     gpio25:
         series: [702l, 704l]
         periph:
+            - [clock_out1, [f32k, xtal, xtal32k]]
             - [flash2, [d1]]
             - [spi, [miso]]
             - [i2c, [sda]]
@@ -291,6 +323,7 @@ pins:
     gpio26:
         series: [702l, 704l]
         periph:
+            - [clock_out0, [dll_2_032M, dll_6_095M, xclk]]
             - [flash2, [cs]]
             - [spi, [ss]]
             - [i2c, [scl]]
@@ -301,6 +334,7 @@ pins:
     gpio27:
         series: [702l, 704l]
         periph:
+            - [clock_out1, [f32k, xtal, xtal32k]]
             - [flash2, [clk]]
             - [spi, [sclk]]
             - [i2c, [sda]]
@@ -311,6 +345,7 @@ pins:
     gpio28:
         series: [702l, 704l]
         periph:
+            - [clock_out0, [dll_2_032M, dll_6_095M, xclk]]
             - [flash2, [d3]]
             - [spi, [mosi]]
             - [i2c, [scl]]
@@ -321,6 +356,7 @@ pins:
     gpio29:
         series: [704l]
         periph:
+            - [clock_out1, [f32k, xtal, xtal32k]]
             - [spi, [miso]]
             - [i2c, [sda]]
             - [uart0, [rts, cts, tx, rx]]
@@ -330,6 +366,7 @@ pins:
     gpio30:
         series: [702l, 704l]
         periph:
+            - [clock_out0, [dll_2_032M, dll_6_095M, xclk]]
             - [spi, [ss]]
             - [i2c, [scl]]
             - [uart0, [rts, cts, tx, rx]]
@@ -339,6 +376,7 @@ pins:
     gpio31:
         series: [702l, 704l]
         periph:
+            - [clock_out1, [f32k, xtal, xtal32k]]
             - [spi, [sclk]]
             - [i2c, [sda]]
             - [uart0, [rts, cts, tx, rx]]

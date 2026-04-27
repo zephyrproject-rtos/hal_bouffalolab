@@ -48,13 +48,21 @@ peripherals:
     - [qspi, 24]
     - [audac, 25]
     - [jtag, 26]
-    - [clock_out, 31]
+    - [clock_out, 31, 0, 1, 2, 3]
 
 signals:
+    # UART signals
     - [rts, 0]
     - [cts, 1]
     - [tx, 2]
     - [rx, 3]
+    # Clock out signals
+    - [cam_ref, 0]
+    - [i2s_ref, 1]
+    - [solo_in_128fs, 3]
+    - [xtal, 2]
+    - [wifipll_32m, 3]
+    - [wifipll_48m, 3]
 
 pins:
     gpio0:
@@ -71,6 +79,7 @@ pins:
             - [cam1, [vsync]]
             - [pwm0, [ch0p]]
             - [jtag, [tms]]
+            - [clock_out0, [cam_ref, i2s_ref, solo_in_128fs]]
     gpio1:
         series: [616, 618]
         analog:
@@ -85,6 +94,7 @@ pins:
             - [cam1, [hsync]]
             - [pwm0, [ch1p]]
             - [jtag, [tck]]
+            - [clock_out1, [cam_ref, i2s_ref, solo_in_128fs]]
     gpio2:
         series: [616, 618]
         analog:
@@ -98,6 +108,7 @@ pins:
             - [uart1, [rts, cts, tx, rx]]
             - [pwm0, [ch2p]]
             - [jtag, [tdo]]
+            - [clock_out2, [cam_ref, i2s_ref, xtal, wifipll_32m]]
     gpio3:
         series: [616, 618]
         analog:
@@ -112,6 +123,7 @@ pins:
             - [cam1, [dat0]]
             - [pwm0, [ch3p]]
             - [jtag, [tdi]]
+            - [clock_out3, [cam_ref, i2s_ref, wifipll_48m]]
     gpio4:
         series: [618]
         periph:
@@ -127,6 +139,7 @@ pins:
             - [dbi_c, [scl]]
             - [qspi, [scl]]
             - [jtag, [tms]]
+            - [clock_out0, [cam_ref, i2s_ref, solo_in_128fs]]
     gpio5:
         series: [618]
         periph:
@@ -142,6 +155,7 @@ pins:
             - [dbi_c, [cs]]
             - [qspi, [cs]]
             - [jtag, [tck]]
+            - [clock_out1, [cam_ref, i2s_ref, solo_in_128fs]]
     gpio6:
         series: [618]
         periph:
@@ -157,6 +171,7 @@ pins:
             - [dbi_c, [sda]]
             - [qspi, [sda0]]
             - [jtag, [tdo]]
+            - [clock_out2, [cam_ref, i2s_ref, xtal, wifipll_32m]]
     gpio7:
         series: [618]
         periph:
@@ -172,6 +187,7 @@ pins:
             - [dbi_c, [dc]]
             - [qspi, [sda1]]
             - [jtag, [tdi]]
+            - [clock_out3, [cam_ref, i2s_ref, wifipll_48m]]
     gpio8:
         series: [618]
         periph:
@@ -187,6 +203,7 @@ pins:
             - [dbi_c, [scl]]
             - [qspi, [sda2]]
             - [jtag, [tms]]
+            - [clock_out0, [cam_ref, i2s_ref, solo_in_128fs]]
     gpio9:
         series: [618]
         periph:
@@ -202,6 +219,7 @@ pins:
             - [dbi_c, [cs]]
             - [qspi, [sda3]]
             - [jtag, [tck]]
+            - [clock_out1, [cam_ref, i2s_ref, solo_in_128fs]]
     gpio10:
         series: [616, 618]
         analog:
@@ -222,6 +240,7 @@ pins:
             - [dbi_c, [sda]]
             - [qspi, [scl]]
             - [jtag, [tdo]]
+            - [clock_out2, [cam_ref, i2s_ref, xtal, wifipll_32m]]
     gpio11:
         series: [616, 618]
         periph:
@@ -240,6 +259,7 @@ pins:
             - [dbi_c, [dc]]
             - [qspi, [cs]]
             - [jtag, [tdi]]
+            - [clock_out3, [cam_ref, i2s_ref, wifipll_48m]]
     gpio12:
         series: [616, 618]
         analog:
@@ -260,6 +280,7 @@ pins:
             - [dbi_c, [scl]]
             - [qspi, [sda0]]
             - [jtag, [tms]]
+            - [clock_out0, [cam_ref, i2s_ref, solo_in_128fs]]
     gpio13:
         series: [616, 618]
         analog:
@@ -280,6 +301,7 @@ pins:
             - [dbi_c, [cs]]
             - [qspi, [sda1]]
             - [jtag, [tck]]
+            - [clock_out1, [cam_ref, i2s_ref, solo_in_128fs]]
     gpio14:
         series: [616, 618]
         analog:
@@ -301,6 +323,7 @@ pins:
             - [qspi, [sda2]]
             - [audac, [p]]
             - [jtag, [tdo]]
+            - [clock_out2, [cam_ref, i2s_ref, xtal, wifipll_32m]]
     gpio15:
         series: [616, 618]
         periph:
@@ -319,6 +342,7 @@ pins:
             - [qspi, [sda3]]
             - [audac, [n]]
             - [jtag, [tdi]]
+            - [clock_out3, [cam_ref, i2s_ref, wifipll_48m]]
     gpio16:
         series: [616, 618]
         periph:
@@ -331,6 +355,7 @@ pins:
             - [cam1, [dat6]]
             - [pwm0, [ch0p]]
             - [jtag, [tms]]
+            - [clock_out0, [cam_ref, i2s_ref, solo_in_128fs]]
     gpio17:
         series: [616, 618]
         periph:
@@ -343,6 +368,7 @@ pins:
             - [cam1, [dat7]]
             - [pwm0, [ch1p]]
             - [jtag, [tck]]
+            - [clock_out1, [cam_ref, i2s_ref, solo_in_128fs]]
     gpio18:
         series: [618]
         periph:
@@ -354,6 +380,7 @@ pins:
             - [uart1, [rts, cts, tx, rx]]
             - [pwm0, [ch2p]]
             - [jtag, [tdo]]
+            - [clock_out2, [cam_ref, i2s_ref, xtal, wifipll_32m]]
     gpio19:
         series: [618]
         periph:
@@ -365,6 +392,7 @@ pins:
             - [uart1, [rts, cts, tx, rx]]
             - [pwm0, [ch3p]]
             - [jtag, [tdi]]
+            - [clock_out3, [cam_ref, i2s_ref, wifipll_48m]]
     gpio20:
         series: [616, 618]
         analog:
@@ -379,6 +407,7 @@ pins:
             - [uart1, [rts, cts, tx, rx]]
             - [pwm0, [ch0p]]
             - [jtag, [tms]]
+            - [clock_out0, [cam_ref, i2s_ref, solo_in_128fs]]
     gpio21:
         series: [616, 618]
         periph:
@@ -391,6 +420,7 @@ pins:
             - [uart1, [rts, cts, tx, rx]]
             - [pwm0, [ch1p]]
             - [jtag, [tck]]
+            - [clock_out1, [cam_ref, i2s_ref, solo_in_128fs]]
     gpio22:
         series: [616, 618]
         analog:
@@ -405,6 +435,7 @@ pins:
             - [pwm0, [ch2p]]
             - [audac, [p]]
             - [jtag, [tdo]]
+            - [clock_out2, [cam_ref, i2s_ref, xtal, wifipll_32m]]
     gpio23:
         series: [618]
         periph:
@@ -417,6 +448,7 @@ pins:
             - [pwm0, [ch3p]]
             - [audac, [n]]
             - [jtag, [tdi]]
+            - [clock_out3, [cam_ref, i2s_ref, wifipll_48m]]
     gpio24:
         series: [618]
         periph:
@@ -429,6 +461,7 @@ pins:
             - [cam0, [dat0]]
             - [pwm0, [ch0p]]
             - [jtag, [tms]]
+            - [clock_out0, [cam_ref, i2s_ref, solo_in_128fs]]
     gpio25:
         series: [618]
         periph:
@@ -443,6 +476,7 @@ pins:
             - [cam0, [dat1]]
             - [pwm0, [ch1p]]
             - [jtag, [tck]]
+            - [clock_out1, [cam_ref, i2s_ref, solo_in_128fs]]
     gpio26:
         series: [618]
         periph:
@@ -457,6 +491,7 @@ pins:
             - [cam0, [dat2]]
             - [pwm0, [ch2p]]
             - [jtag, [tdo]]
+            - [clock_out2, [cam_ref, i2s_ref, xtal, wifipll_32m]]
     gpio27:
         series: [616, 618]
         analog:
@@ -473,6 +508,7 @@ pins:
             - [pwm0, [ch3p]]
             - [audac, [n]]
             - [jtag, [tdi]]
+            - [clock_out3, [cam_ref, i2s_ref, wifipll_48m]]
     gpio28:
         series: [616, 618]
         periph:
@@ -487,6 +523,7 @@ pins:
             - [pwm0, [ch0p]]
             - [audac, [p]]
             - [jtag, [tms]]
+            - [clock_out0, [cam_ref, i2s_ref, solo_in_128fs]]
     gpio29:
         series: [616, 618]
         periph:
@@ -500,6 +537,7 @@ pins:
             - [cam0, [vsync]]
             - [pwm0, [ch1p]]
             - [jtag, [tck]]
+            - [clock_out1, [cam_ref, i2s_ref, solo_in_128fs]]
     gpio30:
         series: [616, 618]
         periph:
@@ -512,6 +550,7 @@ pins:
             - [emac, [rxerr]]
             - [pwm0, [ch2p]]
             - [jtag, [tdo]]
+            - [clock_out2, [cam_ref, i2s_ref, xtal, wifipll_32m]]
     gpio31:
         series: [618]
         periph:
@@ -525,6 +564,7 @@ pins:
             - [cam0, [dat4]]
             - [pwm0, [ch3p]]
             - [jtag, [tdi]]
+            - [clock_out3, [cam_ref, i2s_ref, wifipll_48m]]
     gpio32:
         series: [618]
         periph:
@@ -538,6 +578,7 @@ pins:
             - [cam0, [dat5]]
             - [pwm0, [ch0p]]
             - [jtag, [tms]]
+            - [clock_out0, [cam_ref, i2s_ref, solo_in_128fs]]
     gpio33:
         series: [618]
         periph:
@@ -551,6 +592,7 @@ pins:
             - [cam0, [dat6]]
             - [pwm0, [ch1p]]
             - [jtag, [tck]]
+            - [clock_out1, [cam_ref, i2s_ref, solo_in_128fs]]
     gpio34:
         series: [618]
         periph:
@@ -564,3 +606,4 @@ pins:
             - [cam0, [dat7]]
             - [pwm0, [ch2p]]
             - [jtag, [tdo]]
+            - [clock_out2, [cam_ref, i2s_ref, xtal, wifipll_32m]]
