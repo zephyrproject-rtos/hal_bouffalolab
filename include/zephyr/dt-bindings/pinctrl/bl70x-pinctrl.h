@@ -7,6 +7,8 @@
 #ifndef DT_BINDINGS_PINCTRL_BFLB_BL70X_PINCTRL_H_
 #define DT_BINDINGS_PINCTRL_BFLB_BL70X_PINCTRL_H_
 
+#define BFLB_PINMUX_FUN_INST_clock_out0                 0x0000
+#define BFLB_PINMUX_FUN_INST_clock_out1                 0x0100
 #define BFLB_PINMUX_FUN_INST_sdio                       0x0001
 #define BFLB_PINMUX_FUN_INST_flash0                     0x0002
 #define BFLB_PINMUX_FUN_INST_flash1                     0x0102
@@ -33,6 +35,7 @@
 #define BFLB_PINMUX_FUN_INST_qdec1                      0x0114
 #define BFLB_PINMUX_FUN_INST_qdec2                      0x0214
 
+#define BFLB_PINMUX_SIGNAL_aupll                        0x02
 #define BFLB_PINMUX_SIGNAL_a                            0x00
 #define BFLB_PINMUX_SIGNAL_blck                         0x00
 #define BFLB_PINMUX_SIGNAL_b                            0x00
@@ -71,6 +74,7 @@
 #define BFLB_PINMUX_SIGNAL_gpio2                        0x00
 #define BFLB_PINMUX_SIGNAL_gpio3                        0x00
 #define BFLB_PINMUX_SIGNAL_gpio4                        0x00
+#define BFLB_PINMUX_SIGNAL_i2s_ref                      0x01
 #define BFLB_PINMUX_SIGNAL_line_vld                     0x00
 #define BFLB_PINMUX_SIGNAL_led                          0x00
 #define BFLB_PINMUX_SIGNAL_mosi                         0x00
@@ -107,5 +111,6 @@
 #define BFLB_PINMUX_SIGNAL_txd1                         0x00
 #define BFLB_PINMUX_SIGNAL_tdo                          0x00
 #define BFLB_PINMUX_SIGNAL_tx_en                        0x00
+#define BFLB_PINMUX_SIGNAL_xtal                         0x03
 
 #endif /* DT_BINDINGS_PINCTRL_BFLB_BL70X_PINCTRL_H_ */

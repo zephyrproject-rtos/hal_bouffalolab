@@ -37,13 +37,17 @@
 #define BFLB_PINMUX_FUN_INST_qspi                       0x0018
 #define BFLB_PINMUX_FUN_INST_audac                      0x0019
 #define BFLB_PINMUX_FUN_INST_jtag                       0x001a
-#define BFLB_PINMUX_FUN_INST_clock_out                  0x001f
+#define BFLB_PINMUX_FUN_INST_clock_out0                 0x001f
+#define BFLB_PINMUX_FUN_INST_clock_out1                 0x011f
+#define BFLB_PINMUX_FUN_INST_clock_out2                 0x021f
+#define BFLB_PINMUX_FUN_INST_clock_out3                 0x031f
 
 #define BFLB_PINMUX_SIGNAL_blck                         0x00
 #define BFLB_PINMUX_SIGNAL_bclk                         0x00
 #define BFLB_PINMUX_SIGNAL_ch9                          0x00
 #define BFLB_PINMUX_SIGNAL_cts                          0x01
 #define BFLB_PINMUX_SIGNAL_ch0p                         0x00
+#define BFLB_PINMUX_SIGNAL_cam_ref                      0x00
 #define BFLB_PINMUX_SIGNAL_ch8                          0x00
 #define BFLB_PINMUX_SIGNAL_ch1p                         0x00
 #define BFLB_PINMUX_SIGNAL_ch2                          0x00
@@ -83,6 +87,7 @@
 #define BFLB_PINMUX_SIGNAL_dat5                         0x00
 #define BFLB_PINMUX_SIGNAL_fs                           0x00
 #define BFLB_PINMUX_SIGNAL_hsync                        0x00
+#define BFLB_PINMUX_SIGNAL_i2s_ref                      0x01
 #define BFLB_PINMUX_SIGNAL_in                           0x00
 #define BFLB_PINMUX_SIGNAL_miso                         0x00
 #define BFLB_PINMUX_SIGNAL_mosi                         0x00
@@ -100,6 +105,7 @@
 #define BFLB_PINMUX_SIGNAL_rx_dv                        0x00
 #define BFLB_PINMUX_SIGNAL_ss                           0x00
 #define BFLB_PINMUX_SIGNAL_scl                          0x00
+#define BFLB_PINMUX_SIGNAL_solo_in_128fs                0x03
 #define BFLB_PINMUX_SIGNAL_sclk                         0x00
 #define BFLB_PINMUX_SIGNAL_sda                          0x00
 #define BFLB_PINMUX_SIGNAL_sda0                         0x00
@@ -115,6 +121,9 @@
 #define BFLB_PINMUX_SIGNAL_txd1                         0x00
 #define BFLB_PINMUX_SIGNAL_tx_en                        0x00
 #define BFLB_PINMUX_SIGNAL_vsync                        0x00
+#define BFLB_PINMUX_SIGNAL_wifipll_32m                  0x03
+#define BFLB_PINMUX_SIGNAL_wifipll_48m                  0x03
 #define BFLB_PINMUX_SIGNAL_wr                           0x00
+#define BFLB_PINMUX_SIGNAL_xtal                         0x02
 
 #endif /* DT_BINDINGS_PINCTRL_BFLB_BL61X_PINCTRL_H_ */

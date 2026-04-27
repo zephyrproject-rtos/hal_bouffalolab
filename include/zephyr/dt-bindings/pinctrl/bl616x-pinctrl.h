@@ -70,6 +70,18 @@
 #define GPIO0_JTAG_TMS \
 	BFLB_PINMUX(0, jtag, tms, periph)
 
+/* gpio0_clock_out0_cam_ref */
+#define GPIO0_CLOCK_OUT0_CAM_REF \
+	BFLB_PINMUX(0, clock_out0, cam_ref, periph)
+
+/* gpio0_clock_out0_i2s_ref */
+#define GPIO0_CLOCK_OUT0_I2S_REF \
+	BFLB_PINMUX(0, clock_out0, i2s_ref, periph)
+
+/* gpio0_clock_out0_solo_in_128fs */
+#define GPIO0_CLOCK_OUT0_SOLO_IN_128FS \
+	BFLB_PINMUX(0, clock_out0, solo_in_128fs, periph)
+
 /* gpio0_adc_ch9 */
 #define GPIO0_ADC_CH9 \
 	BFLB_PINMUX(0, adc, ch9, analog)
@@ -134,6 +146,18 @@
 #define GPIO1_JTAG_TCK \
 	BFLB_PINMUX(1, jtag, tck, periph)
 
+/* gpio1_clock_out1_cam_ref */
+#define GPIO1_CLOCK_OUT1_CAM_REF \
+	BFLB_PINMUX(1, clock_out1, cam_ref, periph)
+
+/* gpio1_clock_out1_i2s_ref */
+#define GPIO1_CLOCK_OUT1_I2S_REF \
+	BFLB_PINMUX(1, clock_out1, i2s_ref, periph)
+
+/* gpio1_clock_out1_solo_in_128fs */
+#define GPIO1_CLOCK_OUT1_SOLO_IN_128FS \
+	BFLB_PINMUX(1, clock_out1, solo_in_128fs, periph)
+
 /* gpio1_adc_ch8 */
 #define GPIO1_ADC_CH8 \
 	BFLB_PINMUX(1, adc, ch8, analog)
@@ -193,6 +217,22 @@
 /* gpio2_jtag_tdo */
 #define GPIO2_JTAG_TDO \
 	BFLB_PINMUX(2, jtag, tdo, periph)
+
+/* gpio2_clock_out2_cam_ref */
+#define GPIO2_CLOCK_OUT2_CAM_REF \
+	BFLB_PINMUX(2, clock_out2, cam_ref, periph)
+
+/* gpio2_clock_out2_i2s_ref */
+#define GPIO2_CLOCK_OUT2_I2S_REF \
+	BFLB_PINMUX(2, clock_out2, i2s_ref, periph)
+
+/* gpio2_clock_out2_xtal */
+#define GPIO2_CLOCK_OUT2_XTAL \
+	BFLB_PINMUX(2, clock_out2, xtal, periph)
+
+/* gpio2_clock_out2_wifipll_32m */
+#define GPIO2_CLOCK_OUT2_WIFIPLL_32M \
+	BFLB_PINMUX(2, clock_out2, wifipll_32m, periph)
 
 /* gpio2_adc_ch2 */
 #define GPIO2_ADC_CH2 \
@@ -257,6 +297,18 @@
 /* gpio3_jtag_tdi */
 #define GPIO3_JTAG_TDI \
 	BFLB_PINMUX(3, jtag, tdi, periph)
+
+/* gpio3_clock_out3_cam_ref */
+#define GPIO3_CLOCK_OUT3_CAM_REF \
+	BFLB_PINMUX(3, clock_out3, cam_ref, periph)
+
+/* gpio3_clock_out3_i2s_ref */
+#define GPIO3_CLOCK_OUT3_I2S_REF \
+	BFLB_PINMUX(3, clock_out3, i2s_ref, periph)
+
+/* gpio3_clock_out3_wifipll_48m */
+#define GPIO3_CLOCK_OUT3_WIFIPLL_48M \
+	BFLB_PINMUX(3, clock_out3, wifipll_48m, periph)
 
 /* gpio3_adc_ch8 */
 #define GPIO3_ADC_CH8 \
@@ -346,6 +398,22 @@
 #define GPIO10_JTAG_TDO \
 	BFLB_PINMUX(10, jtag, tdo, periph)
 
+/* gpio10_clock_out2_cam_ref */
+#define GPIO10_CLOCK_OUT2_CAM_REF \
+	BFLB_PINMUX(10, clock_out2, cam_ref, periph)
+
+/* gpio10_clock_out2_i2s_ref */
+#define GPIO10_CLOCK_OUT2_I2S_REF \
+	BFLB_PINMUX(10, clock_out2, i2s_ref, periph)
+
+/* gpio10_clock_out2_xtal */
+#define GPIO10_CLOCK_OUT2_XTAL \
+	BFLB_PINMUX(10, clock_out2, xtal, periph)
+
+/* gpio10_clock_out2_wifipll_32m */
+#define GPIO10_CLOCK_OUT2_WIFIPLL_32M \
+	BFLB_PINMUX(10, clock_out2, wifipll_32m, periph)
+
 /* gpio10_adc_ch7 */
 #define GPIO10_ADC_CH7 \
 	BFLB_PINMUX(10, adc, ch7, analog)
@@ -434,6 +502,18 @@
 #define GPIO11_JTAG_TDI \
 	BFLB_PINMUX(11, jtag, tdi, periph)
 
+/* gpio11_clock_out3_cam_ref */
+#define GPIO11_CLOCK_OUT3_CAM_REF \
+	BFLB_PINMUX(11, clock_out3, cam_ref, periph)
+
+/* gpio11_clock_out3_i2s_ref */
+#define GPIO11_CLOCK_OUT3_I2S_REF \
+	BFLB_PINMUX(11, clock_out3, i2s_ref, periph)
+
+/* gpio11_clock_out3_wifipll_48m */
+#define GPIO11_CLOCK_OUT3_WIFIPLL_48M \
+	BFLB_PINMUX(11, clock_out3, wifipll_48m, periph)
+
 /* gpio12_sdh_clk */
 #define GPIO12_SDH_CLK \
 	BFLB_PINMUX(12, sdh, clk, periph)
@@ -517,6 +597,18 @@
 /* gpio12_jtag_tms */
 #define GPIO12_JTAG_TMS \
 	BFLB_PINMUX(12, jtag, tms, periph)
+
+/* gpio12_clock_out0_cam_ref */
+#define GPIO12_CLOCK_OUT0_CAM_REF \
+	BFLB_PINMUX(12, clock_out0, cam_ref, periph)
+
+/* gpio12_clock_out0_i2s_ref */
+#define GPIO12_CLOCK_OUT0_I2S_REF \
+	BFLB_PINMUX(12, clock_out0, i2s_ref, periph)
+
+/* gpio12_clock_out0_solo_in_128fs */
+#define GPIO12_CLOCK_OUT0_SOLO_IN_128FS \
+	BFLB_PINMUX(12, clock_out0, solo_in_128fs, periph)
 
 /* gpio12_adc_ch6 */
 #define GPIO12_ADC_CH6 \
@@ -605,6 +697,18 @@
 /* gpio13_jtag_tck */
 #define GPIO13_JTAG_TCK \
 	BFLB_PINMUX(13, jtag, tck, periph)
+
+/* gpio13_clock_out1_cam_ref */
+#define GPIO13_CLOCK_OUT1_CAM_REF \
+	BFLB_PINMUX(13, clock_out1, cam_ref, periph)
+
+/* gpio13_clock_out1_i2s_ref */
+#define GPIO13_CLOCK_OUT1_I2S_REF \
+	BFLB_PINMUX(13, clock_out1, i2s_ref, periph)
+
+/* gpio13_clock_out1_solo_in_128fs */
+#define GPIO13_CLOCK_OUT1_SOLO_IN_128FS \
+	BFLB_PINMUX(13, clock_out1, solo_in_128fs, periph)
 
 /* gpio13_adc_ch5 */
 #define GPIO13_ADC_CH5 \
@@ -698,6 +802,22 @@
 #define GPIO14_JTAG_TDO \
 	BFLB_PINMUX(14, jtag, tdo, periph)
 
+/* gpio14_clock_out2_cam_ref */
+#define GPIO14_CLOCK_OUT2_CAM_REF \
+	BFLB_PINMUX(14, clock_out2, cam_ref, periph)
+
+/* gpio14_clock_out2_i2s_ref */
+#define GPIO14_CLOCK_OUT2_I2S_REF \
+	BFLB_PINMUX(14, clock_out2, i2s_ref, periph)
+
+/* gpio14_clock_out2_xtal */
+#define GPIO14_CLOCK_OUT2_XTAL \
+	BFLB_PINMUX(14, clock_out2, xtal, periph)
+
+/* gpio14_clock_out2_wifipll_32m */
+#define GPIO14_CLOCK_OUT2_WIFIPLL_32M \
+	BFLB_PINMUX(14, clock_out2, wifipll_32m, periph)
+
 /* gpio14_adc_ch4 */
 #define GPIO14_ADC_CH4 \
 	BFLB_PINMUX(14, adc, ch4, analog)
@@ -786,6 +906,18 @@
 #define GPIO15_JTAG_TDI \
 	BFLB_PINMUX(15, jtag, tdi, periph)
 
+/* gpio15_clock_out3_cam_ref */
+#define GPIO15_CLOCK_OUT3_CAM_REF \
+	BFLB_PINMUX(15, clock_out3, cam_ref, periph)
+
+/* gpio15_clock_out3_i2s_ref */
+#define GPIO15_CLOCK_OUT3_I2S_REF \
+	BFLB_PINMUX(15, clock_out3, i2s_ref, periph)
+
+/* gpio15_clock_out3_wifipll_48m */
+#define GPIO15_CLOCK_OUT3_WIFIPLL_48M \
+	BFLB_PINMUX(15, clock_out3, wifipll_48m, periph)
+
 /* gpio16_spi_ss */
 #define GPIO16_SPI_SS \
 	BFLB_PINMUX(16, spi, ss, periph)
@@ -845,6 +977,18 @@
 /* gpio16_jtag_tms */
 #define GPIO16_JTAG_TMS \
 	BFLB_PINMUX(16, jtag, tms, periph)
+
+/* gpio16_clock_out0_cam_ref */
+#define GPIO16_CLOCK_OUT0_CAM_REF \
+	BFLB_PINMUX(16, clock_out0, cam_ref, periph)
+
+/* gpio16_clock_out0_i2s_ref */
+#define GPIO16_CLOCK_OUT0_I2S_REF \
+	BFLB_PINMUX(16, clock_out0, i2s_ref, periph)
+
+/* gpio16_clock_out0_solo_in_128fs */
+#define GPIO16_CLOCK_OUT0_SOLO_IN_128FS \
+	BFLB_PINMUX(16, clock_out0, solo_in_128fs, periph)
 
 /* gpio17_spi_sclk */
 #define GPIO17_SPI_SCLK \
@@ -906,6 +1050,18 @@
 #define GPIO17_JTAG_TCK \
 	BFLB_PINMUX(17, jtag, tck, periph)
 
+/* gpio17_clock_out1_cam_ref */
+#define GPIO17_CLOCK_OUT1_CAM_REF \
+	BFLB_PINMUX(17, clock_out1, cam_ref, periph)
+
+/* gpio17_clock_out1_i2s_ref */
+#define GPIO17_CLOCK_OUT1_I2S_REF \
+	BFLB_PINMUX(17, clock_out1, i2s_ref, periph)
+
+/* gpio17_clock_out1_solo_in_128fs */
+#define GPIO17_CLOCK_OUT1_SOLO_IN_128FS \
+	BFLB_PINMUX(17, clock_out1, solo_in_128fs, periph)
+
 /* gpio20_spi_ss */
 #define GPIO20_SPI_SS \
 	BFLB_PINMUX(20, spi, ss, periph)
@@ -965,6 +1121,18 @@
 /* gpio20_jtag_tms */
 #define GPIO20_JTAG_TMS \
 	BFLB_PINMUX(20, jtag, tms, periph)
+
+/* gpio20_clock_out0_cam_ref */
+#define GPIO20_CLOCK_OUT0_CAM_REF \
+	BFLB_PINMUX(20, clock_out0, cam_ref, periph)
+
+/* gpio20_clock_out0_i2s_ref */
+#define GPIO20_CLOCK_OUT0_I2S_REF \
+	BFLB_PINMUX(20, clock_out0, i2s_ref, periph)
+
+/* gpio20_clock_out0_solo_in_128fs */
+#define GPIO20_CLOCK_OUT0_SOLO_IN_128FS \
+	BFLB_PINMUX(20, clock_out0, solo_in_128fs, periph)
 
 /* gpio20_adc_ch0 */
 #define GPIO20_ADC_CH0 \
@@ -1030,6 +1198,18 @@
 #define GPIO21_JTAG_TCK \
 	BFLB_PINMUX(21, jtag, tck, periph)
 
+/* gpio21_clock_out1_cam_ref */
+#define GPIO21_CLOCK_OUT1_CAM_REF \
+	BFLB_PINMUX(21, clock_out1, cam_ref, periph)
+
+/* gpio21_clock_out1_i2s_ref */
+#define GPIO21_CLOCK_OUT1_I2S_REF \
+	BFLB_PINMUX(21, clock_out1, i2s_ref, periph)
+
+/* gpio21_clock_out1_solo_in_128fs */
+#define GPIO21_CLOCK_OUT1_SOLO_IN_128FS \
+	BFLB_PINMUX(21, clock_out1, solo_in_128fs, periph)
+
 /* gpio22_spi_miso */
 #define GPIO22_SPI_MISO \
 	BFLB_PINMUX(22, spi, miso, periph)
@@ -1089,6 +1269,22 @@
 /* gpio22_jtag_tdo */
 #define GPIO22_JTAG_TDO \
 	BFLB_PINMUX(22, jtag, tdo, periph)
+
+/* gpio22_clock_out2_cam_ref */
+#define GPIO22_CLOCK_OUT2_CAM_REF \
+	BFLB_PINMUX(22, clock_out2, cam_ref, periph)
+
+/* gpio22_clock_out2_i2s_ref */
+#define GPIO22_CLOCK_OUT2_I2S_REF \
+	BFLB_PINMUX(22, clock_out2, i2s_ref, periph)
+
+/* gpio22_clock_out2_xtal */
+#define GPIO22_CLOCK_OUT2_XTAL \
+	BFLB_PINMUX(22, clock_out2, xtal, periph)
+
+/* gpio22_clock_out2_wifipll_32m */
+#define GPIO22_CLOCK_OUT2_WIFIPLL_32M \
+	BFLB_PINMUX(22, clock_out2, wifipll_32m, periph)
 
 /* gpio22_adc_ch0 */
 #define GPIO22_ADC_CH0 \
@@ -1162,6 +1358,18 @@
 #define GPIO27_JTAG_TDI \
 	BFLB_PINMUX(27, jtag, tdi, periph)
 
+/* gpio27_clock_out3_cam_ref */
+#define GPIO27_CLOCK_OUT3_CAM_REF \
+	BFLB_PINMUX(27, clock_out3, cam_ref, periph)
+
+/* gpio27_clock_out3_i2s_ref */
+#define GPIO27_CLOCK_OUT3_I2S_REF \
+	BFLB_PINMUX(27, clock_out3, i2s_ref, periph)
+
+/* gpio27_clock_out3_wifipll_48m */
+#define GPIO27_CLOCK_OUT3_WIFIPLL_48M \
+	BFLB_PINMUX(27, clock_out3, wifipll_48m, periph)
+
 /* gpio27_adc_ch10 */
 #define GPIO27_ADC_CH10 \
 	BFLB_PINMUX(27, adc, ch10, analog)
@@ -1234,6 +1442,18 @@
 #define GPIO28_JTAG_TMS \
 	BFLB_PINMUX(28, jtag, tms, periph)
 
+/* gpio28_clock_out0_cam_ref */
+#define GPIO28_CLOCK_OUT0_CAM_REF \
+	BFLB_PINMUX(28, clock_out0, cam_ref, periph)
+
+/* gpio28_clock_out0_i2s_ref */
+#define GPIO28_CLOCK_OUT0_I2S_REF \
+	BFLB_PINMUX(28, clock_out0, i2s_ref, periph)
+
+/* gpio28_clock_out0_solo_in_128fs */
+#define GPIO28_CLOCK_OUT0_SOLO_IN_128FS \
+	BFLB_PINMUX(28, clock_out0, solo_in_128fs, periph)
+
 /* gpio29_spi_sclk */
 #define GPIO29_SPI_SCLK \
 	BFLB_PINMUX(29, spi, sclk, periph)
@@ -1298,6 +1518,18 @@
 #define GPIO29_JTAG_TCK \
 	BFLB_PINMUX(29, jtag, tck, periph)
 
+/* gpio29_clock_out1_cam_ref */
+#define GPIO29_CLOCK_OUT1_CAM_REF \
+	BFLB_PINMUX(29, clock_out1, cam_ref, periph)
+
+/* gpio29_clock_out1_i2s_ref */
+#define GPIO29_CLOCK_OUT1_I2S_REF \
+	BFLB_PINMUX(29, clock_out1, i2s_ref, periph)
+
+/* gpio29_clock_out1_solo_in_128fs */
+#define GPIO29_CLOCK_OUT1_SOLO_IN_128FS \
+	BFLB_PINMUX(29, clock_out1, solo_in_128fs, periph)
+
 /* gpio30_spi_miso */
 #define GPIO30_SPI_MISO \
 	BFLB_PINMUX(30, spi, miso, periph)
@@ -1357,5 +1589,21 @@
 /* gpio30_jtag_tdo */
 #define GPIO30_JTAG_TDO \
 	BFLB_PINMUX(30, jtag, tdo, periph)
+
+/* gpio30_clock_out2_cam_ref */
+#define GPIO30_CLOCK_OUT2_CAM_REF \
+	BFLB_PINMUX(30, clock_out2, cam_ref, periph)
+
+/* gpio30_clock_out2_i2s_ref */
+#define GPIO30_CLOCK_OUT2_I2S_REF \
+	BFLB_PINMUX(30, clock_out2, i2s_ref, periph)
+
+/* gpio30_clock_out2_xtal */
+#define GPIO30_CLOCK_OUT2_XTAL \
+	BFLB_PINMUX(30, clock_out2, xtal, periph)
+
+/* gpio30_clock_out2_wifipll_32m */
+#define GPIO30_CLOCK_OUT2_WIFIPLL_32M \
+	BFLB_PINMUX(30, clock_out2, wifipll_32m, periph)
 
 #endif /* DT_BINDINGS_PINCTRL_BFLB_BL616X_PINCTRL_H_ */

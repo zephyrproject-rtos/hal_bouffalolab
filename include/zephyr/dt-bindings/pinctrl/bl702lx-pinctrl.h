@@ -10,6 +10,18 @@
 #include <dt-bindings/pinctrl/bl70xl-pinctrl.h>
 #include <dt-bindings/pinctrl/bflb-common-pinctrl.h>
 
+/* gpio0_clock_out0_dll_2_032M */
+#define GPIO0_CLOCK_OUT0_DLL_2_032M \
+	BFLB_PINMUX(0, clock_out0, dll_2_032m, periph)
+
+/* gpio0_clock_out0_dll_6_095M */
+#define GPIO0_CLOCK_OUT0_DLL_6_095M \
+	BFLB_PINMUX(0, clock_out0, dll_6_095m, periph)
+
+/* gpio0_clock_out0_xclk */
+#define GPIO0_CLOCK_OUT0_XCLK \
+	BFLB_PINMUX(0, clock_out0, xclk, periph)
+
 /* gpio0_spi_mosi */
 #define GPIO0_SPI_MOSI \
 	BFLB_PINMUX(0, spi, mosi, periph)
@@ -45,6 +57,18 @@
 /* gpio0_jtag_tms */
 #define GPIO0_JTAG_TMS \
 	BFLB_PINMUX(0, jtag, tms, periph)
+
+/* gpio1_clock_out1_f32k */
+#define GPIO1_CLOCK_OUT1_F32K \
+	BFLB_PINMUX(1, clock_out1, f32k, periph)
+
+/* gpio1_clock_out1_xtal */
+#define GPIO1_CLOCK_OUT1_XTAL \
+	BFLB_PINMUX(1, clock_out1, xtal, periph)
+
+/* gpio1_clock_out1_xtal32k */
+#define GPIO1_CLOCK_OUT1_XTAL32K \
+	BFLB_PINMUX(1, clock_out1, xtal32k, periph)
 
 /* gpio1_spi_miso */
 #define GPIO1_SPI_MISO \
@@ -82,6 +106,18 @@
 #define GPIO1_JTAG_TDI \
 	BFLB_PINMUX(1, jtag, tdi, periph)
 
+/* gpio2_clock_out0_dll_2_032M */
+#define GPIO2_CLOCK_OUT0_DLL_2_032M \
+	BFLB_PINMUX(2, clock_out0, dll_2_032m, periph)
+
+/* gpio2_clock_out0_dll_6_095M */
+#define GPIO2_CLOCK_OUT0_DLL_6_095M \
+	BFLB_PINMUX(2, clock_out0, dll_6_095m, periph)
+
+/* gpio2_clock_out0_xclk */
+#define GPIO2_CLOCK_OUT0_XCLK \
+	BFLB_PINMUX(2, clock_out0, xclk, periph)
+
 /* gpio2_spi_ss */
 #define GPIO2_SPI_SS \
 	BFLB_PINMUX(2, spi, ss, periph)
@@ -117,6 +153,18 @@
 /* gpio2_jtag_tck */
 #define GPIO2_JTAG_TCK \
 	BFLB_PINMUX(2, jtag, tck, periph)
+
+/* gpio7_clock_out1_f32k */
+#define GPIO7_CLOCK_OUT1_F32K \
+	BFLB_PINMUX(7, clock_out1, f32k, periph)
+
+/* gpio7_clock_out1_xtal */
+#define GPIO7_CLOCK_OUT1_XTAL \
+	BFLB_PINMUX(7, clock_out1, xtal, periph)
+
+/* gpio7_clock_out1_xtal32k */
+#define GPIO7_CLOCK_OUT1_XTAL32K \
+	BFLB_PINMUX(7, clock_out1, xtal32k, periph)
 
 /* gpio7_spi_sclk */
 #define GPIO7_SPI_SCLK \
@@ -158,6 +206,18 @@
 #define GPIO7_ADC_CH7 \
 	BFLB_PINMUX(7, adc, ch7, analog)
 
+/* gpio8_clock_out0_dll_2_032M */
+#define GPIO8_CLOCK_OUT0_DLL_2_032M \
+	BFLB_PINMUX(8, clock_out0, dll_2_032m, periph)
+
+/* gpio8_clock_out0_dll_6_095M */
+#define GPIO8_CLOCK_OUT0_DLL_6_095M \
+	BFLB_PINMUX(8, clock_out0, dll_6_095m, periph)
+
+/* gpio8_clock_out0_xclk */
+#define GPIO8_CLOCK_OUT0_XCLK \
+	BFLB_PINMUX(8, clock_out0, xclk, periph)
+
 /* gpio8_spi_mosi */
 #define GPIO8_SPI_MOSI \
 	BFLB_PINMUX(8, spi, mosi, periph)
@@ -198,6 +258,18 @@
 #define GPIO8_ADC_CH8 \
 	BFLB_PINMUX(8, adc, ch8, analog)
 
+/* gpio9_clock_out1_f32k */
+#define GPIO9_CLOCK_OUT1_F32K \
+	BFLB_PINMUX(9, clock_out1, f32k, periph)
+
+/* gpio9_clock_out1_xtal */
+#define GPIO9_CLOCK_OUT1_XTAL \
+	BFLB_PINMUX(9, clock_out1, xtal, periph)
+
+/* gpio9_clock_out1_xtal32k */
+#define GPIO9_CLOCK_OUT1_XTAL32K \
+	BFLB_PINMUX(9, clock_out1, xtal32k, periph)
+
 /* gpio9_spi_miso */
 #define GPIO9_SPI_MISO \
 	BFLB_PINMUX(9, spi, miso, periph)
@@ -234,6 +306,18 @@
 #define GPIO9_ADC_CH9 \
 	BFLB_PINMUX(9, adc, ch9, analog)
 
+/* gpio10_clock_out0_dll_2_032M */
+#define GPIO10_CLOCK_OUT0_DLL_2_032M \
+	BFLB_PINMUX(10, clock_out0, dll_2_032m, periph)
+
+/* gpio10_clock_out0_dll_6_095M */
+#define GPIO10_CLOCK_OUT0_DLL_6_095M \
+	BFLB_PINMUX(10, clock_out0, dll_6_095m, periph)
+
+/* gpio10_clock_out0_xclk */
+#define GPIO10_CLOCK_OUT0_XCLK \
+	BFLB_PINMUX(10, clock_out0, xclk, periph)
+
 /* gpio10_spi_ss */
 #define GPIO10_SPI_SS \
 	BFLB_PINMUX(10, spi, ss, periph)
@@ -265,6 +349,18 @@
 /* gpio10_jtag_tck */
 #define GPIO10_JTAG_TCK \
 	BFLB_PINMUX(10, jtag, tck, periph)
+
+/* gpio11_clock_out1_f32k */
+#define GPIO11_CLOCK_OUT1_F32K \
+	BFLB_PINMUX(11, clock_out1, f32k, periph)
+
+/* gpio11_clock_out1_xtal */
+#define GPIO11_CLOCK_OUT1_XTAL \
+	BFLB_PINMUX(11, clock_out1, xtal, periph)
+
+/* gpio11_clock_out1_xtal32k */
+#define GPIO11_CLOCK_OUT1_XTAL32K \
+	BFLB_PINMUX(11, clock_out1, xtal32k, periph)
 
 /* gpio11_spi_sclk */
 #define GPIO11_SPI_SCLK \
@@ -302,6 +398,18 @@
 #define GPIO11_ADC_CH10 \
 	BFLB_PINMUX(11, adc, ch10, analog)
 
+/* gpio14_clock_out0_dll_2_032M */
+#define GPIO14_CLOCK_OUT0_DLL_2_032M \
+	BFLB_PINMUX(14, clock_out0, dll_2_032m, periph)
+
+/* gpio14_clock_out0_dll_6_095M */
+#define GPIO14_CLOCK_OUT0_DLL_6_095M \
+	BFLB_PINMUX(14, clock_out0, dll_6_095m, periph)
+
+/* gpio14_clock_out0_xclk */
+#define GPIO14_CLOCK_OUT0_XCLK \
+	BFLB_PINMUX(14, clock_out0, xclk, periph)
+
 /* gpio14_spi_ss */
 #define GPIO14_SPI_SS \
 	BFLB_PINMUX(14, spi, ss, periph)
@@ -337,6 +445,18 @@
 /* gpio14_adc_ch0 */
 #define GPIO14_ADC_CH0 \
 	BFLB_PINMUX(14, adc, ch0, analog)
+
+/* gpio15_clock_out1_f32k */
+#define GPIO15_CLOCK_OUT1_F32K \
+	BFLB_PINMUX(15, clock_out1, f32k, periph)
+
+/* gpio15_clock_out1_xtal */
+#define GPIO15_CLOCK_OUT1_XTAL \
+	BFLB_PINMUX(15, clock_out1, xtal, periph)
+
+/* gpio15_clock_out1_xtal32k */
+#define GPIO15_CLOCK_OUT1_XTAL32K \
+	BFLB_PINMUX(15, clock_out1, xtal32k, periph)
 
 /* gpio15_spi_sclk */
 #define GPIO15_SPI_SCLK \
@@ -374,6 +494,18 @@
 #define GPIO15_ADC_CH1 \
 	BFLB_PINMUX(15, adc, ch1, analog)
 
+/* gpio16_clock_out0_dll_2_032M */
+#define GPIO16_CLOCK_OUT0_DLL_2_032M \
+	BFLB_PINMUX(16, clock_out0, dll_2_032m, periph)
+
+/* gpio16_clock_out0_dll_6_095M */
+#define GPIO16_CLOCK_OUT0_DLL_6_095M \
+	BFLB_PINMUX(16, clock_out0, dll_6_095m, periph)
+
+/* gpio16_clock_out0_xclk */
+#define GPIO16_CLOCK_OUT0_XCLK \
+	BFLB_PINMUX(16, clock_out0, xclk, periph)
+
 /* gpio16_spi_mosi */
 #define GPIO16_SPI_MOSI \
 	BFLB_PINMUX(16, spi, mosi, periph)
@@ -405,6 +537,18 @@
 /* gpio16_jtag_tms */
 #define GPIO16_JTAG_TMS \
 	BFLB_PINMUX(16, jtag, tms, periph)
+
+/* gpio17_clock_out1_f32k */
+#define GPIO17_CLOCK_OUT1_F32K \
+	BFLB_PINMUX(17, clock_out1, f32k, periph)
+
+/* gpio17_clock_out1_xtal */
+#define GPIO17_CLOCK_OUT1_XTAL \
+	BFLB_PINMUX(17, clock_out1, xtal, periph)
+
+/* gpio17_clock_out1_xtal32k */
+#define GPIO17_CLOCK_OUT1_XTAL32K \
+	BFLB_PINMUX(17, clock_out1, xtal32k, periph)
 
 /* gpio17_spi_miso */
 #define GPIO17_SPI_MISO \
@@ -442,6 +586,18 @@
 #define GPIO17_ADC_CH2 \
 	BFLB_PINMUX(17, adc, ch2, analog)
 
+/* gpio18_clock_out0_dll_2_032M */
+#define GPIO18_CLOCK_OUT0_DLL_2_032M \
+	BFLB_PINMUX(18, clock_out0, dll_2_032m, periph)
+
+/* gpio18_clock_out0_dll_6_095M */
+#define GPIO18_CLOCK_OUT0_DLL_6_095M \
+	BFLB_PINMUX(18, clock_out0, dll_6_095m, periph)
+
+/* gpio18_clock_out0_xclk */
+#define GPIO18_CLOCK_OUT0_XCLK \
+	BFLB_PINMUX(18, clock_out0, xclk, periph)
+
 /* gpio18_spi_ss */
 #define GPIO18_SPI_SS \
 	BFLB_PINMUX(18, spi, ss, periph)
@@ -478,6 +634,18 @@
 #define GPIO18_ADC_CH3 \
 	BFLB_PINMUX(18, adc, ch3, analog)
 
+/* gpio22_clock_out0_dll_2_032M */
+#define GPIO22_CLOCK_OUT0_DLL_2_032M \
+	BFLB_PINMUX(22, clock_out0, dll_2_032m, periph)
+
+/* gpio22_clock_out0_dll_6_095M */
+#define GPIO22_CLOCK_OUT0_DLL_6_095M \
+	BFLB_PINMUX(22, clock_out0, dll_6_095m, periph)
+
+/* gpio22_clock_out0_xclk */
+#define GPIO22_CLOCK_OUT0_XCLK \
+	BFLB_PINMUX(22, clock_out0, xclk, periph)
+
 /* gpio22_spi_ss */
 #define GPIO22_SPI_SS \
 	BFLB_PINMUX(22, spi, ss, periph)
@@ -509,6 +677,18 @@
 /* gpio22_jtag_tck */
 #define GPIO22_JTAG_TCK \
 	BFLB_PINMUX(22, jtag, tck, periph)
+
+/* gpio23_clock_out1_f32k */
+#define GPIO23_CLOCK_OUT1_F32K \
+	BFLB_PINMUX(23, clock_out1, f32k, periph)
+
+/* gpio23_clock_out1_xtal */
+#define GPIO23_CLOCK_OUT1_XTAL \
+	BFLB_PINMUX(23, clock_out1, xtal, periph)
+
+/* gpio23_clock_out1_xtal32k */
+#define GPIO23_CLOCK_OUT1_XTAL32K \
+	BFLB_PINMUX(23, clock_out1, xtal32k, periph)
 
 /* gpio23_flash2_d0 */
 #define GPIO23_FLASH2_D0 \
@@ -546,6 +726,18 @@
 #define GPIO23_JTAG_TDO \
 	BFLB_PINMUX(23, jtag, tdo, periph)
 
+/* gpio24_clock_out0_dll_2_032M */
+#define GPIO24_CLOCK_OUT0_DLL_2_032M \
+	BFLB_PINMUX(24, clock_out0, dll_2_032m, periph)
+
+/* gpio24_clock_out0_dll_6_095M */
+#define GPIO24_CLOCK_OUT0_DLL_6_095M \
+	BFLB_PINMUX(24, clock_out0, dll_6_095m, periph)
+
+/* gpio24_clock_out0_xclk */
+#define GPIO24_CLOCK_OUT0_XCLK \
+	BFLB_PINMUX(24, clock_out0, xclk, periph)
+
 /* gpio24_flash2_d2 */
 #define GPIO24_FLASH2_D2 \
 	BFLB_PINMUX(24, flash2, d2, periph)
@@ -581,6 +773,18 @@
 /* gpio24_jtag_tms */
 #define GPIO24_JTAG_TMS \
 	BFLB_PINMUX(24, jtag, tms, periph)
+
+/* gpio25_clock_out1_f32k */
+#define GPIO25_CLOCK_OUT1_F32K \
+	BFLB_PINMUX(25, clock_out1, f32k, periph)
+
+/* gpio25_clock_out1_xtal */
+#define GPIO25_CLOCK_OUT1_XTAL \
+	BFLB_PINMUX(25, clock_out1, xtal, periph)
+
+/* gpio25_clock_out1_xtal32k */
+#define GPIO25_CLOCK_OUT1_XTAL32K \
+	BFLB_PINMUX(25, clock_out1, xtal32k, periph)
 
 /* gpio25_flash2_d1 */
 #define GPIO25_FLASH2_D1 \
@@ -618,6 +822,18 @@
 #define GPIO25_JTAG_TDI \
 	BFLB_PINMUX(25, jtag, tdi, periph)
 
+/* gpio26_clock_out0_dll_2_032M */
+#define GPIO26_CLOCK_OUT0_DLL_2_032M \
+	BFLB_PINMUX(26, clock_out0, dll_2_032m, periph)
+
+/* gpio26_clock_out0_dll_6_095M */
+#define GPIO26_CLOCK_OUT0_DLL_6_095M \
+	BFLB_PINMUX(26, clock_out0, dll_6_095m, periph)
+
+/* gpio26_clock_out0_xclk */
+#define GPIO26_CLOCK_OUT0_XCLK \
+	BFLB_PINMUX(26, clock_out0, xclk, periph)
+
 /* gpio26_flash2_cs */
 #define GPIO26_FLASH2_CS \
 	BFLB_PINMUX(26, flash2, cs, periph)
@@ -653,6 +869,18 @@
 /* gpio26_jtag_tck */
 #define GPIO26_JTAG_TCK \
 	BFLB_PINMUX(26, jtag, tck, periph)
+
+/* gpio27_clock_out1_f32k */
+#define GPIO27_CLOCK_OUT1_F32K \
+	BFLB_PINMUX(27, clock_out1, f32k, periph)
+
+/* gpio27_clock_out1_xtal */
+#define GPIO27_CLOCK_OUT1_XTAL \
+	BFLB_PINMUX(27, clock_out1, xtal, periph)
+
+/* gpio27_clock_out1_xtal32k */
+#define GPIO27_CLOCK_OUT1_XTAL32K \
+	BFLB_PINMUX(27, clock_out1, xtal32k, periph)
 
 /* gpio27_flash2_clk */
 #define GPIO27_FLASH2_CLK \
@@ -690,6 +918,18 @@
 #define GPIO27_JTAG_TDO \
 	BFLB_PINMUX(27, jtag, tdo, periph)
 
+/* gpio28_clock_out0_dll_2_032M */
+#define GPIO28_CLOCK_OUT0_DLL_2_032M \
+	BFLB_PINMUX(28, clock_out0, dll_2_032m, periph)
+
+/* gpio28_clock_out0_dll_6_095M */
+#define GPIO28_CLOCK_OUT0_DLL_6_095M \
+	BFLB_PINMUX(28, clock_out0, dll_6_095m, periph)
+
+/* gpio28_clock_out0_xclk */
+#define GPIO28_CLOCK_OUT0_XCLK \
+	BFLB_PINMUX(28, clock_out0, xclk, periph)
+
 /* gpio28_flash2_d3 */
 #define GPIO28_FLASH2_D3 \
 	BFLB_PINMUX(28, flash2, d3, periph)
@@ -726,6 +966,18 @@
 #define GPIO28_JTAG_TMS \
 	BFLB_PINMUX(28, jtag, tms, periph)
 
+/* gpio30_clock_out0_dll_2_032M */
+#define GPIO30_CLOCK_OUT0_DLL_2_032M \
+	BFLB_PINMUX(30, clock_out0, dll_2_032m, periph)
+
+/* gpio30_clock_out0_dll_6_095M */
+#define GPIO30_CLOCK_OUT0_DLL_6_095M \
+	BFLB_PINMUX(30, clock_out0, dll_6_095m, periph)
+
+/* gpio30_clock_out0_xclk */
+#define GPIO30_CLOCK_OUT0_XCLK \
+	BFLB_PINMUX(30, clock_out0, xclk, periph)
+
 /* gpio30_spi_ss */
 #define GPIO30_SPI_SS \
 	BFLB_PINMUX(30, spi, ss, periph)
@@ -757,6 +1009,18 @@
 /* gpio30_jtag_tck */
 #define GPIO30_JTAG_TCK \
 	BFLB_PINMUX(30, jtag, tck, periph)
+
+/* gpio31_clock_out1_f32k */
+#define GPIO31_CLOCK_OUT1_F32K \
+	BFLB_PINMUX(31, clock_out1, f32k, periph)
+
+/* gpio31_clock_out1_xtal */
+#define GPIO31_CLOCK_OUT1_XTAL \
+	BFLB_PINMUX(31, clock_out1, xtal, periph)
+
+/* gpio31_clock_out1_xtal32k */
+#define GPIO31_CLOCK_OUT1_XTAL32K \
+	BFLB_PINMUX(31, clock_out1, xtal32k, periph)
 
 /* gpio31_spi_sclk */
 #define GPIO31_SPI_SCLK \
