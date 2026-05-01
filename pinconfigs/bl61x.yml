@@ -34,6 +34,7 @@ peripherals:
     - [cam, 9, 0, 1]
     - [analog, 10]
     - [adc, 10]
+    - [dac, 10]
     - [swgpio, 11]
     - [gpio, 11]
     - [sdio, 12]
@@ -99,6 +100,7 @@ pins:
         series: [616, 618]
         analog:
             - [adc, [ch2]]
+            - [dac, [chb]]
         periph:
             - [spi, [miso]]
             - [i2s, [di]]
@@ -113,6 +115,7 @@ pins:
         series: [616, 618]
         analog:
             - [adc, [ch8]]
+            - [dac, [cha]]
         periph:
             - [spi, [mosi]]
             - [i2s, [do]]
