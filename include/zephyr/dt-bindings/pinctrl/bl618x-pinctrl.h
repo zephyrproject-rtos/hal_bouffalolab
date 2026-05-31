@@ -58,6 +58,14 @@
 #define GPIO0_UART1_RX \
 	BFLB_PINMUX(0, uart1, rx, periph)
 
+/* gpio0_can0_tx */
+#define GPIO0_CAN0_TX \
+	BFLB_PINMUX(0, can0, tx, periph)
+
+/* gpio0_can0_rx */
+#define GPIO0_CAN0_RX \
+	BFLB_PINMUX(0, can0, rx, periph)
+
 /* gpio0_cam1_vsync */
 #define GPIO0_CAM1_VSYNC \
 	BFLB_PINMUX(0, cam1, vsync, periph)
@@ -134,6 +142,14 @@
 #define GPIO1_UART1_RX \
 	BFLB_PINMUX(1, uart1, rx, periph)
 
+/* gpio1_can0_tx */
+#define GPIO1_CAN0_TX \
+	BFLB_PINMUX(1, can0, tx, periph)
+
+/* gpio1_can0_rx */
+#define GPIO1_CAN0_RX \
+	BFLB_PINMUX(1, can0, rx, periph)
+
 /* gpio1_cam1_hsync */
 #define GPIO1_CAM1_HSYNC \
 	BFLB_PINMUX(1, cam1, hsync, periph)
@@ -209,6 +225,14 @@
 /* gpio2_uart1_rx */
 #define GPIO2_UART1_RX \
 	BFLB_PINMUX(2, uart1, rx, periph)
+
+/* gpio2_can0_tx */
+#define GPIO2_CAN0_TX \
+	BFLB_PINMUX(2, can0, tx, periph)
+
+/* gpio2_can0_rx */
+#define GPIO2_CAN0_RX \
+	BFLB_PINMUX(2, can0, rx, periph)
 
 /* gpio2_pwm0_ch2p */
 #define GPIO2_PWM0_CH2P \
@@ -289,6 +313,14 @@
 /* gpio3_uart1_rx */
 #define GPIO3_UART1_RX \
 	BFLB_PINMUX(3, uart1, rx, periph)
+
+/* gpio3_can0_tx */
+#define GPIO3_CAN0_TX \
+	BFLB_PINMUX(3, can0, tx, periph)
+
+/* gpio3_can0_rx */
+#define GPIO3_CAN0_RX \
+	BFLB_PINMUX(3, can0, rx, periph)
 
 /* gpio3_cam1_dat0 */
 #define GPIO3_CAM1_DAT0 \
@@ -374,6 +406,14 @@
 #define GPIO4_UART1_RX \
 	BFLB_PINMUX(4, uart1, rx, periph)
 
+/* gpio4_can0_tx */
+#define GPIO4_CAN0_TX \
+	BFLB_PINMUX(4, can0, tx, periph)
+
+/* gpio4_can0_rx */
+#define GPIO4_CAN0_RX \
+	BFLB_PINMUX(4, can0, rx, periph)
+
 /* gpio4_pwm0_ch0p */
 #define GPIO4_PWM0_CH0P \
 	BFLB_PINMUX(4, pwm0, ch0p, periph)
@@ -458,6 +498,14 @@
 #define GPIO5_UART1_RX \
 	BFLB_PINMUX(5, uart1, rx, periph)
 
+/* gpio5_can0_tx */
+#define GPIO5_CAN0_TX \
+	BFLB_PINMUX(5, can0, tx, periph)
+
+/* gpio5_can0_rx */
+#define GPIO5_CAN0_RX \
+	BFLB_PINMUX(5, can0, rx, periph)
+
 /* gpio5_pwm0_ch1p */
 #define GPIO5_PWM0_CH1P \
 	BFLB_PINMUX(5, pwm0, ch1p, periph)
@@ -541,6 +589,14 @@
 /* gpio6_uart1_rx */
 #define GPIO6_UART1_RX \
 	BFLB_PINMUX(6, uart1, rx, periph)
+
+/* gpio6_can0_tx */
+#define GPIO6_CAN0_TX \
+	BFLB_PINMUX(6, can0, tx, periph)
+
+/* gpio6_can0_rx */
+#define GPIO6_CAN0_RX \
+	BFLB_PINMUX(6, can0, rx, periph)
 
 /* gpio6_pwm0_ch2p */
 #define GPIO6_PWM0_CH2P \
@@ -634,6 +690,14 @@
 #define GPIO7_UART1_RX \
 	BFLB_PINMUX(7, uart1, rx, periph)
 
+/* gpio7_can0_tx */
+#define GPIO7_CAN0_TX \
+	BFLB_PINMUX(7, can0, tx, periph)
+
+/* gpio7_can0_rx */
+#define GPIO7_CAN0_RX \
+	BFLB_PINMUX(7, can0, rx, periph)
+
 /* gpio7_pwm0_ch3p */
 #define GPIO7_PWM0_CH3P \
 	BFLB_PINMUX(7, pwm0, ch3p, periph)
@@ -717,6 +781,14 @@
 /* gpio8_uart1_rx */
 #define GPIO8_UART1_RX \
 	BFLB_PINMUX(8, uart1, rx, periph)
+
+/* gpio8_can0_tx */
+#define GPIO8_CAN0_TX \
+	BFLB_PINMUX(8, can0, tx, periph)
+
+/* gpio8_can0_rx */
+#define GPIO8_CAN0_RX \
+	BFLB_PINMUX(8, can0, rx, periph)
 
 /* gpio8_pwm0_ch0p */
 #define GPIO8_PWM0_CH0P \
@@ -806,6 +878,14 @@
 #define GPIO9_UART1_RX \
 	BFLB_PINMUX(9, uart1, rx, periph)
 
+/* gpio9_can0_tx */
+#define GPIO9_CAN0_TX \
+	BFLB_PINMUX(9, can0, tx, periph)
+
+/* gpio9_can0_rx */
+#define GPIO9_CAN0_RX \
+	BFLB_PINMUX(9, can0, rx, periph)
+
 /* gpio9_pwm0_ch1p */
 #define GPIO9_PWM0_CH1P \
 	BFLB_PINMUX(9, pwm0, ch1p, periph)
@@ -893,6 +973,14 @@
 /* gpio10_uart1_rx */
 #define GPIO10_UART1_RX \
 	BFLB_PINMUX(10, uart1, rx, periph)
+
+/* gpio10_can0_tx */
+#define GPIO10_CAN0_TX \
+	BFLB_PINMUX(10, can0, tx, periph)
+
+/* gpio10_can0_rx */
+#define GPIO10_CAN0_RX \
+	BFLB_PINMUX(10, can0, rx, periph)
 
 /* gpio10_cam1_dat1 */
 #define GPIO10_CAM1_DAT1 \
@@ -998,6 +1086,14 @@
 #define GPIO11_UART1_RX \
 	BFLB_PINMUX(11, uart1, rx, periph)
 
+/* gpio11_can0_tx */
+#define GPIO11_CAN0_TX \
+	BFLB_PINMUX(11, can0, tx, periph)
+
+/* gpio11_can0_rx */
+#define GPIO11_CAN0_RX \
+	BFLB_PINMUX(11, can0, rx, periph)
+
 /* gpio11_cam1_dat2 */
 #define GPIO11_CAM1_DAT2 \
 	BFLB_PINMUX(11, cam1, dat2, periph)
@@ -1093,6 +1189,14 @@
 /* gpio12_uart1_rx */
 #define GPIO12_UART1_RX \
 	BFLB_PINMUX(12, uart1, rx, periph)
+
+/* gpio12_can0_tx */
+#define GPIO12_CAN0_TX \
+	BFLB_PINMUX(12, can0, tx, periph)
+
+/* gpio12_can0_rx */
+#define GPIO12_CAN0_RX \
+	BFLB_PINMUX(12, can0, rx, periph)
 
 /* gpio12_cam1_dat3 */
 #define GPIO12_CAM1_DAT3 \
@@ -1194,6 +1298,14 @@
 #define GPIO13_UART1_RX \
 	BFLB_PINMUX(13, uart1, rx, periph)
 
+/* gpio13_can0_tx */
+#define GPIO13_CAN0_TX \
+	BFLB_PINMUX(13, can0, tx, periph)
+
+/* gpio13_can0_rx */
+#define GPIO13_CAN0_RX \
+	BFLB_PINMUX(13, can0, rx, periph)
+
 /* gpio13_cam1_clk */
 #define GPIO13_CAM1_CLK \
 	BFLB_PINMUX(13, cam1, clk, periph)
@@ -1293,6 +1405,14 @@
 /* gpio14_uart1_rx */
 #define GPIO14_UART1_RX \
 	BFLB_PINMUX(14, uart1, rx, periph)
+
+/* gpio14_can0_tx */
+#define GPIO14_CAN0_TX \
+	BFLB_PINMUX(14, can0, tx, periph)
+
+/* gpio14_can0_rx */
+#define GPIO14_CAN0_RX \
+	BFLB_PINMUX(14, can0, rx, periph)
 
 /* gpio14_cam1_dat4 */
 #define GPIO14_CAM1_DAT4 \
@@ -1402,6 +1522,14 @@
 #define GPIO15_UART1_RX \
 	BFLB_PINMUX(15, uart1, rx, periph)
 
+/* gpio15_can0_tx */
+#define GPIO15_CAN0_TX \
+	BFLB_PINMUX(15, can0, tx, periph)
+
+/* gpio15_can0_rx */
+#define GPIO15_CAN0_RX \
+	BFLB_PINMUX(15, can0, rx, periph)
+
 /* gpio15_sdio_dat1 */
 #define GPIO15_SDIO_DAT1 \
 	BFLB_PINMUX(15, sdio, dat1, periph)
@@ -1490,6 +1618,14 @@
 #define GPIO16_UART1_RX \
 	BFLB_PINMUX(16, uart1, rx, periph)
 
+/* gpio16_can0_tx */
+#define GPIO16_CAN0_TX \
+	BFLB_PINMUX(16, can0, tx, periph)
+
+/* gpio16_can0_rx */
+#define GPIO16_CAN0_RX \
+	BFLB_PINMUX(16, can0, rx, periph)
+
 /* gpio16_cam1_dat6 */
 #define GPIO16_CAM1_DAT6 \
 	BFLB_PINMUX(16, cam1, dat6, periph)
@@ -1561,6 +1697,14 @@
 /* gpio17_uart1_rx */
 #define GPIO17_UART1_RX \
 	BFLB_PINMUX(17, uart1, rx, periph)
+
+/* gpio17_can0_tx */
+#define GPIO17_CAN0_TX \
+	BFLB_PINMUX(17, can0, tx, periph)
+
+/* gpio17_can0_rx */
+#define GPIO17_CAN0_RX \
+	BFLB_PINMUX(17, can0, rx, periph)
 
 /* gpio17_cam1_dat7 */
 #define GPIO17_CAM1_DAT7 \
@@ -1634,6 +1778,14 @@
 #define GPIO18_UART1_RX \
 	BFLB_PINMUX(18, uart1, rx, periph)
 
+/* gpio18_can0_tx */
+#define GPIO18_CAN0_TX \
+	BFLB_PINMUX(18, can0, tx, periph)
+
+/* gpio18_can0_rx */
+#define GPIO18_CAN0_RX \
+	BFLB_PINMUX(18, can0, rx, periph)
+
 /* gpio18_pwm0_ch2p */
 #define GPIO18_PWM0_CH2P \
 	BFLB_PINMUX(18, pwm0, ch2p, periph)
@@ -1706,6 +1858,14 @@
 #define GPIO19_UART1_RX \
 	BFLB_PINMUX(19, uart1, rx, periph)
 
+/* gpio19_can0_tx */
+#define GPIO19_CAN0_TX \
+	BFLB_PINMUX(19, can0, tx, periph)
+
+/* gpio19_can0_rx */
+#define GPIO19_CAN0_RX \
+	BFLB_PINMUX(19, can0, rx, periph)
+
 /* gpio19_pwm0_ch3p */
 #define GPIO19_PWM0_CH3P \
 	BFLB_PINMUX(19, pwm0, ch3p, periph)
@@ -1777,6 +1937,14 @@
 /* gpio20_uart1_rx */
 #define GPIO20_UART1_RX \
 	BFLB_PINMUX(20, uart1, rx, periph)
+
+/* gpio20_can0_tx */
+#define GPIO20_CAN0_TX \
+	BFLB_PINMUX(20, can0, tx, periph)
+
+/* gpio20_can0_rx */
+#define GPIO20_CAN0_RX \
+	BFLB_PINMUX(20, can0, rx, periph)
 
 /* gpio20_pwm0_ch0p */
 #define GPIO20_PWM0_CH0P \
@@ -1854,6 +2022,14 @@
 #define GPIO21_UART1_RX \
 	BFLB_PINMUX(21, uart1, rx, periph)
 
+/* gpio21_can0_tx */
+#define GPIO21_CAN0_TX \
+	BFLB_PINMUX(21, can0, tx, periph)
+
+/* gpio21_can0_rx */
+#define GPIO21_CAN0_RX \
+	BFLB_PINMUX(21, can0, rx, periph)
+
 /* gpio21_pwm0_ch1p */
 #define GPIO21_PWM0_CH1P \
 	BFLB_PINMUX(21, pwm0, ch1p, periph)
@@ -1921,6 +2097,14 @@
 /* gpio22_uart1_rx */
 #define GPIO22_UART1_RX \
 	BFLB_PINMUX(22, uart1, rx, periph)
+
+/* gpio22_can0_tx */
+#define GPIO22_CAN0_TX \
+	BFLB_PINMUX(22, can0, tx, periph)
+
+/* gpio22_can0_rx */
+#define GPIO22_CAN0_RX \
+	BFLB_PINMUX(22, can0, rx, periph)
 
 /* gpio22_pwm0_ch2p */
 #define GPIO22_PWM0_CH2P \
@@ -2002,6 +2186,14 @@
 #define GPIO23_UART1_RX \
 	BFLB_PINMUX(23, uart1, rx, periph)
 
+/* gpio23_can0_tx */
+#define GPIO23_CAN0_TX \
+	BFLB_PINMUX(23, can0, tx, periph)
+
+/* gpio23_can0_rx */
+#define GPIO23_CAN0_RX \
+	BFLB_PINMUX(23, can0, rx, periph)
+
 /* gpio23_pwm0_ch3p */
 #define GPIO23_PWM0_CH3P \
 	BFLB_PINMUX(23, pwm0, ch3p, periph)
@@ -2073,6 +2265,14 @@
 /* gpio24_uart1_rx */
 #define GPIO24_UART1_RX \
 	BFLB_PINMUX(24, uart1, rx, periph)
+
+/* gpio24_can0_tx */
+#define GPIO24_CAN0_TX \
+	BFLB_PINMUX(24, can0, tx, periph)
+
+/* gpio24_can0_rx */
+#define GPIO24_CAN0_RX \
+	BFLB_PINMUX(24, can0, rx, periph)
 
 /* gpio24_cam0_dat0 */
 #define GPIO24_CAM0_DAT0 \
@@ -2149,6 +2349,14 @@
 /* gpio25_uart1_rx */
 #define GPIO25_UART1_RX \
 	BFLB_PINMUX(25, uart1, rx, periph)
+
+/* gpio25_can0_tx */
+#define GPIO25_CAN0_TX \
+	BFLB_PINMUX(25, can0, tx, periph)
+
+/* gpio25_can0_rx */
+#define GPIO25_CAN0_RX \
+	BFLB_PINMUX(25, can0, rx, periph)
 
 /* gpio25_emac_ref_clk */
 #define GPIO25_EMAC_REF_CLK \
@@ -2230,6 +2438,14 @@
 #define GPIO26_UART1_RX \
 	BFLB_PINMUX(26, uart1, rx, periph)
 
+/* gpio26_can0_tx */
+#define GPIO26_CAN0_TX \
+	BFLB_PINMUX(26, can0, tx, periph)
+
+/* gpio26_can0_rx */
+#define GPIO26_CAN0_RX \
+	BFLB_PINMUX(26, can0, rx, periph)
+
 /* gpio26_emac_txd0 */
 #define GPIO26_EMAC_TXD0 \
 	BFLB_PINMUX(26, emac, txd0, periph)
@@ -2309,6 +2525,14 @@
 /* gpio27_uart1_rx */
 #define GPIO27_UART1_RX \
 	BFLB_PINMUX(27, uart1, rx, periph)
+
+/* gpio27_can0_tx */
+#define GPIO27_CAN0_TX \
+	BFLB_PINMUX(27, can0, tx, periph)
+
+/* gpio27_can0_rx */
+#define GPIO27_CAN0_RX \
+	BFLB_PINMUX(27, can0, rx, periph)
 
 /* gpio27_emac_txd1 */
 #define GPIO27_EMAC_TXD1 \
@@ -2394,6 +2618,14 @@
 #define GPIO28_UART1_RX \
 	BFLB_PINMUX(28, uart1, rx, periph)
 
+/* gpio28_can0_tx */
+#define GPIO28_CAN0_TX \
+	BFLB_PINMUX(28, can0, tx, periph)
+
+/* gpio28_can0_rx */
+#define GPIO28_CAN0_RX \
+	BFLB_PINMUX(28, can0, rx, periph)
+
 /* gpio28_emac_rxd0 */
 #define GPIO28_EMAC_RXD0 \
 	BFLB_PINMUX(28, emac, rxd0, periph)
@@ -2474,6 +2706,14 @@
 #define GPIO29_UART1_RX \
 	BFLB_PINMUX(29, uart1, rx, periph)
 
+/* gpio29_can0_tx */
+#define GPIO29_CAN0_TX \
+	BFLB_PINMUX(29, can0, tx, periph)
+
+/* gpio29_can0_rx */
+#define GPIO29_CAN0_RX \
+	BFLB_PINMUX(29, can0, rx, periph)
+
 /* gpio29_emac_rxd1 */
 #define GPIO29_EMAC_RXD1 \
 	BFLB_PINMUX(29, emac, rxd1, periph)
@@ -2549,6 +2789,14 @@
 /* gpio30_uart1_rx */
 #define GPIO30_UART1_RX \
 	BFLB_PINMUX(30, uart1, rx, periph)
+
+/* gpio30_can0_tx */
+#define GPIO30_CAN0_TX \
+	BFLB_PINMUX(30, can0, tx, periph)
+
+/* gpio30_can0_rx */
+#define GPIO30_CAN0_RX \
+	BFLB_PINMUX(30, can0, rx, periph)
 
 /* gpio30_emac_rxerr */
 #define GPIO30_EMAC_RXERR \
@@ -2626,6 +2874,14 @@
 #define GPIO31_UART1_RX \
 	BFLB_PINMUX(31, uart1, rx, periph)
 
+/* gpio31_can0_tx */
+#define GPIO31_CAN0_TX \
+	BFLB_PINMUX(31, can0, tx, periph)
+
+/* gpio31_can0_rx */
+#define GPIO31_CAN0_RX \
+	BFLB_PINMUX(31, can0, rx, periph)
+
 /* gpio31_emac_tx_en */
 #define GPIO31_EMAC_TX_EN \
 	BFLB_PINMUX(31, emac, tx_en, periph)
@@ -2701,6 +2957,14 @@
 /* gpio32_uart1_rx */
 #define GPIO32_UART1_RX \
 	BFLB_PINMUX(32, uart1, rx, periph)
+
+/* gpio32_can0_tx */
+#define GPIO32_CAN0_TX \
+	BFLB_PINMUX(32, can0, tx, periph)
+
+/* gpio32_can0_rx */
+#define GPIO32_CAN0_RX \
+	BFLB_PINMUX(32, can0, rx, periph)
 
 /* gpio32_emac_rx_dv */
 #define GPIO32_EMAC_RX_DV \
@@ -2778,6 +3042,14 @@
 #define GPIO33_UART1_RX \
 	BFLB_PINMUX(33, uart1, rx, periph)
 
+/* gpio33_can0_tx */
+#define GPIO33_CAN0_TX \
+	BFLB_PINMUX(33, can0, tx, periph)
+
+/* gpio33_can0_rx */
+#define GPIO33_CAN0_RX \
+	BFLB_PINMUX(33, can0, rx, periph)
+
 /* gpio33_emac_mdc */
 #define GPIO33_EMAC_MDC \
 	BFLB_PINMUX(33, emac, mdc, periph)
@@ -2853,6 +3125,14 @@
 /* gpio34_uart1_rx */
 #define GPIO34_UART1_RX \
 	BFLB_PINMUX(34, uart1, rx, periph)
+
+/* gpio34_can0_tx */
+#define GPIO34_CAN0_TX \
+	BFLB_PINMUX(34, can0, tx, periph)
+
+/* gpio34_can0_rx */
+#define GPIO34_CAN0_RX \
+	BFLB_PINMUX(34, can0, rx, periph)
 
 /* gpio34_emac_mdio */
 #define GPIO34_EMAC_MDIO \
