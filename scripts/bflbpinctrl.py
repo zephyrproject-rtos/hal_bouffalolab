@@ -104,7 +104,15 @@ def generate_bflb_series_header(outdir, family, peripherals, signals, signal_cfg
         for periph, index, *instancies in peripherals:
             if instancies:
                 for inst in instancies:
-                    write_periph_index(f, periph + str(inst), index + inst * 32)
+                    # An instance is either "N" (exposed as perishN using mux
+                    # slot N) or "[display, mux]" to decouple the exposed
+                    # peripheral number from the hardware mux slot, e.g. CAN
+                    # rides on UART mux slot 2 but is exposed as can0.
+                    if isinstance(inst, list):
+                        display, mux = inst
+                    else:
+                        display = mux = inst
+                    write_periph_index(f, periph + str(display), index + mux * 32)
                 continue
             write_periph_index(f, periph, index)
 

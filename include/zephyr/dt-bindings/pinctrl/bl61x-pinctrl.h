@@ -17,6 +17,7 @@
 #define BFLB_PINMUX_FUN_INST_i2c0                       0x0005
 #define BFLB_PINMUX_FUN_INST_i2c1                       0x0026
 #define BFLB_PINMUX_FUN_INST_uart1                      0x0027
+#define BFLB_PINMUX_FUN_INST_can0                       0x0047
 #define BFLB_PINMUX_FUN_INST_uart0                      0x0007
 #define BFLB_PINMUX_FUN_INST_emac                       0x0008
 #define BFLB_PINMUX_FUN_INST_cam0                       0x0009
