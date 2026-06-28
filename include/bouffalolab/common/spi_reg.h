@@ -112,12 +112,6 @@
 #define SPI_CR_SPI_PRD_I_SHIFT (0U)
 #define SPI_CR_SPI_PRD_I_MASK  (0xff << SPI_CR_SPI_PRD_I_SHIFT)
 
-/* 0x18 : spi_rxd_ignr */
-#define SPI_CR_SPI_RXD_IGNR_P_SHIFT (0U)
-#define SPI_CR_SPI_RXD_IGNR_P_MASK  (0x1f << SPI_CR_SPI_RXD_IGNR_P_SHIFT)
-#define SPI_CR_SPI_RXD_IGNR_S_SHIFT (16U)
-#define SPI_CR_SPI_RXD_IGNR_S_MASK  (0x1f << SPI_CR_SPI_RXD_IGNR_S_SHIFT)
-
 /* 0x1C : spi_sto_value */
 #define SPI_CR_SPI_STO_VALUE_SHIFT (0U)
 #define SPI_CR_SPI_STO_VALUE_MASK  (0xfff << SPI_CR_SPI_STO_VALUE_SHIFT)

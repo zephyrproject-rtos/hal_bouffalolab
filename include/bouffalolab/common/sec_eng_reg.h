@@ -309,7 +309,6 @@
 
 /* 0x140 : se_aes_0_key_sel */
 #define SEC_ENG_SE_AES_0_KEY_SEL_SHIFT (0U)
-#define SEC_ENG_SE_AES_0_KEY_SEL_MASK  (0x3 << SEC_ENG_SE_AES_0_KEY_SEL_SHIFT)
 
 /* 0x144 : se_aes_1_key_sel */
 #define SEC_ENG_SE_AES_1_KEY_SEL_SHIFT (0U)

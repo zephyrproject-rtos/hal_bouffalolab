@@ -18,6 +18,8 @@
 #define SPI_RX_FIFO_CNT_MASK (0x7 << SPI_RX_FIFO_CNT_SHIFT)
 #define SPI_TX_FIFO_TH_MASK (0x3 << SPI_TX_FIFO_TH_SHIFT)
 #define SPI_RX_FIFO_TH_MASK (0x3 << SPI_RX_FIFO_TH_SHIFT)
+#define SPI_CR_SPI_RXD_IGNR_P_MASK  (0x1f << SPI_CR_SPI_RXD_IGNR_P_SHIFT)
+#define SPI_CR_SPI_RXD_IGNR_S_MASK  (0x1f << SPI_CR_SPI_RXD_IGNR_S_SHIFT)
 
 /* uart_reg.h */
 #define UART_UTX_IR_POSITION_OFFSET (0x10) /* utx_ir_position */
@@ -37,6 +39,12 @@
 #define UART_RX_FIFO_CNT_MASK (0xff << UART_RX_FIFO_CNT_SHIFT)
 #define UART_TX_FIFO_TH_MASK (0x7f << UART_TX_FIFO_TH_SHIFT)
 #define UART_RX_FIFO_TH_MASK (0x7f << UART_RX_FIFO_TH_SHIFT)
+/* 0x18 : urx_rto_timer */
+#define UART_CR_URX_RTO_VALUE_SHIFT (0U)
+#define UART_CR_URX_RTO_VALUE_MASK  (0xff << UART_CR_URX_RTO_VALUE_SHIFT)
+#define UART_CR_URX_DEG_EN          (1 << 11U)
+#define UART_CR_URX_DEG_CNT_SHIFT   (12U)
+#define UART_CR_URX_DEG_CNT_MASK    (0xf << UART_CR_URX_DEG_CNT_SHIFT)
 
 #define UART_SW_MODE_OFFSET (0x1C) /* uart_sw_mode */
 #define UART_CR_UTX_LIN_EN (1 << 3U)
@@ -184,10 +192,33 @@
 #define I2C_CR_I2C_PKT_LEN_SHIFT  (16U)
 #define I2C_CR_I2C_PKT_LEN_MASK   (0xff << I2C_CR_I2C_PKT_LEN_SHIFT)
 
+#define I2C_SUB_ADDR_OFFSET      (0x8)  /* i2c_sub_addr */
+#define I2C_CR_I2C_SUB_ADDR_EN       (1 << 4U)
+#define I2C_CR_I2C_SUB_ADDR_BC_SHIFT (5U)
+#define I2C_CR_I2C_SUB_ADDR_BC_MASK  (0x3 << I2C_CR_I2C_SUB_ADDR_BC_SHIFT)
+/* 0x8 : i2c_sub_addr */
+#define I2C_CR_I2C_SUB_ADDR_B0_SHIFT (0U)
+#define I2C_CR_I2C_SUB_ADDR_B0_MASK  (0xff << I2C_CR_I2C_SUB_ADDR_B0_SHIFT)
+#define I2C_CR_I2C_SUB_ADDR_B1_SHIFT (8U)
+#define I2C_CR_I2C_SUB_ADDR_B1_MASK  (0xff << I2C_CR_I2C_SUB_ADDR_B1_SHIFT)
+#define I2C_CR_I2C_SUB_ADDR_B2_SHIFT (16U)
+#define I2C_CR_I2C_SUB_ADDR_B2_MASK  (0xff << I2C_CR_I2C_SUB_ADDR_B2_SHIFT)
+#define I2C_CR_I2C_SUB_ADDR_B3_SHIFT (24U)
+#define I2C_CR_I2C_SUB_ADDR_B3_MASK  (0xff << I2C_CR_I2C_SUB_ADDR_B3_SHIFT)
+
+/* 0x84 : i2c_fifo_config_1 */
+#define I2C_TX_FIFO_CNT_SHIFT (0U)
+#define I2C_TX_FIFO_CNT_MASK  (0x3 << I2C_TX_FIFO_CNT_SHIFT)
+#define I2C_RX_FIFO_CNT_SHIFT (8U)
+#define I2C_RX_FIFO_CNT_MASK  (0x3 << I2C_RX_FIFO_CNT_SHIFT)
+#define I2C_TX_FIFO_TH        (1 << 16U)
+#define I2C_RX_FIFO_TH        (1 << 24U)
+
 /* bflb_uart.h */
 #define UART_FIFO_MAX         32
 
 /* dma_reg.h */
+#define DMA_TOP_CONFIG_OFFSET        (0x30)
 #define DMA_SBSIZE_MASK        (0x3 << DMA_SBSIZE_SHIFT)
 #define DMA_DST_MIN_MODE       (1 << 14U)
 #define DMA_DBSIZE_MASK        (0x3 << DMA_DBSIZE_SHIFT)
@@ -196,3 +227,19 @@
 #define DMA_DWIDTH_MASK        (0x3 << DMA_DWIDTH_SHIFT)
 #define DMA_FIX_CNT_SHIFT      (23U)
 #define DMA_FIX_CNT_MASK       (0x7 << DMA_FIX_CNT_SHIFT)
+#define DMA_SRCPERIPHERAL_SHIFT (1U)
+#define DMA_SRCPERIPHERAL_MASK  (0x1f << DMA_SRCPERIPHERAL_SHIFT)
+#define DMA_DSTPERIPHERAL_SHIFT (6U)
+#define DMA_DSTPERIPHERAL_MASK  (0x1f << DMA_DSTPERIPHERAL_SHIFT)
+#define DMA_FLOWCNTRL_SHIFT     (11U)
+#define DMA_FLOWCNTRL_MASK      (0x7 << DMA_FLOWCNTRL_SHIFT)
+#define DMA_IE                  (1 << 14U)
+#define DMA_ITC                 (1 << 15U)
+#define DMA_L                   (1 << 16U)
+#define DMA_A                   (1 << 17U)
+#define DMA_H                   (1 << 18U)
+#define DMA_LLICOUNTER_SHIFT    (20U)
+#define DMA_LLICOUNTER_MASK     (0x3ff << DMA_LLICOUNTER_SHIFT)
+
+/* sec_eng_reg.h */
+#define SEC_ENG_SE_AES_0_KEY_SEL_MASK  (0x3 << SEC_ENG_SE_AES_0_KEY_SEL_SHIFT)

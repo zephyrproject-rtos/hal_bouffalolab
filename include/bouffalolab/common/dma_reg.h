@@ -54,7 +54,7 @@
 #define DMA_SOFTSREQ_OFFSET          (0x24) /* DMA_SoftSReq */
 #define DMA_SOFTLBREQ_OFFSET         (0x28) /* DMA_SoftLBReq */
 #define DMA_SOFTLSREQ_OFFSET         (0x2C) /* DMA_SoftLSReq */
-#define DMA_TOP_CONFIG_OFFSET        (0x30) /* DMA_Top_Config */
+
 #define DMA_SYNC_OFFSET              (0x34) /* DMA_Sync */
 
 #define DMA_CxSRCADDR_OFFSET (0x00) /* DMA_CxSrcAddr */
@@ -97,29 +97,9 @@
 #define DMA_ENABLEDCHANNELS_SHIFT (0U)
 #define DMA_ENABLEDCHANNELS_MASK  (0xff << DMA_ENABLEDCHANNELS_SHIFT)
 
-/* 0x20 : DMA_SoftBReq */
-#define DMA_SOFTBREQ_SHIFT (0U)
-#define DMA_SOFTBREQ_MASK  (0xffffffff << DMA_SOFTBREQ_SHIFT)
-
-/* 0x24 : DMA_SoftSReq */
-#define DMA_SOFTSREQ_SHIFT (0U)
-#define DMA_SOFTSREQ_MASK  (0xffffffff << DMA_SOFTSREQ_SHIFT)
-
-/* 0x28 : DMA_SoftLBReq */
-#define DMA_SOFTLBREQ_SHIFT (0U)
-#define DMA_SOFTLBREQ_MASK  (0xffffffff << DMA_SOFTLBREQ_SHIFT)
-
-/* 0x2C : DMA_SoftLSReq */
-#define DMA_SOFTLSREQ_SHIFT (0U)
-#define DMA_SOFTLSREQ_MASK  (0xffffffff << DMA_SOFTLSREQ_SHIFT)
-
 /* 0x30 : DMA_Top_Config */
 #define DMA_E (1 << 0U)
 #define DMA_M (1 << 1U)
-
-/* 0x34 : DMA_Sync */
-#define DMA_SYNC_SHIFT (0U)
-#define DMA_SYNC_MASK  (0xffffffff << DMA_SYNC_SHIFT)
 
 /* 0x100 : DMA_CxSrcAddr */
 #define DMA_SRCADDR_SHIFT (0U)
@@ -149,21 +129,5 @@
 #define DMA_PROT_SHIFT         (28U)
 #define DMA_PROT_MASK          (0x7 << DMA_PROT_SHIFT)
 #define DMA_I                  (1 << 31U)
-
-/* 0x110 : DMA_CxConfig */
-#define DMA_E                   (1 << 0U)
-#define DMA_SRCPERIPHERAL_SHIFT (1U)
-#define DMA_SRCPERIPHERAL_MASK  (0x1f << DMA_SRCPERIPHERAL_SHIFT)
-#define DMA_DSTPERIPHERAL_SHIFT (6U)
-#define DMA_DSTPERIPHERAL_MASK  (0x1f << DMA_DSTPERIPHERAL_SHIFT)
-#define DMA_FLOWCNTRL_SHIFT     (11U)
-#define DMA_FLOWCNTRL_MASK      (0x7 << DMA_FLOWCNTRL_SHIFT)
-#define DMA_IE                  (1 << 14U)
-#define DMA_ITC                 (1 << 15U)
-#define DMA_L                   (1 << 16U)
-#define DMA_A                   (1 << 17U)
-#define DMA_H                   (1 << 18U)
-#define DMA_LLICOUNTER_SHIFT    (20U)
-#define DMA_LLICOUNTER_MASK     (0x3ff << DMA_LLICOUNTER_SHIFT)
 
 #endif /* __HARDWARE_DMA_H__ */
