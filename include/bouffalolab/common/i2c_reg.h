@@ -44,7 +44,6 @@
 
 #define I2C_CONFIG_OFFSET        (0x0)  /* i2c_config */
 #define I2C_INT_STS_OFFSET       (0x4)  /* i2c_int_sts */
-#define I2C_SUB_ADDR_OFFSET      (0x8)  /* i2c_sub_addr */
 #define I2C_BUS_BUSY_OFFSET      (0xC)  /* i2c_bus_busy */
 #define I2C_PRD_START_OFFSET     (0x10) /* i2c_prd_start */
 #define I2C_PRD_STOP_OFFSET      (0x14) /* i2c_prd_stop */
@@ -61,9 +60,6 @@
 #define I2C_CR_I2C_PKT_DIR           (1 << 1U)
 #define I2C_CR_I2C_DEG_EN            (1 << 2U)
 #define I2C_CR_I2C_SCL_SYNC_EN       (1 << 3U)
-#define I2C_CR_I2C_SUB_ADDR_EN       (1 << 4U)
-#define I2C_CR_I2C_SUB_ADDR_BC_SHIFT (5U)
-#define I2C_CR_I2C_SUB_ADDR_BC_MASK  (0x3 << I2C_CR_I2C_SUB_ADDR_BC_SHIFT)
 
 #define I2C_CR_I2C_DEG_CNT_SHIFT (28U)
 #define I2C_CR_I2C_DEG_CNT_MASK  (0xf << I2C_CR_I2C_DEG_CNT_SHIFT)
@@ -90,16 +86,6 @@
 #define I2C_CR_I2C_NAK_EN   (1 << 27U)
 #define I2C_CR_I2C_ARB_EN   (1 << 28U)
 #define I2C_CR_I2C_FER_EN   (1 << 29U)
-
-/* 0x8 : i2c_sub_addr */
-#define I2C_CR_I2C_SUB_ADDR_B0_SHIFT (0U)
-#define I2C_CR_I2C_SUB_ADDR_B0_MASK  (0xff << I2C_CR_I2C_SUB_ADDR_B0_SHIFT)
-#define I2C_CR_I2C_SUB_ADDR_B1_SHIFT (8U)
-#define I2C_CR_I2C_SUB_ADDR_B1_MASK  (0xff << I2C_CR_I2C_SUB_ADDR_B1_SHIFT)
-#define I2C_CR_I2C_SUB_ADDR_B2_SHIFT (16U)
-#define I2C_CR_I2C_SUB_ADDR_B2_MASK  (0xff << I2C_CR_I2C_SUB_ADDR_B2_SHIFT)
-#define I2C_CR_I2C_SUB_ADDR_B3_SHIFT (24U)
-#define I2C_CR_I2C_SUB_ADDR_B3_MASK  (0xff << I2C_CR_I2C_SUB_ADDR_B3_SHIFT)
 
 /* 0xC : i2c_bus_busy */
 #define I2C_STS_I2C_BUS_BUSY    (1 << 0U)
@@ -144,14 +130,6 @@
 #define I2C_TX_FIFO_UNDERFLOW (1 << 5U)
 #define I2C_RX_FIFO_OVERFLOW  (1 << 6U)
 #define I2C_RX_FIFO_UNDERFLOW (1 << 7U)
-
-/* 0x84 : i2c_fifo_config_1 */
-#define I2C_TX_FIFO_CNT_SHIFT (0U)
-#define I2C_TX_FIFO_CNT_MASK  (0x3 << I2C_TX_FIFO_CNT_SHIFT)
-#define I2C_RX_FIFO_CNT_SHIFT (8U)
-#define I2C_RX_FIFO_CNT_MASK  (0x3 << I2C_RX_FIFO_CNT_SHIFT)
-#define I2C_TX_FIFO_TH        (1 << 16U)
-#define I2C_RX_FIFO_TH        (1 << 24U)
 
 /* 0x88 : i2c_fifo_wdata */
 #define I2C_FIFO_WDATA_SHIFT (0U)
