@@ -322,3 +322,28 @@ blobs:
     license-path: zephyr/blobs/license_sdk.txt
     description: "WL80211 upper MAC library for BL616"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.26/components/wireless/wl80211
+# BL616CL series
+  - path: lib/bl616cl/libbtblecontroller_bl616cl_m0b1.a
+    sha256: ea8fcf02a176bcae60afc39d0d621e6ff2d10616b24ae89d9bb93d6e96bf2430
+    type: lib
+    version: '2.3.28'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.28/components/wireless/bluetooth/btblecontroller/lib/libbtblecontroller_bl616cl_m0b1.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "BT/BLE controller for BL616CL (Beacon only variant)"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.28/components/wireless/bluetooth/btblecontroller
+  - path: lib/bl616cl/libbtblecontroller_bl616cl_m2s1.a
+    sha256: 933affbcf748430af782876c420fdf6a4ca617bcdf2e3a012f238ffcac832c70
+    type: lib
+    version: '2.3.28'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.28/components/wireless/bluetooth/btblecontroller/lib/libbtblecontroller_bl616cl_m2s1.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "BT/BLE controller for BL616CL (variant: m2s1, 2 central + 1 peripheral)"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.28/components/wireless/bluetooth/btblecontroller
+  - path: lib/bl616cl/libbl616cl_phyrf.a
+    sha256: cfba136a65d54cf961cedf896a729b718f35dc26ba31b6f4152944284e9c8844
+    type: lib
+    version: '2.3.28'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.28/drivers/soc/bl616cl/phyrf/lib-gcc_10.2.0-toolchain_V2.6.1/libbl616cl_phyrf.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "PHY/RF library for BL616CL"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.28/drivers/soc/bl616cl/phyrf
