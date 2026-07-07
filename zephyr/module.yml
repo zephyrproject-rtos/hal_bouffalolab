@@ -356,3 +356,28 @@ blobs:
     license-path: zephyr/blobs/license_sdk.txt
     description: "WL80211 upper MAC library for BL616CL"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/components/wireless/wl80211
+# BL808 series
+  - path: lib/bl808x/libbl606p_btblecontroller_prebuild.a
+    sha256: 68ca8868cbd6be9a4198ab21de6cfc57a9a92e2bf431d779a6dea001f7a255df
+    type: lib
+    version: '305dd9a'
+    url: https://github.com/pine64/pinevoice_smartspeaker_sdk/raw/305dd9a535ce7751de8d77bd2134873469072df0/components/bl606p_wireless/btblecontroller/btblecontroller/libs/e907fp/libbl606p_btblecontroller_prebuild.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "BT/BLE controller for BL606P/BL808 (e907fp target)"
+    doc-url: https://github.com/pine64/pinevoice_smartspeaker_sdk/tree/305dd9a535ce7751de8d77bd2134873469072df0/components/bl606p_wireless/btblecontroller
+  - path: lib/bl808x/libbl606p_phyrf.a
+    sha256: 36b4241e868ff96378b61c890570f761d3cb2f56b1af98601bd2a4ac0dd3f05d
+    type: lib
+    version: '305dd9a'
+    url: https://github.com/pine64/pinevoice_smartspeaker_sdk/raw/305dd9a535ce7751de8d77bd2134873469072df0/components/bl606p_wireless/bl606p_phy/bl606p_phyrf/lib-gcc_10.2.0-toolchain_V2.6.1/libbl606p_phyrf.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "PHY/RF library for BL606P/BL808"
+    doc-url: https://github.com/pine64/pinevoice_smartspeaker_sdk/tree/305dd9a535ce7751de8d77bd2134873469072df0/components/bl606p_wireless/bl606p_phy
+  - path: lib/bl808x/libbl606p_firmware_prebuild.a
+    sha256: 004c4636b3409585294b2219312c7bf99b361450b2b33798a7672535c34ae98b
+    type: lib
+    version: '305dd9a'
+    url: https://github.com/pine64/pinevoice_smartspeaker_sdk/raw/305dd9a535ce7751de8d77bd2134873469072df0/components/bl606p_wireless/bl606p_firmware/libs/e907fp/libbl606p_firmware_prebuild.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "WiFi MAC firmware for BL606P/BL808 (e907fp target)"
+    doc-url: https://github.com/pine64/pinevoice_smartspeaker_sdk/tree/305dd9a535ce7751de8d77bd2134873469072df0/components/bl606p_wireless/bl606p_firmware
