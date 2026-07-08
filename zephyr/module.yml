@@ -347,3 +347,36 @@ blobs:
     license-path: zephyr/blobs/license_sdk.txt
     description: "PHY/RF library for BL616CL"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.28/drivers/soc/bl616cl/phyrf
+# BL616CL WiFi MACSW blobs
+  - path: lib/bl616cl/libmacsw_bl616cl.a
+    sha256: 7f91ce87486a87d040826d3ae0096d031599a44c206d2a6b0c6fa7926c1d7eb5
+    type: lib
+    version: '2.3.28'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.28/components/wireless/macsw/lib/libmacsw_bl616cl.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "MACSW lower MAC firmware for BL616CL"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.28/components/wireless/macsw
+  - path: lib/bl616cl/libmacsw_config_bl616cl_ack.a
+    sha256: 7a29644752c7c41f37fe4b787feb8f3ca443762f0716d668a879deee423c4d81
+    type: lib
+    version: '2.3.28'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.28/components/wireless/macsw/lib/libmacsw_config_bl616cl_ack.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "MACSW configuration for BL616CL (ack config)"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.28/components/wireless/macsw
+  - path: lib/bl616cl/libmacsw_config_bl616cl_default.a
+    sha256: e32846a4e41eb6c1d52706b5b687da8ee515c4662b20170b601d7c57475c65f4
+    type: lib
+    version: '2.3.28'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.28/components/wireless/macsw/lib/libmacsw_config_bl616cl_default.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "MACSW configuration for BL616CL (default config)"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.28/components/wireless/macsw
+  - path: lib/bl616cl/libwl80211_bl616cl.a
+    sha256: 58177b280e099ca67911dae780de11ab949d6f13cef6fd2de031fe340eb9313d
+    type: lib
+    version: '2.3.28'
+    url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.28/components/wireless/wl80211/lib/libwl80211_bl616cl.a
+    license-path: zephyr/blobs/license_sdk.txt
+    description: "WL80211 upper MAC library for BL616CL"
+    doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.28/components/wireless/wl80211
