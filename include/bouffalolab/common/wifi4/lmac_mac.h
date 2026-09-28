@@ -68,12 +68,12 @@
  ****************************************************************************************
  */
 #define MAC_ADDR_CMP(addr1_ptr, addr2_ptr)                                              \
-    ((*(((u8*)(addr1_ptr)) + 0) == *(((u8*)(addr2_ptr)) + 0)) &&            \
-     (*(((u8*)(addr1_ptr)) + 1) == *(((u8*)(addr2_ptr)) + 1)) &&            \
-     (*(((u8*)(addr1_ptr)) + 2) == *(((u8*)(addr2_ptr)) + 2)) &&            \
-     (*(((u8*)(addr1_ptr)) + 3) == *(((u8*)(addr2_ptr)) + 3)) &&            \
-     (*(((u8*)(addr1_ptr)) + 4) == *(((u8*)(addr2_ptr)) + 4)) &&            \
-     (*(((u8*)(addr1_ptr)) + 5) == *(((u8*)(addr2_ptr)) + 5)))
+    ((*(((uint8_t*)(addr1_ptr)) + 0) == *(((uint8_t*)(addr2_ptr)) + 0)) &&              \
+     (*(((uint8_t*)(addr1_ptr)) + 1) == *(((uint8_t*)(addr2_ptr)) + 1)) &&              \
+     (*(((uint8_t*)(addr1_ptr)) + 2) == *(((uint8_t*)(addr2_ptr)) + 2)) &&              \
+     (*(((uint8_t*)(addr1_ptr)) + 3) == *(((uint8_t*)(addr2_ptr)) + 3)) &&              \
+     (*(((uint8_t*)(addr1_ptr)) + 4) == *(((uint8_t*)(addr2_ptr)) + 4)) &&              \
+     (*(((uint8_t*)(addr1_ptr)) + 5) == *(((uint8_t*)(addr2_ptr)) + 5)))
 
 /**
  ****************************************************************************************
@@ -95,9 +95,9 @@
  ****************************************************************************************
  */
 #define MAC_ADDR_CPY(addr1_ptr, addr2_ptr)                                              \
-    *(((u16*)(addr1_ptr)) + 0) = *(((u16*)(addr2_ptr)) + 0);                  \
-    *(((u16*)(addr1_ptr)) + 1) = *(((u16*)(addr2_ptr)) + 1);                  \
-    *(((u16*)(addr1_ptr)) + 2) = *(((u16*)(addr2_ptr)) + 2)
+    *(((uint16_t*)(addr1_ptr)) + 0) = *(((uint16_t*)(addr2_ptr)) + 0);                  \
+    *(((uint16_t*)(addr1_ptr)) + 1) = *(((uint16_t*)(addr2_ptr)) + 1);                  \
+    *(((uint16_t*)(addr1_ptr)) + 2) = *(((uint16_t*)(addr2_ptr)) + 2)
 
 /**
  ****************************************************************************************
@@ -121,7 +121,7 @@
 struct mac_addr
 {
     /* Array of bytes that make up the MAC address. */
-    u8_l array[MAC_ADDR_LEN];
+    uint8_t array[MAC_ADDR_LEN];
 };
 
 /* SSID maximum length. */
@@ -131,10 +131,10 @@ struct mac_addr
 struct mac_ssid
 {
     /* Actual length of the SSID. */
-    u8_l length;
+    uint8_t length;
     /* Array containing the SSID name. */
-    u8_l array[MAC_SSID_LEN];
-    u8_l array_tail[1]; /* for MAX SSID ISSUE */
+    uint8_t array[MAC_SSID_LEN];
+    uint8_t array_tail[1]; /* for MAX SSID ISSUE */
 };
 
 /* MAC RATE-SET */
@@ -143,8 +143,8 @@ struct mac_ssid
 #define MAC_EXT_RATES_OFF      8
 struct mac_rateset
 {
-    u8_l     length;
-    u8_l     array[MAC_RATESET_LEN];
+    uint8_t     length;
+    uint8_t     array[MAC_RATESET_LEN];
 };
 
 /* MAC RATES */
@@ -152,9 +152,9 @@ struct mac_rateset
 struct mac_rates
 {
     /* MCS 0 to 76 */
-    u32 mcs[MAC_MCS_WORD_CNT];
+    uint32_t mcs[MAC_MCS_WORD_CNT];
     /* Legacy rates (1Mbps to 54Mbps) */
-    u16 legacy;
+    uint16_t legacy;
 };
 
 /* IV/EIV data */
@@ -162,16 +162,16 @@ struct mac_rates
 #define MAC_EIV_LEN 4
 struct rx_seciv
 {
-    u8 iv[MAC_IV_LEN];
-    u8 ext_iv[MAC_EIV_LEN];
+    uint8_t iv[MAC_IV_LEN];
+    uint8_t ext_iv[MAC_EIV_LEN];
 };
 
 /* MAC MCS SET */
 #define MAX_MCS_LEN 16 /* 16 * 8 = 128 */
 struct mac_mcsset
 {
-    u8 length;
-    u8 array[MAX_MCS_LEN];
+    uint8_t length;
+    uint8_t array[MAX_MCS_LEN];
 };
 
 /* MAC Secret Key */
@@ -179,7 +179,7 @@ struct mac_mcsset
 #define MAC_WEP_KEY_LEN         13 /* Max size of a WEP key (104/8 = 13) */
 struct mac_wep_key
 {
-    u8 array[MAC_WEP_KEY_LEN]; /* Key material */
+    uint8_t array[MAC_WEP_KEY_LEN]; /* Key material */
 };
 
 
@@ -187,8 +187,10 @@ struct mac_wep_key
 #define MAC_SEC_KEY_LEN         32 /* TKIP keys 256 bits (max length) with MIC keys */
 struct mac_sec_key
 {
-    u8_l length; /* Key material length */
-    u32_l array[MAC_SEC_KEY_LEN/4]; /* Key material */
+    uint8_t length; /* Key material length */
+    uint32_t array[MAC_SEC_KEY_LEN/4]; /* Key material */
+    uint8_t pn_length; /* Initial packet number length */
+    uint32_t pn_array[2]; /* Initial packet number */
 };
 
 /* MAC channel list */
@@ -197,20 +199,20 @@ struct mac_sec_key
 struct mac_ch_list
 {
     /* Number of channels in channel list. */
-    u16 nbr;
+    uint16_t nbr;
     /* List of the channels. */
-    u8 list[MAC_MAX_CH];
+    uint8_t list[MAC_MAX_CH];
 };
 
 
 struct mac_country_subband
 {
     /* First channel number of the triplet. */
-    u8 first_chn;
+    uint8_t first_chn;
     /* Max number of channel number for the triplet. */
-    u8 nbr_of_chn;
+    uint8_t nbr_of_chn;
     /* Maximum allowed transmit power. */
-    u8 max_tx_power;
+    uint8_t max_tx_power;
 };
 
 #define MAX_COUNTRY_LEN         3
@@ -218,9 +220,9 @@ struct mac_country_subband
 struct mac_country
 {
     /* Length of the country string */
-    u8 length;
+    uint8_t length;
     /* Country  string 2 char. */
-    u8 string[MAX_COUNTRY_LEN];
+    uint8_t string[MAX_COUNTRY_LEN];
     /* channel info triplet */
     struct mac_country_subband subband[MAX_COUNTRY_SUBBAND];
 };
@@ -228,77 +230,75 @@ struct mac_country
 /* MAC HT CAPABILITY */
 struct mac_htcapability
 {
-    u16_l       ht_capa_info;
-    u8_l        a_mpdu_param;
-    u8_l        mcs_rate[MAX_MCS_LEN];
-    u16_l       ht_extended_capa;
-    u32_l       tx_beamforming_capa;
-    u8_l        asel_capa;
+    uint16_t       ht_capa_info;
+    uint8_t        a_mpdu_param;
+    uint8_t        mcs_rate[MAX_MCS_LEN];
+    uint16_t       ht_extended_capa;
+    uint32_t       tx_beamforming_capa;
+    uint8_t        asel_capa;
 };
 
 /* MAC VHT CAPABILITY */
 struct mac_vhtcapability
 {
-    u32_l       vht_capa_info;
-    u16_l       rx_mcs_map;
-    u16_l       rx_highest;
-    u16_l       tx_mcs_map;
-    u16_l       tx_highest;
+    uint32_t       vht_capa_info;
+    uint16_t       rx_mcs_map;
+    uint16_t       rx_highest;
+    uint16_t       tx_mcs_map;
+    uint16_t       tx_highest;
 };
 
 
 /* MAC HT CAPABILITY */
 struct mac_htoprnelmt
 {
-    u8     prim_channel;
-    u8     ht_oper_1;
-    u16    ht_oper_2;
-    u16    ht_oper_3;
-    u8     mcs_rate[MAX_MCS_LEN];
+    uint8_t     prim_channel;
+    uint8_t     ht_oper_1;
+    uint16_t    ht_oper_2;
+    uint16_t    ht_oper_3;
+    uint8_t     mcs_rate[MAX_MCS_LEN];
 
 };
 
 /* MAC QOS CAPABILITY */
 struct mac_qoscapability
 {
-    u8  qos_info;
+    uint8_t  qos_info;
 };
 
 /* RSN information element */
 #define MAC_RAW_RSN_IE_LEN 34
 struct mac_raw_rsn_ie
 {
-    u8 data[2 + MAC_RAW_RSN_IE_LEN];
+    uint8_t data[2 + MAC_RAW_RSN_IE_LEN];
 };
 
 #define MAC_RAW_ENC_LEN 0x1A
 struct mac_wpa_frame
 {
-    u8 array[MAC_RAW_ENC_LEN];
+    uint8_t array[MAC_RAW_ENC_LEN];
 };
 
 #define MAC_WME_PARAM_LEN          16
 struct mac_wmm_frame
 {
-    u8 array [MAC_WME_PARAM_LEN];
+    uint8_t array [MAC_WME_PARAM_LEN];
 };
 
 /* BSS load element */
 struct mac_bss_load
 {
-    u16 sta_cnt;
-    u8  ch_utilization;
-    u16 avail_adm_capacity;
+    uint16_t sta_cnt;
+    uint8_t  ch_utilization;
+    uint16_t avail_adm_capacity;
 };
 
 /* EDCA Parameter Set Element */
 struct  mac_edca_param_set
 {
-    u8         qos_info;
-    u32        ac_be_param_record;
-    u32        ac_bk_param_record;
-    u32        ac_vi_param_record;
-    u32        ac_vo_param_record;
+    uint8_t         qos_info;
+    uint8_t         acm;
+    uint32_t        ac_param[4];
 };
 
 
@@ -306,30 +306,30 @@ struct  mac_edca_param_set
 
 struct mac_twenty_fourty_bss
 {
-    u8 bss_coexistence;
+    uint8_t bss_coexistence;
 };
 
 /* MAC BA PARAMETERS */
 struct mac_ba_param
 {
     struct mac_addr   peer_sta_address; /* Peer STA MAC Address to which BA is Setup */
-    u16          buffer_size; /* Number of buffers available for this BA */
-    u16          start_sequence_number; /* Start Sequence Number of BA */
-    u16          ba_timeout; /* BA Setup timeout value */
-    u8           dev_type; /* BA Device Type Originator/Responder */
-    u8           block_ack_policy; /* BLOCK-ACK Policy Setup Immedaite/Delayed */
-    u8           buffer_cnt; /* Number of buffers required for BA Setup */
+    uint16_t          buffer_size; /* Number of buffers available for this BA */
+    uint16_t          start_sequence_number; /* Start Sequence Number of BA */
+    uint16_t          ba_timeout; /* BA Setup timeout value */
+    uint8_t           dev_type; /* BA Device Type Originator/Responder */
+    uint8_t           block_ack_policy; /* BLOCK-ACK Policy Setup Immedaite/Delayed */
+    uint8_t           buffer_cnt; /* Number of buffers required for BA Setup */
 };
 
 /* MAC TS INFO field */
 struct mac_ts_info
 {
-    u8   traffic_type;
-    u8   ack_policy;
-    u8   access_policy;
-    u8   dir;
-    u8   tsid;
-    u8   user_priority;
+    uint8_t   traffic_type;
+    uint8_t   ack_policy;
+    uint8_t   access_policy;
+    uint8_t   dir;
+    uint8_t   tsid;
+    uint8_t   user_priority;
     bool      aggregation;
     bool      apsd;
     bool      schedule;
@@ -339,21 +339,21 @@ struct mac_ts_info
 struct mac_tspec_param
 {
     struct mac_ts_info ts_info;
-    u16  nominal_msdu_size;
-    u16  max_msdu_size;
-    u32  min_service_interval;
-    u32  max_service_interval;
-    u32  inactivity_interval;
-    u32  short_inactivity_interval;
-    u32  service_start_time;
-    u32  max_burst_size;
-    u32  min_data_rate;
-    u32  mean_data_rate;
-    u32  min_phy_rate;
-    u32  peak_data_rate;
-    u32  delay_bound;
-    u16  medium_time;
-    u8   surplusbwallowance;
+    uint16_t  nominal_msdu_size;
+    uint16_t  max_msdu_size;
+    uint32_t  min_service_interval;
+    uint32_t  max_service_interval;
+    uint32_t  inactivity_interval;
+    uint32_t  short_inactivity_interval;
+    uint32_t  service_start_time;
+    uint32_t  max_burst_size;
+    uint32_t  min_data_rate;
+    uint32_t  mean_data_rate;
+    uint32_t  min_phy_rate;
+    uint32_t  peak_data_rate;
+    uint32_t  delay_bound;
+    uint16_t  medium_time;
+    uint8_t   surplusbwallowance;
 };
 
 /* Scan result element, parsed from beacon or probe response frames. */
@@ -362,51 +362,45 @@ struct mac_scan_result
     /* Network BSSID. */
     struct mac_addr bssid;
     /* Network type (IBSS or ESS). */
-    u16 bsstype;
-    /* Network channel number. */
-    u16 ch_nbr;
+    uint16_t bsstype;
+    /* Network channel. */
+    struct scan_chan_tag *chan;
     /* Network beacon period. */
-    u16 beacon_period;
-    u32 timestamp_high;
-    u32 timestamp_low;
-    u16 dtim_period;
-    u16 ibss_parameter;
-    u16 cap_info;
-    struct mac_rateset rate_set;
-    struct mac_bss_load bss_load;
-    u8 country_element[3];
-    struct mac_edca_param_set edca_param;
-    struct mac_raw_rsn_ie rsn_ie;
-    struct mac_qoscapability qos_cap;
-    struct mac_htcapability ht_cap;
-    u8 sec_ch_oft;
-    struct mac_twenty_fourty_bss twenty_fourty_bss;
+    uint16_t beacon_period;
+    uint16_t cap_info;
     bool valid_flag;
-    u8 rssi;
+    int8_t rssi;
+    int8_t ppm_rel;
+    int8_t ppm_abs;
+    int8_t pmf_capable;
+    int8_t pmf_required;
+    int8_t is_wpa3;
+    /* Management frame the result was parsed from. */
+    void *rxu_mgmt_ind;
 };
 
 /* Structure containing the information required to perform a measurement request */
 struct mac_request_set
 {
 
-    u8             mode; /* As specified by standard */
-    u8             type; /* 0: Basic request, 1: CCA request, 2: RPI histogram request */
-    u16            duration; /* In TU */
+    uint8_t             mode; /* As specified by standard */
+    uint8_t             type; /* 0: Basic request, 1: CCA request, 2: RPI histogram request */
+    uint16_t            duration; /* In TU */
     uint64_t            start_time; /* TSF time */
-    u8             ch_number; /* channel to be measured */
+    uint8_t             ch_number; /* channel to be measured */
 };
 
 /* Structure containing the information returned from a measurement process */
 struct mac_report_set
 {
-    u8             mode; /* As specified by standard */
-    u8             type; /* 0: Basic request, 1: CCA request, 2: RPI histogram request */
-    u16            duration; /* In TU */
+    uint8_t             mode; /* As specified by standard */
+    uint8_t             type; /* 0: Basic request, 1: CCA request, 2: RPI histogram request */
+    uint16_t            duration; /* In TU */
     uint64_t            start_time; /* TSF time */
-    u8             ch_number; /* channel to be measured */
-    u8             map; /* As specified by standard */
-    u8             cca_busy_fraction; /* As specified by standard */
-    u8             rpi_histogram[8]; /* As specified by standard */
+    uint8_t             ch_number; /* channel to be measured */
+    uint8_t             map; /* As specified by standard */
+    uint8_t             cca_busy_fraction; /* As specified by standard */
+    uint8_t             rpi_histogram[8]; /* As specified by standard */
 };
 
 /* Structure containing the MAC SW and MAC HW version information */
@@ -415,8 +409,8 @@ struct mac_version
     char mac_sw_version[16];
     char mac_sw_version_date[48];
     char mac_sw_build_date[48];
-    u32 mac_hw_version1;
-    u32 mac_hw_version2;
+    uint32_t mac_hw_version1;
+    uint32_t mac_hw_version2;
 };
 
 /* Structure containing some of the properties of a BSS. @todo Add required fields during */
@@ -424,9 +418,9 @@ struct mac_version
 struct mac_bss_conf
 {
     /* Flags (ERP, QoS, etc.). */
-    u32 flags;
+    uint32_t flags;
     /* Beacon period */
-    u16 beacon_period;
+    uint16_t beacon_period;
 };
 
 /* Traffic ID enumeration */
@@ -512,9 +506,9 @@ enum
 * GLOBAL VARIABLES
 ****************************************************************************************
 */
-extern const u8 mac_tid2ac[];
+extern const uint8_t mac_tid2ac[];
 
-extern const u8 mac_id2rate[];
+extern const uint8_t mac_id2rate[];
 
 /* @} */
 

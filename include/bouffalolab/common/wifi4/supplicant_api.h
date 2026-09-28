@@ -177,8 +177,9 @@ typedef struct {
     uint8_t vif_idx;
     uint8_t mac[ETH_ALEN];
     struct wifi_ssid ssid;
-    wifi_auth_mode_t auth_mode;
-    wifi_cipher_type_t pairwise_cipher;
+    /* 1-byte enums in the blob (compiled with -fshort-enums) */
+    wifi_auth_mode_t auth_mode : 8;
+    wifi_cipher_type_t pairwise_cipher : 8;
     char passphrase[64 + 1];
 } wifi_ap_parm_t;
 
