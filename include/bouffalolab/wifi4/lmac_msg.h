@@ -343,6 +343,15 @@ struct mm_sta_add_req
     u8_l ampdu_spacing_min;
     /* Interface index */
     u8_l inst_nbr;
+    /* RSSI of the station */
+    s8_l rssi;
+    /* TSF of the last beacon */
+    u32_l tsflo;
+    u32_l tsfhi;
+    /* Data rate of the last beacon */
+    u8_l data_rate;
+    /* Quick connect */
+    u8_l quick_conn;
 };
 
 /* Structure containing the parameters of the @ref MM_STA_ADD_CFM message. */
@@ -361,8 +370,10 @@ struct mm_sta_del_req
 {
     /* Index of the station to be deleted */
     u8_l sta_idx;
+#ifdef CFG_CHIP_BL602
     /* VIF on which remain on channel operation has been started (if roc == 1) */
     u8_l vif_index;
+#endif
 };
 
 /* Structure containing the parameters of the @ref MM_STA_DEL_CFM message. */
@@ -370,8 +381,10 @@ struct mm_sta_del_cfm
 {
     /* Status of the operation (different from 0 if unsuccessful) */
     u8_l     status;
+#ifdef CFG_CHIP_BL602
     /* VIF on which remain on channel operation has been started (if roc == 1) */
     u8_l vif_index;
+#endif
 };
 
 /* Structure containing the parameters of the SET_POWER_MODE REQ message. */
@@ -465,16 +478,8 @@ struct mm_chan_ctxt_update_req
 {
     /* Channel context index */
     u8_l chan_index;
-    /* Band (2.4GHz or 5GHz) */
-    u8_l band;
-    /* Channel type: 20,40,80,160 or 80+80 MHz */
-    u8_l type;
-    /* Frequency for Primary 20MHz channel (in MHz) */
-    u16_l prim20_freq;
-    /* Frequency for Center of the contiguous channel or center of Primary 80+80 */
-    u16_l center1_freq;
-    /* Frequency for Center of the non-contiguous secondary 80+80 */
-    u16_l center2_freq;
+    /* New channel parameters */
+    struct mm_chan_ctxt_add_req channel;
 };
 
 /* Structure containing the parameters of the @ref MM_CHAN_CTXT_SCHED_REQ message */
@@ -512,6 +517,8 @@ struct mm_channel_pre_switch_ind
 /* Structure containing the parameters of the @ref MM_CONNECTION_LOSS_IND message. */
 struct mm_connection_loss_ind
 {
+    /* Status code of the loss */
+    u16_l status_code;
     /* VIF instance number */
     u8_l inst_nbr;
 };
@@ -544,6 +551,8 @@ struct mm_bcn_change_req
     u8_l inst_nbr;
     /* Offset of CSA (channel switch announcement) counters (0 means no counter) */
     u8_l csa_oft[BCN_MAX_CSA_CPT];
+    /* Beacon template */
+    u8_l bcn_buf[];
 };
 
 
@@ -640,6 +649,7 @@ struct mm_set_ps_options_req
     bool_l dont_listen_bc_mc;
 };
 
+#ifdef CFG_CHIP_BL602
 /* Structure containing the parameters of the @ref MM_CSA_COUNTER_IND message */
 struct mm_csa_counter_ind
 {
@@ -648,6 +658,7 @@ struct mm_csa_counter_ind
     /* Updated CSA counter value */
     u8_l csa_count;
 };
+#endif
 
 /* Structure containing the parameters of the @ref MM_CHANNEL_SURVEY_IND message */
 struct mm_channel_survey_ind
@@ -737,6 +748,10 @@ struct scan_start_req
     u8_l ssid_cnt;
     /* no CCK - For P2P frames not being sent at CCK rate in 2GHz band. */
     bool no_cck;
+    /* Scan is part of a join */
+    u8_l joining;
+    /* Per-channel scan duration */
+    u32_l duration_scan;
 };
 
 /* Structure containing the parameters of the @ref SCAN_START_CFM message */
@@ -937,8 +952,6 @@ struct me_sta_add_cfm
     u8_l sta_idx;
     /* Status of the station addition */
     u8_l status;
-    /* PM state of the station */
-    u8_l pm_state;
 };
 
 /* Structure containing the parameters of the @ref ME_STA_DEL_REQ message. */
@@ -1322,6 +1335,7 @@ struct apm_sta_del_cfm
     u8_l sta_idx;
 };
 
+#ifdef CFG_CHIP_BL602
 /* Structure containing the parameters of the @ref APM_CHAN_SWITCH_REQ message. */
 struct apm_chan_switch_req
 {
@@ -1334,6 +1348,7 @@ struct apm_chan_switch_req
     /* CSA count */
     u8_l cs_count;
 };
+#endif
 
 /* Structure containing the parameters of the @ref APM_STA_ADD_IND message. */
 struct apm_sta_add_ind

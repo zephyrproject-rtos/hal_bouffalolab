@@ -149,8 +149,10 @@ typedef enum wifi_fw_event_id
     MM_DENOISE_REQ,
     /* Set Power Save mode */
     MM_SET_PS_MODE_REQ,
+#ifdef CFG_CHIP_BL602
     /* set power save mode off for internal fw */
     MM_SET_PS_OFF_INTERNAL_REQ,
+#endif
     /* Set Power Save mode confirmation */
     MM_SET_PS_MODE_CFM,
     /* Request to add a channel context */
@@ -207,8 +209,10 @@ typedef enum wifi_fw_event_id
     MM_SET_PS_OPTIONS_CFM,
     /* Indication of PS state change for a P2P VIF */
     MM_P2P_VIF_PS_CHANGE_IND,
+#ifdef CFG_CHIP_BL602
     /* Indication that CSA counter has been updated */
     MM_CSA_COUNTER_IND,
+#endif
     /* Message containing channel information */
     MM_CHANNEL_SURVEY_IND,
     /* Message containing Beamformer information */
@@ -225,10 +229,12 @@ typedef enum wifi_fw_event_id
     MM_P2P_NOA_UPD_IND,
     /* Indication that RSSI is below or above the threshold */
     MM_RSSI_STATUS_IND,
+#ifdef CFG_CHIP_BL602
     /* Indication that CSA is done */
     MM_CSA_FINISH_IND,
     /* Indication that CSA is in prorgess (resp. done) and traffic must be stopped (resp. restarted) */
     MM_CSA_TRAFFIC_IND,
+#endif
     /* Request to update the group information of a station */
     MM_MU_GROUP_UPDATE_REQ,
     /* Confirmation of the @ref MM_MU_GROUP_UPDATE_REQ message */
@@ -306,10 +312,12 @@ typedef enum wifi_fw_event_id
     APM_CONF_MAX_STA_REQ,
     /* CONF MAX STA Confirm */
     APM_CONF_MAX_STA_CFM,
+#ifdef CFG_CHIP_BL602
     /* Channel switch Request */
     APM_CHAN_SWITCH_REQ,
     /* Channel switch Confirm */
     APM_CHAN_SWITCH_CFM,
+#endif
     /* MAX number of messages */
     APM_MAX,
 
@@ -406,8 +414,10 @@ typedef enum wifi_fw_event_id
     SM_STA_ADD_IND,
     /* Request for send pending auth or assoc */
     SM_CONNECT_AUTH_ASSOC_REQ,
+#ifdef CFG_CHIP_BL602
     /* Request for auth_start */
     SM_CONNECT_AUTH_START,
+#endif
     /* MAX number of messages */
     SM_MAX,
 } ke_msg_id_t;
@@ -519,7 +529,9 @@ enum task_mm_cfg {
 enum task_sm_cfg {
     TASK_SM_CFG_AUTH_ASSOC_RETRY_LIMIT,
     TASK_SM_CFG_RECONNECT_TRIGGER_FLAG,
+#ifdef CFG_CHIP_BL602
     TASK_SM_CFG_AUTH_START_DELAY,
+#endif
 };
 
 enum task_scan_cfg {
@@ -580,7 +592,8 @@ struct sm_tlv_list
  */
 struct sm_connect_tlv_desc {
     struct sm_tlv_list_hdr list_hdr;
-    sm_connection_data_tlv_id_t id;
+    /* sm_connection_data_tlv_id_t, as the blob's 1-byte enum */
+    uint8_t id;
     uint16_t len;
     uint8_t data[0];
 };

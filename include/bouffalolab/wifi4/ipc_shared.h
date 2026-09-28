@@ -31,16 +31,17 @@
 
 
 #ifndef CFG_TXDESC
+#ifdef CFG_CHIP_BL602
+#define CFG_TXDESC          2
+#else
 #define CFG_TXDESC          4
+#endif
 #endif
 #ifndef CFG_VIRT_DEV_MAX
 #define CFG_VIRT_DEV_MAX    2
 #endif
 #ifndef CFG_STA_MAX
 #define CFG_STA_MAX         5
-#endif
-#ifndef CFG_CHIP_BL602
-#define CFG_CHIP_BL602      1
 #endif
 
 #define IPC_TXQUEUE_CNT     NX_TXQ_CNT
@@ -199,6 +200,15 @@ struct txdesc_host
     uint32_t pad_buf[400/4];
 };
 
+#ifndef CFG_CHIP_BL602
+/* TX payload buffer paired with a txdesc0 entry */
+struct txbuf_host
+{
+    uint32_t flag;
+    uint32_t buf[1600/4];
+};
+#endif
+
 /* Structure containing the information about the PHY channel that is used */
 struct phy_channel_info
 {
@@ -248,6 +258,11 @@ struct ipc_shared_env_tag
 
     /* Host buffer address for the TX payload descriptor pattern */
     volatile uint32_t  pattern_addr;
+
+#ifndef CFG_CHIP_BL602
+    /* TX payload buffers, one per BK queue descriptor */
+    volatile struct txbuf_host txbuf[NX_TXDESC_CNT0];
+#endif
 
     /* Array of TX descriptors for the BK queue */
     volatile struct txdesc_host txdesc0[NX_TXDESC_CNT0];
