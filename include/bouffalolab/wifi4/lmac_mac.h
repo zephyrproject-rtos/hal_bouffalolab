@@ -189,6 +189,8 @@ struct mac_sec_key
 {
     u8_l length; /* Key material length */
     u32_l array[MAC_SEC_KEY_LEN/4]; /* Key material */
+    u8_l pn_length; /* Initial packet number length */
+    u32_l pn_array[2]; /* Initial packet number */
 };
 
 /* MAC channel list */
@@ -295,10 +297,8 @@ struct mac_bss_load
 struct  mac_edca_param_set
 {
     u8         qos_info;
-    u32        ac_be_param_record;
-    u32        ac_bk_param_record;
-    u32        ac_vi_param_record;
-    u32        ac_vo_param_record;
+    u8         acm;
+    u32        ac_param[4];
 };
 
 
@@ -363,26 +363,20 @@ struct mac_scan_result
     struct mac_addr bssid;
     /* Network type (IBSS or ESS). */
     u16 bsstype;
-    /* Network channel number. */
-    u16 ch_nbr;
+    /* Network channel. */
+    struct scan_chan_tag *chan;
     /* Network beacon period. */
     u16 beacon_period;
-    u32 timestamp_high;
-    u32 timestamp_low;
-    u16 dtim_period;
-    u16 ibss_parameter;
     u16 cap_info;
-    struct mac_rateset rate_set;
-    struct mac_bss_load bss_load;
-    u8 country_element[3];
-    struct mac_edca_param_set edca_param;
-    struct mac_raw_rsn_ie rsn_ie;
-    struct mac_qoscapability qos_cap;
-    struct mac_htcapability ht_cap;
-    u8 sec_ch_oft;
-    struct mac_twenty_fourty_bss twenty_fourty_bss;
     bool valid_flag;
-    u8 rssi;
+    int8_t rssi;
+    int8_t ppm_rel;
+    int8_t ppm_abs;
+    int8_t pmf_capable;
+    int8_t pmf_required;
+    int8_t is_wpa3;
+    /* Management frame the result was parsed from. */
+    void *rxu_mgmt_ind;
 };
 
 /* Structure containing the information required to perform a measurement request */
