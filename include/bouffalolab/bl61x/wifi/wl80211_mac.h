@@ -149,6 +149,7 @@ int wl80211_mac_tx(uint8_t vif_type, struct wl80211_tx_header *desc, unsigned in
                    void *txdone_cb, void *opaque);
 
 void wl80211_mac_rx_free(void *info);
+void wl80211_mac_rx_flow_dump(void);
 
 /**********************/
 /* 驱动专用接口和变量 */

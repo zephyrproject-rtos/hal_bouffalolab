@@ -237,21 +237,17 @@ void *wl80211_platform_malloc_wram(size_t size);
  */
 void wl80211_platform_free_wram(void *ptr);
 
-#if CONFIG_WL80211_WRAM_MEM_SIZE_LIMIT
 /** Get current WRAM memory size usage
  *
  * @return Current allocated memory size in bytes
  */
 size_t wl80211_platform_get_wram_mem_size_usage(void);
-#endif
 
-#if CONFIG_WL80211_WRAM_MEM_CNT_LIMIT
 /** Get current WRAM memory count usage
  *
  * @return Current allocated memory count
  */
 size_t wl80211_platform_get_wram_mem_cnt_usage(void);
-#endif
 
 /** * @brief Allocate memory in WRAM region without limit
  *

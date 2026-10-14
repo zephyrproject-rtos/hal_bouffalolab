@@ -226,6 +226,8 @@ struct wl80211_ap_settings {
 	uint8_t auth_type; /* ref @ enum wl80211_auth_type */
 	const uint8_t *ie;
 	uint16_t ie_len;
+	const uint8_t *probe_resp_ie;
+	uint16_t probe_resp_ie_len;
 	uint32_t flags;
 };
 
@@ -241,7 +243,7 @@ typedef void (*wl80211_monitor_rx_cb_t)(void *ctx, void *pkt, size_t len, size_t
 					int rssi);
 struct wl80211_monitor_settings {
 	/* channel settings */
-	enum wl80211_chan_width channel_width;
+	enum wl80211_chan_width channel_width : 8;
 	uint32_t center_freq1;
 	uint32_t center_freq2;
 
@@ -285,6 +287,8 @@ struct wl80211_global_state {
 	uint16_t ap_beacon_interval;
 	uint8_t *ap_ie;
 	uint16_t ap_ie_len;
+	uint8_t *ap_probe_resp_ie;
+	uint16_t ap_probe_resp_ie_len;
 	/* station max idle time before send deauth (x5 seconds) */
 	uint16_t ap_max_idle_time;
 	struct aid_list_entry aid_list[4];
@@ -321,6 +325,7 @@ enum {
 
 /* post wifi event in async */
 void wl80211_post_event(int code1, int code2);
+void wl80211_post_event_with_mac(int code1, int code2, const uint8_t mac[6]);
 
 /* wl80211 control command */
 enum {

@@ -24,6 +24,7 @@ void timeout_start(timeout_t e, unsigned int delay);
 void timeout_stop(timeout_t e);
 
 timeout_t timeout_start_new(timeout_cb_t cb, void *opaque, unsigned int delay);
+int timeout_is_started(timeout_t e);
 
 void timeout_init(void);
 #endif

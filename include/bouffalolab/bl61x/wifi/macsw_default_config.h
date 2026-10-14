@@ -5,6 +5,8 @@
  */
 #ifdef __MACSW_CONFIG_INTERNEL_ALLOW__
 #define CFG_AMSDU_4K
+#define CFG_RXL_BUFFER1_AMSDU_CNT 1
+
 #define CFG_TXDESC0 1
 #define CFG_TXDESC1 32
 #define CFG_TXDESC2 1
