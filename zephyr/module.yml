@@ -11,7 +11,7 @@ blobs:
     type: lib
     version: '2.3.29'
     url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.29/components/wireless/wifi4/firmware/lib/libfirmware.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BL602 WiFi MAC firmware (wifi4 LMAC/UMAC, scan, connect, TX/RX)"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/components/wireless/wifi4
 # BL70xL series
@@ -20,7 +20,7 @@ blobs:
     type: lib
     version: '1.6.40-2226-gf5b2695e1'
     url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/ble/btblecontroller_bl702l_m0s1p/lib/libbtblecontroller_bl702l_m0s1p.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BLE controller: peripheral only, 1 connection"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/a18c0f9215a9490ca2ce4811084b96ee60e4f205
   - path: lib/bl70xl/libbtblecontroller_bl702l_m0s1rp.a
@@ -28,7 +28,7 @@ blobs:
     type: lib
     version: '1.6.40-2226-gf5b2695e1'
     url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/ble/btblecontroller_bl702l_m0s1rp/lib/libbtblecontroller_bl702l_m0s1rp.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BLE controller: peripheral only, 1 connection (ROM code, A1)"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/a18c0f9215a9490ca2ce4811084b96ee60e4f205
   - path: lib/bl70xl/libbtblecontroller_bl702l_m0s1sp.a
@@ -36,7 +36,7 @@ blobs:
     type: lib
     version: '1.6.40-2226-gf5b2695e1'
     url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/ble/btblecontroller_bl702l_m0s1sp/lib/libbtblecontroller_bl702l_m0s1sp.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BLE controller: peripheral + observer, 1 connection"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/a18c0f9215a9490ca2ce4811084b96ee60e4f205
   - path: lib/bl70xl/libbtblecontroller_bl702l_m0s2p.a
@@ -44,7 +44,7 @@ blobs:
     type: lib
     version: '1.6.40-2226-gf5b2695e1'
     url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/ble/btblecontroller_bl702l_m0s2p/lib/libbtblecontroller_bl702l_m0s2p.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BLE controller: peripheral only, 2 connections"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/a18c0f9215a9490ca2ce4811084b96ee60e4f205
   - path: lib/bl70xl/libbtblecontroller_bl702l_m0s4p.a
@@ -52,7 +52,7 @@ blobs:
     type: lib
     version: '1.6.40-2226-gf5b2695e1'
     url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/ble/btblecontroller_bl702l_m0s4p/lib/libbtblecontroller_bl702l_m0s4p.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BLE controller: peripheral only, 4 connections"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/a18c0f9215a9490ca2ce4811084b96ee60e4f205
   - path: lib/bl70xl/libbtblecontroller_bl702l_m1s1p.a
@@ -60,7 +60,7 @@ blobs:
     type: lib
     version: '1.6.40-2226-gf5b2695e1'
     url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/ble/btblecontroller_bl702l_m1s1p/lib/libbtblecontroller_bl702l_m1s1p.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BLE controller: all roles, 1 connection"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/a18c0f9215a9490ca2ce4811084b96ee60e4f205
   - path: lib/bl70xl/libbtblecontroller_bl702l_m2s1p.a
@@ -68,7 +68,7 @@ blobs:
     type: lib
     version: '1.6.40-2226-gf5b2695e1'
     url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/ble/btblecontroller_bl702l_m2s1p/lib/libbtblecontroller_bl702l_m2s1p.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BLE controller: all roles, 2 connections"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/a18c0f9215a9490ca2ce4811084b96ee60e4f205
   - path: lib/bl70xl/libbtblecontroller_bl702l_m4s1p.a
@@ -76,7 +76,7 @@ blobs:
     type: lib
     version: '1.6.40-2226-gf5b2695e1'
     url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/ble/btblecontroller_bl702l_m4s1p/lib/libbtblecontroller_bl702l_m4s1p.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BLE controller: all roles, 4 connections"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/a18c0f9215a9490ca2ce4811084b96ee60e4f205
   - path: lib/bl70xl/libbtblecontroller_bl702l_m8s1p.a
@@ -84,7 +84,7 @@ blobs:
     type: lib
     version: '1.6.40-2226-gf5b2695e1'
     url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/ble/btblecontroller_bl702l_m8s1p/lib/libbtblecontroller_bl702l_m8s1p.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BLE controller: all roles, 8 connections"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/a18c0f9215a9490ca2ce4811084b96ee60e4f205
   - path: lib/bl70xl/liblmac154_bl702l.a
@@ -92,7 +92,7 @@ blobs:
     type: lib
     version: '1.6.40-2226-gf5b2695e1'
     url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/lmac154/lmac154_bl702l/lib/liblmac154_bl702l.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "IEEE 802.15.4 MAC/PHY library for BL702L (BL70XL)"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/a18c0f9215a9490ca2ce4811084b96ee60e4f205
   - path: lib/bl70xl/libbl702l_rf.a
@@ -100,7 +100,7 @@ blobs:
     type: lib
     version: '1.6.40-2226-gf5b2695e1'
     url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/a18c0f9215a9490ca2ce4811084b96ee60e4f205/platform/soc/bl702l/bl702l_rf/lib/libbl702l_rf.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "RF driver library for BL702L (BL70XL)"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/a18c0f9215a9490ca2ce4811084b96ee60e4f205
   - path: lib/bl70xl/libbl702l_rom_a0.a
@@ -108,7 +108,7 @@ blobs:
     type: lib
     version: '1.6.40-2226-gf5b2695e1'
     url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/a18c0f9215a9490ca2ce4811084b96ee60e4f205/platform/soc/bl702l/bl702l_rom_a0/lib/libbl702l_rom_a0.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "ROM patch library for BL702L (BL70XL) A0 revision"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/a18c0f9215a9490ca2ce4811084b96ee60e4f205
   - path: lib/bl70xl/libbl702l_rom_a1.a
@@ -116,7 +116,7 @@ blobs:
     type: lib
     version: '1.6.40-2226-gf5b2695e1'
     url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/a18c0f9215a9490ca2ce4811084b96ee60e4f205/platform/soc/bl702l/bl702l_rom_a1/lib/libbl702l_rom_a1.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "ROM patch library for BL702L (BL70XL) A1 revision"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/a18c0f9215a9490ca2ce4811084b96ee60e4f205
 # BL70x series
@@ -125,7 +125,7 @@ blobs:
     type: lib
     version: '1.6.40-2226-gf5b2695e1'
     url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/ble/blecontroller_bl702_m0s0sp/lib/libblecontroller_bl702_m0s0sp.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BLE controller for BL702: observer + peripheral, 0 connections"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/ble/blecontroller_bl702_m0s0sp
   - path: lib/bl70x/libblecontroller_bl702_m0s1.a
@@ -133,7 +133,7 @@ blobs:
     type: lib
     version: '1.6.40-2226-gf5b2695e1'
     url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/ble/blecontroller_bl702_m0s1/lib/libblecontroller_bl702_m0s1.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BLE controller for BL702: peripheral only, 1 connection"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/ble/blecontroller_bl702_m0s1
   - path: lib/bl70x/libblecontroller_bl702_m0s1p.a
@@ -141,7 +141,7 @@ blobs:
     type: lib
     version: '1.6.40-2226-gf5b2695e1'
     url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/ble/blecontroller_bl702_m0s1p/lib/libblecontroller_bl702_m0s1p.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BLE controller for BL702: peripheral only, 1 connection (optimized)"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/ble/blecontroller_bl702_m0s1p
   - path: lib/bl70x/libblecontroller_bl702_m0s1s.a
@@ -149,7 +149,7 @@ blobs:
     type: lib
     version: '1.6.40-2226-gf5b2695e1'
     url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/ble/blecontroller_bl702_m0s1s/lib/libblecontroller_bl702_m0s1s.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BLE controller for BL702: peripheral + scanner, 1 connection"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/ble/blecontroller_bl702_m0s1s
   - path: lib/bl70x/libblecontroller_bl702_m0s1t10.a
@@ -157,7 +157,7 @@ blobs:
     type: lib
     version: '1.6.40-2226-gf5b2695e1'
     url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/ble/blecontroller_bl702_m0s1t10/lib/libblecontroller_bl702_m0s1t10.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BLE controller for BL702: peripheral, 1 connection (test mode)"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/ble/blecontroller_bl702_m0s1t10
   - path: lib/bl70x/libblecontroller_bl702_m1s1.a
@@ -165,7 +165,7 @@ blobs:
     type: lib
     version: '1.6.40-2226-gf5b2695e1'
     url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/ble/blecontroller_bl702_m1s1/lib/libblecontroller_bl702_m1s1.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BLE controller for BL702: central + peripheral, 1 connection each"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/ble/blecontroller_bl702_m1s1
   - path: lib/bl70x/libblecontroller_bl702_m16s1.a
@@ -173,7 +173,7 @@ blobs:
     type: lib
     version: '1.6.40-2226-gf5b2695e1'
     url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/ble/blecontroller_bl702_m16s1/lib/libblecontroller_bl702_m16s1.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BLE controller for BL702: all roles, 16 connections"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/ble/blecontroller_bl702_m16s1
   - path: lib/bl70x/libblecontroller_bl702_uarthci.a
@@ -181,7 +181,7 @@ blobs:
     type: lib
     version: '1.6.40-2226-gf5b2695e1'
     url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/ble/blecontroller_bl702_uarthci/lib/libblecontroller_bl702_uarthci.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BLE controller for BL702: UART HCI transport"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/ble/blecontroller_bl702_uarthci
   - path: lib/bl70x/liblmac154.a
@@ -189,7 +189,7 @@ blobs:
     type: lib
     version: '1.6.40-2226-gf5b2695e1'
     url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/lmac154/lmac154/lib/liblmac154.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "IEEE 802.15.4 MAC/PHY library for BL702 (BL70x)"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/a18c0f9215a9490ca2ce4811084b96ee60e4f205/network/lmac154/lmac154
   - path: lib/bl70x/libbl702_rf.a
@@ -197,7 +197,7 @@ blobs:
     type: lib
     version: '1.6.40-2226-gf5b2695e1'
     url: https://github.com/bouffalolab/bl_iot_sdk-components/raw/a18c0f9215a9490ca2ce4811084b96ee60e4f205/platform/soc/bl702/bl702_rf/lib/libbl702_rf.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "RF driver library for BL702 (BL70x)"
     doc-url: https://github.com/bouffalolab/bl_iot_sdk-components/tree/a18c0f9215a9490ca2ce4811084b96ee60e4f205/platform/soc/bl702/bl702_rf
 # BL61x series
@@ -206,7 +206,7 @@ blobs:
     type: lib
     version: '2.3.29'
     url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.29/components/wireless/bluetooth/btblecontroller/lib/libbtblecontroller_bl616_ble1m0s1bredr0.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BT/BLE controller for BL616 (peripheral only, 1 connection)"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/components/wireless/bluetooth/btblecontroller
   - path: lib/bl61x/libbtblecontroller_bl616_ble1m10s1bredr0.a
@@ -214,7 +214,7 @@ blobs:
     type: lib
     version: '2.3.29'
     url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.29/components/wireless/bluetooth/btblecontroller/lib/libbtblecontroller_bl616_ble1m10s1bredr0.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BT/BLE controller for BL616 (peripheral + central, 10 connections)"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/components/wireless/bluetooth/btblecontroller
   - path: lib/bl61x/libbtblecontroller_bl616_ble1m2s1bredr1.a
@@ -222,7 +222,7 @@ blobs:
     type: lib
     version: '2.3.29'
     url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.29/components/wireless/bluetooth/btblecontroller/lib/libbtblecontroller_bl616_ble1m2s1bredr1.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BT/BLE controller for BL616 (peripheral + central, 2 connections + BR/EDR)"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/components/wireless/bluetooth/btblecontroller
   - path: lib/bl61x/libbtblecontroller_bl616_bleuarthci.a
@@ -230,7 +230,7 @@ blobs:
     type: lib
     version: '2.3.29'
     url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.29/components/wireless/bluetooth/btblecontroller/lib/libbtblecontroller_bl616_bleuarthci.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BT/BLE controller for BL616 (BLE-only UART HCI transport)"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/components/wireless/bluetooth/btblecontroller
   - path: lib/bl61x/libbtblecontroller_bl616_uarthci.a
@@ -238,7 +238,7 @@ blobs:
     type: lib
     version: '2.3.29'
     url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.29/components/wireless/bluetooth/btblecontroller/lib/libbtblecontroller_bl616_uarthci.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BT/BLE controller for BL616 (UART HCI transport)"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/components/wireless/bluetooth/btblecontroller
   - path: lib/bl61x/libbl616_phyrf.a
@@ -246,7 +246,7 @@ blobs:
     type: lib
     version: '2.3.29'
     url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.29/drivers/soc/bl616/phyrf/lib-gcc_10.2.0-toolchain_V2.6.1/libbl616_phyrf.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "PHY/RF library for BL616"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/drivers/soc/bl616/phyrf
   - path: lib/bl61x/liblmac154_bl616.a
@@ -254,7 +254,7 @@ blobs:
     type: lib
     version: '2.3.29'
     url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.29/components/wireless/lmac154/lmac154/lib/liblmac154_bl616.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "IEEE 802.15.4 MAC/PHY library for BL616 (BL61x)"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/components/wireless/lmac154/lmac154
 # BL60x series
@@ -263,7 +263,7 @@ blobs:
     type: lib
     version: '2.3.29'
     url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.29/components/wireless/bluetooth/blecontroller/lib/libblecontroller_bl602_m1s1.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BLE controller library for BL602 (variant: m1s1, 1 central + 1 peripheral)"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/components/wireless/bluetooth/blecontroller
   - path: lib/bl60x/libblecontroller_bl602_m8s1.a
@@ -271,7 +271,7 @@ blobs:
     type: lib
     version: '2.3.29'
     url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.29/components/wireless/bluetooth/blecontroller/lib/libblecontroller_bl602_m8s1.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BLE controller library for BL602 (variant: m8s1, 8 central + 1 peripheral)"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/components/wireless/bluetooth/blecontroller
   - path: lib/bl60x/libbl602_phyrf.a
@@ -279,7 +279,7 @@ blobs:
     type: lib
     version: '2.3.29'
     url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.29/drivers/soc/bl602/phyrf/lib-gcc-10.2.0-rv32imfc-ilp32f-bouffalosdk/libbl602_phyrf.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "PHY/RF library for BL602 (BL60x)"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/drivers/soc/bl602/phyrf
 # BL61x WiFi MACSW blobs
@@ -288,7 +288,7 @@ blobs:
     type: lib
     version: '2.3.29'
     url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.29/components/wireless/macsw/lib/libmacsw_bl616.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "MACSW lower MAC firmware for BL616"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/components/wireless/macsw
   - path: lib/bl61x/libmacsw_config_bl616_ack.a
@@ -296,7 +296,7 @@ blobs:
     type: lib
     version: '2.3.29'
     url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.29/components/wireless/macsw/lib/libmacsw_config_bl616_ack.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "MACSW configuration for BL616 (ack config)"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/components/wireless/macsw
   - path: lib/bl61x/libmacsw_config_bl616_default.a
@@ -304,7 +304,7 @@ blobs:
     type: lib
     version: '2.3.29'
     url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.29/components/wireless/macsw/lib/libmacsw_config_bl616_default.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "MACSW configuration for BL616 (default config)"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/components/wireless/macsw
   - path: lib/bl61x/libmacsw_config_bl616_bridge.a
@@ -312,7 +312,7 @@ blobs:
     type: lib
     version: '2.3.29'
     url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.29/components/wireless/macsw/lib/libmacsw_config_bl616_bridge.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "MACSW configuration for BL616 (bridge config)"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/components/wireless/macsw
   - path: lib/bl61x/libmacsw_config_bl616_coex.a
@@ -320,7 +320,7 @@ blobs:
     type: lib
     version: '2.3.29'
     url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.29/components/wireless/macsw/lib/libmacsw_config_bl616_coex.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "MACSW configuration for BL616 (coex config)"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/components/wireless/macsw
   - path: lib/bl61x/libwl80211_bl616.a
@@ -328,7 +328,7 @@ blobs:
     type: lib
     version: '2.3.29'
     url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.29/components/wireless/wl80211/lib/libwl80211_bl616.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "WL80211 upper MAC library for BL616"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/components/wireless/wl80211
 # BL616CL series
@@ -337,7 +337,7 @@ blobs:
     type: lib
     version: '2.3.29'
     url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.29/components/wireless/bluetooth/btblecontroller/lib/libbtblecontroller_bl616cl_m0b1.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BT/BLE controller for BL616CL (Beacon only variant)"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/components/wireless/bluetooth/btblecontroller
   - path: lib/bl616cl/libbtblecontroller_bl616cl_m2s1.a
@@ -345,7 +345,7 @@ blobs:
     type: lib
     version: '2.3.29'
     url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.29/components/wireless/bluetooth/btblecontroller/lib/libbtblecontroller_bl616cl_m2s1.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BT/BLE controller for BL616CL (variant: m2s1, 2 central + 1 peripheral)"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/components/wireless/bluetooth/btblecontroller
   - path: lib/bl616cl/libbl616cl_phyrf.a
@@ -353,7 +353,7 @@ blobs:
     type: lib
     version: '2.3.29'
     url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.29/drivers/soc/bl616cl/phyrf/lib-gcc_10.2.0-toolchain_V2.6.1/libbl616cl_phyrf.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "PHY/RF library for BL616CL"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/drivers/soc/bl616cl/phyrf
 # BL616CL WiFi MACSW blobs
@@ -362,7 +362,7 @@ blobs:
     type: lib
     version: '2.3.29'
     url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.29/components/wireless/macsw/lib/libmacsw_bl616cl.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "MACSW lower MAC firmware for BL616CL"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/components/wireless/macsw
   - path: lib/bl616cl/libmacsw_config_bl616cl_ack.a
@@ -370,7 +370,7 @@ blobs:
     type: lib
     version: '2.3.29'
     url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.29/components/wireless/macsw/lib/libmacsw_config_bl616cl_ack.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "MACSW configuration for BL616CL (ack config)"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/components/wireless/macsw
   - path: lib/bl616cl/libmacsw_config_bl616cl_default.a
@@ -378,7 +378,7 @@ blobs:
     type: lib
     version: '2.3.29'
     url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.29/components/wireless/macsw/lib/libmacsw_config_bl616cl_default.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "MACSW configuration for BL616CL (default config)"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/components/wireless/macsw
   - path: lib/bl616cl/libwl80211_bl616cl.a
@@ -386,7 +386,7 @@ blobs:
     type: lib
     version: '2.3.29'
     url: https://github.com/bouffalolab/bouffalo_sdk/raw/v2.3.29/components/wireless/wl80211/lib/libwl80211_bl616cl.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "WL80211 upper MAC library for BL616CL"
     doc-url: https://github.com/bouffalolab/bouffalo_sdk/tree/v2.3.29/components/wireless/wl80211
 # BL808 series
@@ -395,7 +395,7 @@ blobs:
     type: lib
     version: '305dd9a'
     url: https://github.com/pine64/pinevoice_smartspeaker_sdk/raw/305dd9a535ce7751de8d77bd2134873469072df0/components/bl606p_wireless/btblecontroller/btblecontroller/libs/e907fp/libbl606p_btblecontroller_prebuild.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "BT/BLE controller for BL606P/BL808 (e907fp target)"
     doc-url: https://github.com/pine64/pinevoice_smartspeaker_sdk/tree/305dd9a535ce7751de8d77bd2134873469072df0/components/bl606p_wireless/btblecontroller
   - path: lib/bl808x/libbl606p_phyrf.a
@@ -403,7 +403,7 @@ blobs:
     type: lib
     version: '305dd9a'
     url: https://github.com/pine64/pinevoice_smartspeaker_sdk/raw/305dd9a535ce7751de8d77bd2134873469072df0/components/bl606p_wireless/bl606p_phy/bl606p_phyrf/lib-gcc_10.2.0-toolchain_V2.6.1/libbl606p_phyrf.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "PHY/RF library for BL606P/BL808"
     doc-url: https://github.com/pine64/pinevoice_smartspeaker_sdk/tree/305dd9a535ce7751de8d77bd2134873469072df0/components/bl606p_wireless/bl606p_phy
   - path: lib/bl808x/libbl606p_firmware_prebuild.a
@@ -411,6 +411,6 @@ blobs:
     type: lib
     version: '305dd9a'
     url: https://github.com/pine64/pinevoice_smartspeaker_sdk/raw/305dd9a535ce7751de8d77bd2134873469072df0/components/bl606p_wireless/bl606p_firmware/libs/e907fp/libbl606p_firmware_prebuild.a
-    license-path: zephyr/blobs/license_sdk.txt
+    license-path: LICENSES/Apache-2.0.txt
     description: "WiFi MAC firmware for BL606P/BL808 (e907fp target)"
     doc-url: https://github.com/pine64/pinevoice_smartspeaker_sdk/tree/305dd9a535ce7751de8d77bd2134873469072df0/components/bl606p_wireless/bl606p_firmware
