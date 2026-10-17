@@ -449,6 +449,15 @@ int lmac154_monitor(uint32_t monitor_timeout);
  *
  * @return The lmac154 interrupt handler
  *
+ * @note  Use this handler for the legacy single-stack send/receive path.
+ *        Send entry points: lmac154_triggerTx(), lmac154_triggerParamTx(),
+ *        lmac154_triggerParamTxExt(), and lmac154_writeTxAckFrame().
+ *        Receive control: lmac154_enableRx(), lmac154_forceEnableRX(), and
+ *        lmac154_disableRx().
+ *        Interrupt-context event callbacks: lmac154_txDoneEvent(),
+ *        lmac154_ackEvent(), lmac154_ackFrameEvent(), lmac154_rxDoneEvent(),
+ *        lmac154_rxStartEvent(), and lmac154_hwAutoTxAckDoneEvent().
+ *
 *******************************************************************************/
 lmac154_isr_t lmac154_getInterruptHandler(void);
 
@@ -472,6 +481,13 @@ bool lmac154_registerEventCallback(lmac154_stack_idx_t stack_idx,
  * @param  stack2_rxDoneCallback, frame received with destination panid on stack 2
  *
  * @return The m154 irq handler
+ *
+ * @note  Use this callback for the dual-stack send/receive path.
+ *        Register stack receive callbacks with
+ *        lmac154_registerEventCallback() and enable stacks with
+ *        lmac154_enable1stStack() or lmac154_enable2ndStack().
+ *        Send entry points: lmac154_triggerParamTxExt() and
+ *        lmac154_writeTxAckFrame().
  *
 *******************************************************************************/
 lmac154_isr_t lmac154_getInterruptCallback(void);
@@ -863,6 +879,14 @@ lmac154_data_rate_t lmac154_getRxDataRate(void);
  *
 *******************************************************************************/
 void lmac154_setCCAMode(lmac154_cca_mode_t mode);
+
+/****************************************************************************
+ * @brief  Get CCA mode
+ *
+ * @return lmac154_cca_mode_t
+ *
+*******************************************************************************/
+lmac154_cca_mode_t lmac154_getCCAMode(void);
 
 /****************************************************************************
  * @brief  Set CCA ED threshold (default -71dBm)
@@ -1385,6 +1409,8 @@ void lmac154_setRxFiltering(bool is_enable);
 uint64_t lmac154_get_rx_start_timestamp(void);
 uint64_t lmac154_get_rx_done_timestamp(void);
 uint64_t lmac154_get_tx_done_timestamp(void);
+
+bool lmac154_fptSetMaxNum(uint32_t shortAddrNum, uint32_t longAddrNum);
 
 
 /****************************************************************************

@@ -16,7 +16,7 @@
     do {                                                                               \
         int irq_rest;                                                                  \
         uint32_t btime, etime;                                                         \
-        __asm__ volatile ("csrrci %0, mstatus, %1" : "=r" (irq_rest) : "i" (INTE_EN)); \
+        __asm__ volatile ("csrrci %0, mstatus, %1" : "=r" (irq_rest) : "i" (INTE_EN) : "memory"); \
         btime = 0; /* bflb_mtimer_get_time_ms(); */                                    \
                                                                                        \
         /* Increment the critical section nesting level */                             \
@@ -27,14 +27,14 @@
         /* CRITICAL_NESTING_DEC(); */                                                 \
         etime = 0; /*bflb_mtimer_get_time_ms();*/                                     \
         /* Restore mstatus to its previous value */                                   \
-        __asm__ volatile ("csrw mstatus, %0" : /* no output */ : "r" (irq_rest));     \
+        __asm__ volatile ("csrw mstatus, %0" : /* no output */ : "r" (irq_rest) : "memory"); \
         if (etime - btime > 5) {                                                      \
           printf("disable interrupt time %ld ms too long. %s:%d\r\n",                  \
                   etime - btime, __func__, __LINE__);                                 \
         }                                                                             \
     } while (0);
 
-#if MACSW_WFA
+#ifdef CONFIG_HIGH_ISR_STACK
 extern volatile int GLOBAL_INT_DISABLE_has_lock;
 extern volatile uint32_t critical_nesting_level;
 /* extern volatile void *GLOBAL_INT_task_handle; */
@@ -57,7 +57,7 @@ extern int32_t TrapNetCounter; /* Someone actually called 'GLOBAL_INT_DISABLE' i
 #define GLOBAL_INT_DISABLE() GLOBAL_INT_DISABLE_LONG_TIME()
 #endif
 
-#if MACSW_WFA
+#ifdef CONFIG_HIGH_ISR_STACK
 #define GLOBAL_INT_RESTORE()                                                        \
         if(!TrapNetCounter) {                                                       \
         critical_nesting_level--;                                                   \
