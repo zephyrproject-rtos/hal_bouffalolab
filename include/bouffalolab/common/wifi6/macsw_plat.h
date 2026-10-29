@@ -16,7 +16,7 @@
     do {                                                                               \
         int irq_rest;                                                                  \
         uint32_t btime, etime;                                                         \
-        __asm__ volatile ("csrrci %0, mstatus, %1" : "=r" (irq_rest) : "i" (INTE_EN)); \
+        __asm__ volatile ("csrrci %0, mstatus, %1" : "=r" (irq_rest) : "i" (INTE_EN) : "memory"); \
         btime = 0; /* bflb_mtimer_get_time_ms(); */                                    \
                                                                                        \
         /* Increment the critical section nesting level */                             \
@@ -27,14 +27,14 @@
         /* CRITICAL_NESTING_DEC(); */                                                 \
         etime = 0; /*bflb_mtimer_get_time_ms();*/                                     \
         /* Restore mstatus to its previous value */                                   \
-        __asm__ volatile ("csrw mstatus, %0" : /* no output */ : "r" (irq_rest));     \
+        __asm__ volatile ("csrw mstatus, %0" : /* no output */ : "r" (irq_rest) : "memory"); \
         if (etime - btime > 5) {                                                      \
           printf("disable interrupt time %ld ms too long. %s:%d\r\n",                  \
                   etime - btime, __func__, __LINE__);                                 \
         }                                                                             \
     } while (0);
 
-#if MACSW_WFA
+#ifdef CONFIG_HIGH_ISR_STACK
 extern volatile int GLOBAL_INT_DISABLE_has_lock;
 extern volatile uint32_t critical_nesting_level;
 /* extern volatile void *GLOBAL_INT_task_handle; */
@@ -57,7 +57,7 @@ extern int32_t TrapNetCounter; /* Someone actually called 'GLOBAL_INT_DISABLE' i
 #define GLOBAL_INT_DISABLE() GLOBAL_INT_DISABLE_LONG_TIME()
 #endif
 
-#if MACSW_WFA
+#ifdef CONFIG_HIGH_ISR_STACK
 #define GLOBAL_INT_RESTORE()                                                        \
         if(!TrapNetCounter) {                                                       \
         critical_nesting_level--;                                                   \
@@ -71,6 +71,21 @@ extern int32_t TrapNetCounter; /* Someone actually called 'GLOBAL_INT_DISABLE' i
 #else
 #define GLOBAL_INT_RESTORE() GLOBAL_INT_RESTORE_LONG_TIME()
 #endif
+
+/* Severity values match the SDK log levels; OFF is a threshold, not a severity. */
+enum wifi_diag_level {
+    WIFI_DIAG_FATAL = 0,
+    WIFI_DIAG_ERROR = 1,
+    WIFI_DIAG_WARN = 2,
+    WIFI_DIAG_INFO = 3,
+    WIFI_DIAG_DEBUG = 4,
+    WIFI_DIAG_TRACE = 5,
+    WIFI_DIAG_OFF = 6,
+};
+
+int wifi_verbosity_set(int level);
+int wifi_verbosity_get(void);
+bool wifi_verbosity_enabled(uint8_t severity);
 
 /**
  ****************************************************************************************
@@ -112,7 +127,7 @@ void wifi_task_resume(bool isr);
  */
 uint32_t wifi_sys_now_ms(bool isr);
 
-#if MACSW_TWT && defined(CFG_WIFI_TWT_PDS15_ENABLE)
+#if defined(MACSW_TWT) && MACSW_TWT && defined(CFG_WIFI_TWT_PDS15_ENABLE)
 int macsw_platform_get_time_us(uint64_t *time_us);
 #endif
 
@@ -121,11 +136,18 @@ int macsw_platform_get_time_us(uint64_t *time_us);
  ****************************************************************************************
  * @brief Formatted output to system log.
  *
- * @param[in] priority Log priority
+ * @param[in] priority Legacy priority: 0=error, 1=warning, 2=info, 3=debug,
+ *                     4=raw (optional D_ module/severity prefixes).
  * @param[in] fmt Format string
  ****************************************************************************************
  */
-#ifdef CONFIG_LOG_DISABLE
+/* Deprecated alias: now clips all automatic syslog output, not just FW prints.
+ * Explicit console queries are independent of this automatic-log control. */
+#if defined(CONFIG_NO_FW_BL_LOG_PRINT) && !defined(CONFIG_MACSW_LOG_NO_PRINT)
+#define CONFIG_MACSW_LOG_NO_PRINT 1
+#endif
+
+#if defined(CONFIG_MACSW_LOG_NO_PRINT) || defined(CONFIG_LOG_DISABLE)
     #pragma GCC diagnostic ignored "-Wunused-but-set-variable"
     #define wifi_syslog(...) ((void)0)
 #else

@@ -577,7 +577,7 @@ extern tx_pwr_table_t tx_power_limit_tables[2];
 #define POWER_TABLE_PRINT(power_table, array) \
     for (int i = 0; i < sizeof(power_table->array)/sizeof(power_table->array[0]); i++) { \
         int8_t pwr = power_table->array[i]; \
-            printf("Info: array=%s, index=%d, value=%d, min=%d, max=%d\n", \
+            wifi_syslog(3, "Info: array=%s, index=%d, value=%d, min=%d, max=%d\n", \
                    #array, i, pwr, tx_power_limit_tables[0].array[i], tx_power_limit_tables[1].array[i]); \
     }
 

@@ -3,13 +3,17 @@
  *
  * SPDX-License-Identifier: Apache-2.0
  */
-#ifdef __MACSW_CONFIG_INTERNEL_ALLOW__
+
 #define CFG_AMSDU_4K
 #define CFG_TXDESC0 1
 #define CFG_TXDESC1 32
 #define CFG_TXDESC2 1
 #define CFG_TXDESC3 1
 #define CFG_TXDESC4 4
-#endif
 
-#define CONFIG_COEX_WIFI_MODE 1
+#define CFG_REORD_BUF 6
+
+/* Missing values, checked against blob */
+#define CFG_TWT 8
+#define CFG_BARX 1
+#define CFG_BATX 1
