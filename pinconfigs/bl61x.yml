@@ -638,3 +638,30 @@ pins:
             - [pwm0, [ch2p]]
             - [jtag, [tdo]]
             - [clock_out2, [cam_ref, i2s_ref, xtal, wifipll_32m]]
+
+# Internal Pins, the exact order for the flash data pins is undisclosed,
+# but we know that without the IO2-CS swap, the data pins are 37 38 39 40
+    gpio35:
+        series: [616, 618]
+        periph:
+            - [sf1, [clk]]
+    gpio36:
+        series: [616, 618]
+        periph:
+            - [sf1, [cs, d2]]
+    gpio37:
+        series: [616, 618]
+        periph:
+            - [sf1, [d0, d3]]
+    gpio38:
+        series: [616, 618]
+        periph:
+            - [sf1, [d1]]
+    gpio39:
+        series: [616, 618]
+        periph:
+            - [sf1, [d2, cs]]
+    gpio40:
+        series: [616, 618]
+        periph:
+            - [sf1, [d3, d0]]
