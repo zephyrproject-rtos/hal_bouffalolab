@@ -2238,4 +2238,44 @@
 #define GPIO36_CLOCK_OUT0_SOLO_IN_128FS \
 	BFLB_PINMUX(36, clock_out0, solo_in_128fs, periph)
 
+/* gpio37_sf1_clk */
+#define GPIO37_SF1_CLK \
+	BFLB_PINMUX(37, sf1, clk, periph)
+
+/* gpio38_sf1_cs */
+#define GPIO38_SF1_CS \
+	BFLB_PINMUX(38, sf1, cs, periph)
+
+/* gpio38_sf1_d2 */
+#define GPIO38_SF1_D2 \
+	BFLB_PINMUX(38, sf1, d2, periph)
+
+/* gpio39_sf1_d0 */
+#define GPIO39_SF1_D0 \
+	BFLB_PINMUX(39, sf1, d0, periph)
+
+/* gpio39_sf1_d3 */
+#define GPIO39_SF1_D3 \
+	BFLB_PINMUX(39, sf1, d3, periph)
+
+/* gpio40_sf1_d1 */
+#define GPIO40_SF1_D1 \
+	BFLB_PINMUX(40, sf1, d1, periph)
+
+/* gpio41_sf1_d2 */
+#define GPIO41_SF1_D2 \
+	BFLB_PINMUX(41, sf1, d2, periph)
+
+/* gpio41_sf1_cs */
+#define GPIO41_SF1_CS \
+	BFLB_PINMUX(41, sf1, cs, periph)
+
+/* gpio42_sf1_d3 */
+#define GPIO42_SF1_D3 \
+	BFLB_PINMUX(42, sf1, d3, periph)
+
+/* gpio42_sf1_d0 */
+#define GPIO42_SF1_D0 \
+	BFLB_PINMUX(42, sf1, d0, periph)
+
 #endif /* DT_BINDINGS_PINCTRL_BFLB_BL616CL32X_PINCTRL_H_ */

@@ -1766,4 +1766,44 @@
 #define GPIO30_CLOCK_OUT2_WIFIPLL_32M \
 	BFLB_PINMUX(30, clock_out2, wifipll_32m, periph)
 
+/* gpio35_sf1_clk */
+#define GPIO35_SF1_CLK \
+	BFLB_PINMUX(35, sf1, clk, periph)
+
+/* gpio36_sf1_cs */
+#define GPIO36_SF1_CS \
+	BFLB_PINMUX(36, sf1, cs, periph)
+
+/* gpio36_sf1_d2 */
+#define GPIO36_SF1_D2 \
+	BFLB_PINMUX(36, sf1, d2, periph)
+
+/* gpio37_sf1_d0 */
+#define GPIO37_SF1_D0 \
+	BFLB_PINMUX(37, sf1, d0, periph)
+
+/* gpio37_sf1_d3 */
+#define GPIO37_SF1_D3 \
+	BFLB_PINMUX(37, sf1, d3, periph)
+
+/* gpio38_sf1_d1 */
+#define GPIO38_SF1_D1 \
+	BFLB_PINMUX(38, sf1, d1, periph)
+
+/* gpio39_sf1_d2 */
+#define GPIO39_SF1_D2 \
+	BFLB_PINMUX(39, sf1, d2, periph)
+
+/* gpio39_sf1_cs */
+#define GPIO39_SF1_CS \
+	BFLB_PINMUX(39, sf1, cs, periph)
+
+/* gpio40_sf1_d3 */
+#define GPIO40_SF1_D3 \
+	BFLB_PINMUX(40, sf1, d3, periph)
+
+/* gpio40_sf1_d0 */
+#define GPIO40_SF1_D0 \
+	BFLB_PINMUX(40, sf1, d0, periph)
+
 #endif /* DT_BINDINGS_PINCTRL_BFLB_BL616X_PINCTRL_H_ */

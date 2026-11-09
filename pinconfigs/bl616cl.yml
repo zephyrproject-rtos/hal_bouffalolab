@@ -759,3 +759,30 @@ pins:
             - [dbi_b, [dc]]
             - [jtag, [tms]]
             - [clock_out0, [cam_ref, i2s_ref, solo_in_128fs]]
+
+# Internal Pins, the exact order for the flash data pins is undisclosed,
+# but we know that without the IO2-CS swap, the data pins are 39 40 41 42
+    gpio37:
+        series: [616cl32, 616cl40, 616cl48]
+        periph:
+            - [sf1, [clk]]
+    gpio38:
+        series: [616cl32, 616cl40, 616cl48]
+        periph:
+            - [sf1, [cs, d2]]
+    gpio39:
+        series: [616cl32, 616cl40, 616cl48]
+        periph:
+            - [sf1, [d0, d3]]
+    gpio40:
+        series: [616cl32, 616cl40, 616cl48]
+        periph:
+            - [sf1, [d1]]
+    gpio41:
+        series: [616cl32, 616cl40, 616cl48]
+        periph:
+            - [sf1, [d2, cs]]
+    gpio42:
+        series: [616cl32, 616cl40, 616cl48]
+        periph:
+            - [sf1, [d3, d0]]
